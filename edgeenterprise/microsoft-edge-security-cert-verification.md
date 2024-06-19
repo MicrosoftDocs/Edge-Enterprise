@@ -47,7 +47,7 @@ Microsoft recommends that enterprises that have break-and-inspect proxies or oth
 
 In Microsoft Edge 115, support for the **MicrosoftRootStoreEnabled** policy is removed.
 
-## Known locally-trusted certificate behavior differences on Windows
+## Known locally trusted certificate behavior differences on Windows
 ### Stricter RFC 5280 compliance
 The new, built-in certificate verifier is more stringent in enforcing [RFC 5280](https://datatracker.ietf.org/doc/rfc5280/) requirements than the old, platform-based verifier.
 
