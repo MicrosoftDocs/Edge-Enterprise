@@ -3,7 +3,7 @@ title: "Configure Web Content Filtering on Edge using Edge management service"
 ms.author: ssatti
 author: dan-wesley
 manager: vesesha
-ms.date: 06/19/2024
+ms.date: 06/21/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -34,7 +34,7 @@ Before you can set up WCF you must meet or exceed the following prerequisites.
    - Be signed in with school account on a device running Windows 10 or later.
    - Have Microsoft Edge Version 118 or higher installed.
 2. You must be a Microsoft Edge Administrator or a Global Administrator to access this experience in Microsoft 365 Admin Center.
-3. You must have a Microsoft Intune license.
+3. Your organisation should have a M365 A1/A3/A5 license.
 
 > [!NOTE]
 > Make sure you update Microsoft Edge to latest version on all the managed devices where you want to run Web Content Filtering (WCF).
