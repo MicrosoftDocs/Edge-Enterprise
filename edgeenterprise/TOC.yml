@@ -1,4 +1,4 @@
-# last revised 05/13/2024
+# last revised 06/21/2024
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -224,6 +224,8 @@
      href: microsoft-edge-security-smartscreen.md
    - name: Support for Windows Information Protection
      href: microsoft-edge-security-windows-information-protection.md
+   - name: Configure Web Content Filtering on Edge using Edge management service
+     href: microsoft-edge-web-content-filtering.md
 - name: Microsoft Edge Privacy
   items:  
    - name: Configure privacy settings

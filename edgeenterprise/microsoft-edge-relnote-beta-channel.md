@@ -54,6 +54,10 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 - [ImmersiveReaderPictureDictionaryEnabled](/deployedge/microsoft-edge-policies#immersivereaderpicturedictionaryenabled) - Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete).
 
+## Version 126.0.2592.68: June 20, 2024
+
+Fixed various bugs and performance issues.
+
 ## Version 126.0.2592.61: June 17, 2024
 
 Fixed various bugs and performance issues.
