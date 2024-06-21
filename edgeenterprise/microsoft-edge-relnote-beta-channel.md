@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/20/2024
+ms.date: 06/21/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -18,6 +18,41 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 127.0.2651.8: June 21, 2024
+
+Fixed various bugs and performance issues, feature updates, and policy updates.
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Beta channel release. These notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 127.0.2610.3 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-127-0-2610-3-is-live/m-p/4156565)
+- [Dev Channel update to 127.0.2638.2 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-127-0-2638-2-is-live/m-p/4168541)
+
+**Announcement**
+
+- **SSE3 Requirement.**  Microsoft Edge will stop supporting CPUs that lack SSE3 in Microsoft Edge 128. Devices with such CPUs won't receive any more updates. For more information, see [Microsoft Edge Supported Operating Systems](/deployedge/microsoft-edge-supported-operating-systems).
+
+- **Token Binding.** Token Binding uses cryptographic certificates on both ends of the TLS connection in an attempt to close the security gap of bearer tokens, which might be lost or stolen. We're planning to deprecate Token Binding in Microsoft Edge version 130. The [AllowTokenBindingForUrls](/deployedge/microsoft-edge-policies#allowtokenbindingforurls) policy is deprecated and will be obsoleted in Microsoft Edge version 130.  
+
+### Feature updates
+
+- **Removal of mutation events.** Support for mutation events was removed. The [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) API can be used instead. Administrators can use the [MutationEventsEnabled](/deployedge/microsoft-edge-policies#mutationeventsenabled) policy as a temporary workaround. Enterprises should still work to remove their dependencies on these mutation events. For more information, see [Intent to Ship: Deprecate Mutation Events (google.com)](https://groups.google.com/a/chromium.org/g/blink-dev/c/jBEISy1p1XU).  
+
+- **Gift Card Redemption History in the Hub.** Users with an MSA or Microsoft Entra ID Linked Account can view and utilize information from gift card redemptions through Pay with Rewards or the Rewards Dashboard. Once a user successfully redeems a gift card with Pay with Rewards, information relating to their gift card (date, card number/pin, redemption status) redemption is added to a Redemption History. This information is located in the Wallet hub. Admins can control availability of this feature using the [EdgeWalletCheckoutEnabled](/deployedge/microsoft-edge-policies#edgewalletcheckoutenabled) policy. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+- **Password Monitor policy update.** When the [PasswordMonitorAllowed](/deployedge/microsoft-edge-policies#passwordmonitorallowed) policy is enabled as mandatory, users won't see the consent screen to turn on the feature. Also, when it's set to Mandatory enabled, the UI in Settings will be disabled but remain in the 'On' state, and a briefcase icon will be made visible next to it with this description displayed on hover - "This setting is managed by your organization."
+
+### Policy updates
+
+#### Deprecated policies
+
+- [SignInCtaOnNtpEnabled](/deployedge/microsoft-edge-policies#signinctaonntpenabled) - Enable sign in click to action dialog (deprecated).  
+
+#### Obsoleted policies
+
+- [ImmersiveReaderPictureDictionaryEnabled](/deployedge/microsoft-edge-policies#immersivereaderpicturedictionaryenabled) - Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete).
 
 ## Version 126.0.2592.68: June 20, 2024
 
@@ -61,7 +96,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 ### Feature updates
 
-- **AI theme generator.** Microsoft Edge will include an AI theme generator, that allows users to input a text prompt and generate a series of images to preview as browser themes. Applying the theme includes setting the generated image on the Edge new tab page and applying the image's dominant color to the browser frame. Admins can control availability to this feature using the [AIGenThemesEnabled](/deployedge/microsoft-edge-policies#enables-dall-e-themes-generation) policy.  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+- **AI theme generator.** Microsoft Edge includes an AI theme generator that allows users to input a text string and generate a series of images to preview as browser themes. Applying the theme includes setting the generated image on the Edge new tab page and applying the image's dominant color to the browser frame. Admins can control availability to this feature using the [AIGenThemesEnabled](/deployedge/microsoft-edge-policies#enables-dall-e-themes-generation) policy.  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 - **Security protection controls in the Microsoft Edge management service.**  The Microsoft Edge management service will provide admins with a dedicated experience to manage specific settings that help improve the security posture of their managed browser instances. **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the Microsoft 365 admin center.
 
@@ -122,99 +157,9 @@ The following Dev channel updates preceded this Beta channel release. The follow
 
 - [ImageEditorServiceEnabled](/deployedge/microsoft-edge-policies#imageeditorserviceenabled) - Enable the Designer for Image Editor feature
 - [ZstdContentEncodingEnabled](/deployedge/microsoft-edge-policies#zstdcontentencodingenabled) - Enable zstd content encoding support
-- [QRCodeGeneratorEnabled](/deployedge/microsoft-edge-policies#qrcodegeneratorenabled) - Enable QR Code Generator
+- [QRCodeGeneratorEnabled](/deployedge/microsoft-edge-policies#qrcodegeneratorenabled) - Enable QR Code Generators
 
-## Version 124.0.2478.67: April 26, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 124.0.2478.51: April 18, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 124.0.2478.49: April 17, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 124.0.2478.39: April 12, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 124.0.2478.27: April 8, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 124.0.2478.19: April 1, 2024
-
-Fixed various bugs and performance issues.
-
-### Feature updates
-
-- **Cross-device Search Query History suggestions.** The existing Search Query suggestions are enhanced with cross-device query history in both Recent Searches and browser searches for enterprise users who enable Edge Sync across devices/browsers. From now on Edge gives you the relevant query history suggestions that you used for previous searches, regardless of where you did it. You can always trust Edge to help you quickly re-find the information that you accessed before.
-
-- **Enterprise secure AI controls in the Microsoft Edge management service.** The Microsoft Edge management service now provides a new dedicated space for admins to manage all AI-related policies in the Edge browser. This helps enhance security and productivity for managed users and devices.
-
-## Version 124.0.2478.10: March 28, 2024
-
-Fixed various bugs and performance issues, updated features, and policies.
-
-### Dev Channel updates
-
-The following Dev channel updates preceded this Beta channel release. The following Dev notes provide detailed information about the changes in each release.
-
-- [Dev Channel update to 124.0.2438.2 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-124-0-2438-2-is-live/m-p/4079136)
-- [Dev Channel update to 124.0.2450.2 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-124-0-2450-2-is-live/m-p/4085888)
-- [Dev Channel update to 124.0.2464.2 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-124-0-2464-2-is-live/m-p/4092459)
-- [Dev Channel update to 124.0.2478.6 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-124-0-2478-6-is-live/m-p/4097816)
-
-### Feature updates
-
-- **Email notifications for extension requests in the Microsoft Edge management service.** The Microsoft Edge management service provides admins with the ability to receive email notifications for extensions that their users requested. This helps inform them promptly of any new feedback. **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the Microsoft 365 admin center.
-
-- **Updated default profile pill for EDU users in Edge for Business.** To improve the applicability of the current Edge for Business default visuals, users signed in with an EDU account will see the default profile pill label updated to "School".
-
-- **Desktop Shortcut for New Enterprise Devices.** New Microsoft Enterprise devices running through Windows Out of Box Experience (OOBE) for the first time will see a Microsoft Edge desktop shortcut automatically created. This desktop shortcut provides users with an alternative way to access their Microsoft Edge browser without needing to manually pin and configure their set-up.
-
-- **Updated profile options in new profile experience.** Many users unintentionally create empty profiles, cluttering their workspace and impeding their browsing experience. To reduce clutter and the likelihood of profile churn, updated First Run Experience (FRE) string options encourage users to sign-in and meaningfully create profiles for an improved browsing experience, or easily cancel unintentional creation. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-- **Copilot Page Context Policies.** To summarize and answer questions based on page context in Microsoft Edge, Copilot needs to be able to access the page content. We're providing two new policies to offer more flexibility for admins to customize Edge page context access across Copilot chats in Edge sidebar.
-   - [CopilotPageContext](/deployedge/microsoft-edge-policies#copilotpagecontext) - Control Copilot access to browser context for Microsoft Entra ID profiles
-   - [CopilotCDPPageContext](/deployedge/microsoft-edge-policies#copilotcdppagecontext) - Control Copilot with Commercial Data Protection access to browser context for Microsoft Entra ID profiles
-   - The [DiscoverPageContextEnabled](/deployedge/microsoft-edge-policies#discoverpagecontextenabled) policy is deprecated in Edge version 124 and will be obsoleted in Edge version 127.
-
-- **Inline Compose.** This feature allows users to rewrite text using Copilot. Users can highlight text they'd like to improve when writing in Edge and use the Rewrite tool to iterate with different lengths, formats, and tones. Administrators can control availability using the [ComposeInlineEnabled](/deployedge/microsoft-edge-policies#composeinlineenabled) policy.
-
-- **Updates to Settings pages on privacy, security, search, & services.**  To improve ease of use, we're updating Edge settings page into two sections: "Privacy and Security" and "Search and Services." This streamlined approach should enable users to find the settings they're interested in more easily. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-- **Removal of Web SQL.** Web SQL support is fully removed. In prior releases, Web SQL support was disabled by default but could be re-enabled via the [WebSQLAccess policy](/deployedge/microsoft-edge-policies?branch=pr-en-us-4033#websqlaccess). After this change, there's no longer any mechanism to enable Web SQL support. This change is happening in the Chromium project, on which Microsoft Edge is based. For more information, see [Intent to Deprecate and Remove Web SQL](https://groups.google.com/a/chromium.org/g/blink-dev/c/fWYb6evVA-w/m/pziWcvboAgAJ).
-
-- **Sidebar Tools App - SpeedTest.**  Adding a SpeedTest answer by default to the Tools app in the Microsoft Edge sidebar.  For more information, see [Manage the sidebar in Microsoft Edge](/deployedge/microsoft-edge-sidebar).
-
-- **Updated Edge Profile account re-authentication popup when Browser to Web Single-Sign-On (SSO) fails.** Edge provides a browser to Web single sign-on (SSO) capability that lets a user sign in to their Edge Profile with a web account first and then automatically sign them into Microsoft first party websites.
-
-  This is done by saving cached credentials. This approach works until there's an authentication challenge to the cached credentials. A typical scenario is when a user changes their password on a different device. The cached credentials on the current device become outdated and SSO fails. Edge detects this failure and shows a re-authentication popup that prompts the user to update their cached credentials on the current device.
-
-- **Updated profile management and customization controls.** Enhancing the profile management and customization experience through surfaced profile controls and an expanded range of default avatars. With these updates, users can effortlessly tailor their profiles to their preferences and select from a broader collection of profile avatars.
-
-- **Updated UX for Microsoft Defender for Endpoint blocks.** Microsoft Edge now provides a different blocking experience for Microsoft Defender for Endpoint based blocks (Web Content Filtering and Custom Indicators). For more information, see [Web protection](/microsoft-365/security/defender-endpoint/web-protection-overview?view=o365-worldwide&preserve-view=true).
-
-### Policy updates
-
-#### New policies
-
-- [CopilotCDPPageContext](/deployedge/microsoft-edge-policies#copilotcdppagecontext) - Control Copilot with Commercial Data Protection access to browser context for Microsoft Entra ID profiles
-- [CopilotPageContext](/deployedge/microsoft-edge-policies#copilotpagecontext) - Control Copilot access to browser context for Microsoft Entra ID profiles
-- [MutationEventsEnabled](/deployedge/microsoft-edge-policies#mutationeventsenabled) - Enable deprecated/removed Mutation Events
-
-#### Deprecated policies
-
-- [DiscoverPageContextEnabled](/deployedge/microsoft-edge-policies#discoverpagecontextenabled) - Enable Discover access to page contents for AAD profiles (deprecated)
-
-#### Obsoleted policies
-
-- [ThrottleNonVisibleCrossOriginIframesAllowed](/deployedge/microsoft-edge-policies#throttlenonvisiblecrossoriginiframesallowed) - Allows enabling throttling of non-visible, cross-origin iframes (obsolete)
-- [WebSQLAccess](/deployedge/microsoft-edge-policies#websqlaccess) - Force WebSQL to be enabled (obsolete)
-
+<!-- Version 124.0.2478.67: April 26, 2024 to Version 124.0.2478.10: March 28, 2024 -->
 <!-- Version 123.0.2420.65: March 27, 2024 to Version 122.0.2365.8: February 1, 2024 -->
 <!-- Version 121.0.2277.83: January 25, 2024, 2023 to Version 121.0.2277.4: December 15, 2023 -->
 <!-- Version 120.0.2210.61: December 7, 2023 to Version 120.0.2210.7: November 13, 2023 -->
