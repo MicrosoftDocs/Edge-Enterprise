@@ -17,6 +17,7 @@ description: "Archived release notes for Microsoft Edge Beta Channel"
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. To understand Microsoft Edge channels, see the [Overview of the Microsoft Edge channels](microsoft-edge-channels.md). All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 
 <!-- Version 124.0.2478.67: April 26, 2024 to Version 124.0.2478.10: March 28, 2024 -->
+
 ## Version 124.0.2478.67: April 26, 2024
 
 Fixed various bugs and performance issues.
