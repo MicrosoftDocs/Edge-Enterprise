@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge for Windows with policy settings"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/04/2024
+ms.date: 06/25/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -30,7 +30,7 @@ To configure Microsoft Edge with group policy objects, install *administrative t
 
 You can use Active Directory group policy to configure Microsoft Edge policy settings if you prefer to manage policy at the domain level. This approach lets you manage policy settings globally. You can target different policy settings to specific OUs, or use WMI filters to apply settings only to users or computers returned by a particular query. To configure policies on individual computers, you can use Local Group Policy Editor on the target computer. This approach lets you apply policy settings that only affect the local device.
 
-Microsoft Edge supports *mandatory* and *recommended* policies. Mandatory policies override user preferences and prevent the user from the policy. Recommended policies provide a default setting that the user can override. Most policies are only mandatory but there's a subset that is mandatory and recommended. If both versions of a policy are set, the mandatory setting takes precedence. A recommended policy only takes effect when the user hasn't modified the setting.
+Microsoft Edge supports *mandatory* and *recommended* policies. Mandatory policies override user preferences and prevent the user from changing the policy settings. Recommended policies provide a default setting that the user can override. Most policies are only mandatory but there's a subset that is mandatory and recommended. If both versions of a policy are set, the mandatory setting takes precedence. A recommended policy only takes effect when the user hasn't modified the setting.
 
 >[!TIP]
 > You can use Microsoft Intune to configure Microsoft Edge policy settings. For more information, see [Configure Microsoft Edge using Microsoft Intune](configure-edge-with-intune.md).
