@@ -3,7 +3,7 @@ title: "Archived - release notes for Microsoft Edge Mobile Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/22/2024
+ms.date: 06/26/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,6 +15,110 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 # Archived - release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 123.0.2420.108 (iOS): April 19, 2024 to Version 123.0.2420.56 (iOS): March 25, 2024 -->
+
+## Version 123.0.2420.108 (iOS): April 19, 2024
+
+Fixed various bugs and performance issues.
+
+### Bug fixes
+
+- Fixed a bug that pkpass files in binary data mime type were not handled correctly.
+
+## Version 123.0.2420.102 (iOS): April 16, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 123.0.2420.102 (Android): April 16, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 123.0.2420.90 (iOS): April 11, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 123.0.2420.90 (Android): April 10, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 123.0.2420.74 (Android and iOS): April 2, 2024
+
+Fixed various bugs and performance issues.
+
+### General updates
+
+- [iOS] Update Citrix mVPN SDK to version 24.2.1
+
+### New features
+
+- Start a flight to show Shared links entry point on the overflow menu
+
+## Version 123.0.2420.61 (Android): March 25, 2024
+
+Fixed various bugs and performance issues. This release includes general updates, and new policies.
+
+### General updates
+
+- [Android] Remove "https" scheme check for managed bookmarks to support URLs such as `edge://…`.
+
+### Bug fixes
+
+- [Android] Fix a bug that NLTM SSO policy doesn't work in some conditions.
+- [Android] Fix issues for brand logo policy.
+
+### Policy updates
+
+- Introduce a policy to control the behavior of opening Intune unmanaged URL in work profile. Current behavior is "stay" and open the unmanaged URL in work profile. This policy allows admin to change behavior to switch to personal context and open the unmanaged URL.
+
+  `com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitch`
+  - 0 (Default) - The URLs are opened in normal tabs with work profile
+  - 1 - Edge respects Intune's protection policy, the behavior is based on the configuration of Receive data from other apps in Intune protection policy.
+    - All apps - fall back to behavior for policy value 0
+    - None or Policy managed apps
+      - If personal profile is signed-in, the URLs are opened in normal tabs with personal profile
+      - If personal profile isn't signed-in, the URLs are opened in InPrivate
+      - If InPrivate is disabled, the URLs won't be opened
+  - 2 (Android only) - Microsoft Edge checks **URLAllowlist** or **URLBlocklist**. Microsoft Edge opens allowed URLs in normal tabs with work profile. As for URLs in blocklist, they might or might not be opened in InPrivate or normal tabs with personal profile, it depends on how **openInPrivateIfBlocked** is configured.
+
+## Version 123.0.2420.56 (iOS): March 25, 2024
+
+Fixed various bugs and performance issues. This release includes general updates, new features, and new policies.
+
+### General updates
+
+- [iOS] Update MS Tunnel MAM SDK to 1.0.12
+- [iOS] Update MS Intune MAM SDK to 19.1.0
+- [iOS] "Save to OneDrive" option in Edge now has upload progress indicator.
+
+### Bug fixes
+
+- [iOS] URL Block policy also shows "Site blocked" alert for http POST requests.
+- [iOS] Fix issues for new File upload block policy and idle timer policy.
+
+### New features
+
+- [iOS] Shared device mode public preview
+
+### Policy updates
+
+- [iOS] Introduces MAM policy to control the behavior the "Site Blocked" popup. This policy would let admins choose preferences between InPrivate and MSA if options are available.
+`com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock`
+  - 0 (Default) - Always show choose popup windows
+  - 1 - Only MSA account login, auto transition to MSA
+  - 2 - When the MSA account login and InPrivate are enabled at the same time, auto transition to MSA
+  - 3 - When the MSA account login and InPrivate are enabled at the same time, auto transition to InPrivate.
+
+- [iOS] Introduce a policy to control the behavior of opening Intune unmanaged URL in work profile. Current behavior is "stay" and open the unmanaged URL in work profile. This policy allows admin to change behavior to switch to personal context and open the unmanaged URL.
+
+  `com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitch`
+  - 0 (Default) - The URLs are opened in normal tabs with work profile
+  - 1 - Edge respects Intune's protection policy, the behavior is based on the configuration of Receive data from other apps in Intune protection policy.
+    - All apps - fall back to behavior for policy value 0
+    - None or Policy managed apps
+      - If personal profile is signed-in, the URLs are opened in normal tabs with personal profile
+      - If personal profile isn't signed-in, the URLs are opened in InPrivate
+      - If InPrivate is disabled, the URLs won't be opened
 
 <!-- Version 122.0.2365.99 (Android and iOS): March 18, to 2024 Version 121.0.2277.84 (Android): January 29, 2024 -->
 
