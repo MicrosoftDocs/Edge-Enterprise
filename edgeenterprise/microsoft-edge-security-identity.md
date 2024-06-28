@@ -3,7 +3,7 @@ title: "Microsoft Edge identity support and configuration"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/04/2024
+ms.date: 06/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -89,10 +89,11 @@ For services that require delegating Negotiate credentials, Microsoft Edge suppo
 
 ### Proactive Authentication
 
-Proactive authentication is an optimization over browser to website SSO that front loads authentication to certain first party websites. This improves address bar performance if the user is using Bing as the search engine. This gives users personalized and Microsoft Search for Business (MSB) search results. It also enables allowing authentication to key services such as the Office New Tab Page.
+Proactive authentication is an optimization over browser to website SSO that front loads authentication to certain first party websites. This improves address bar performance if the user is using Bing as the search engine. This gives users personalized and Microsoft Search for Business (MSB) search results. It also enables allowing authentication to key services such as the Office New Tab Page, MSN and Microsoft Copilot.
 
 > [!NOTE]
-> If you want to configure browser sign in after version 90, use the [BrowserSignin](/deployedge/microsoft-edge-policies#browsersignin) policy. For Microsoft Edge version 90 or lower, you can control this service using the [ProactiveAuthEnabled](/deployedge/microsoft-edge-policies#proactiveauthenabled) policy.
+> You can control this service using the [ProactiveAuthWorkflowEnabled](/deployedge/microsoft-edge-policies#proactiveauthworkflowenabled) policy for Microsoft Edge version 126 or higher;
+or using [ProactiveAuthEnabled](/deployedge/microsoft-edge-policies#proactiveauthenabled) policy for Microsoft Edge version 90 or lower. For in between versions, if you want to configure browser sign in, use the [BrowserSignin](/deployedge/microsoft-edge-policies#browsersignin) policy.
 
 ### Windows Hello CredUI for NTLM Authentication
 

@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/21/2024
+ms.date: 06/25/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -19,6 +19,14 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 127.0.2651.15: June 25, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- **Updated HttpAllowlist policy.** Automatic HTTPS should now respect the [HttpAllowlist](/deployedge/microsoft-edge-policies#httpallowlist) policy, which provides a list of hostnames that HTTP should be permitted on.
+ 
 ## Version 127.0.2651.8: June 21, 2024
 
 Fixed various bugs and performance issues, feature updates, and policy updates.
