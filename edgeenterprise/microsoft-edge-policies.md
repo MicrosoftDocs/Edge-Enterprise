@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -21,22 +21,22 @@ For information about an additional set of policies used to control how and when
 
 You can download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) for the recommended security configuration baseline settings for Microsoft Edge. For more information see the [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
-Starting in Microsoft Edge version 116, certain policies will not be applied to a profile that's signed in with a Microsoft account. For more information, please check the individual policy for details on whether it applies to a profile that is signed in with a Microsoft account.
+Starting in Microsoft Edge version 116, certain policies will not be applied to a profile that is signed in with a Microsoft account. For more information, please check an individual policy for details on whether it applies to a profile that is signed in with a Microsoft account.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 >
-> For Microsoft Edge Mobile policy reference, see [Microsoft Edge Mobile - Policies](/deployedge/microsoft-edge-mobile-policies)
+> For Microsoft Edge Mobile policy reference, see [Microsoft Edge Mobile - Policies](/deployedge/microsoft-edge-mobile-policies).
 
 ## New policies
 
-The following table lists the new and obsoleted policies that are in this article update.
+The following table lists the deprecated and obsolete policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[ProactiveAuthWorkflowEnabled](#proactiveauthworkflowenabled)|Enable proactive authentication|
-|[InternetExplorerSetForegroundWhenActive](#internetexplorersetforegroundwhenactive)|Keep the active Microsoft Edge window with an Internet Explorer mode tab always in the foreground.|
-|[ImmersiveReaderPictureDictionaryEnabled](#immersivereaderpicturedictionaryenabled)|Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete)|
+|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog (deprecated)|
+|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles (obsolete)|
+|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge (obsolete)|
 
 ## Available policies
 
@@ -229,7 +229,7 @@ These tables list all of the browser-related group policies available in this re
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
 |[ProactiveAuthWorkflowEnabled](#proactiveauthworkflowenabled)|Enable proactive authentication|
-|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog|
+|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog (deprecated)|
 |[SwitchIntranetSitesToWorkProfile](#switchintranetsitestoworkprofile)|Switch intranet sites to a work profile|
 |[SwitchSitesOnIEModeSiteListToWorkProfile](#switchsitesoniemodesitelisttoworkprofile)|Switch sites on the IE mode site list to a work profile|
 |[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|WAM for authentication below Windows 10 RS3 enabled|
@@ -472,7 +472,7 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
-|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commerical Data Protection access to browser context for Microsoft Entra ID profiles|
+|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commercial Data Protection access to browser context for Microsoft Entra ID profiles|
 |[CopilotPageContext](#copilotpagecontext)|Control Copilot access to browser context for Microsoft Entra ID profiles|
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
 |[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature|
@@ -493,7 +493,7 @@ These tables list all of the browser-related group policies available in this re
 |[DirectInvokeEnabled](#directinvokeenabled)|Allow users to open files using the DirectInvoke protocol|
 |[Disable3DAPIs](#disable3dapis)|Disable support for 3D graphics APIs|
 |[DisableScreenshots](#disablescreenshots)|Disable taking screenshots|
-|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles|
+|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles (obsolete)|
 |[DiskCacheDir](#diskcachedir)|Set disk cache directory|
 |[DiskCacheSize](#diskcachesize)|Set disk cache size, in bytes|
 |[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)|
@@ -509,7 +509,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge (obsolete)|
 |[EdgeEDropEnabled](#edgeedropenabled)|Enable Drop feature in Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled (obsolete)|
-|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
+|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge (obsolete)|
 |[EdgeOpenInSidebarEnabled](#edgeopeninsidebarenabled)|Enable open in sidebar|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
 |[EdgeSidebarCustomizeEnabled](#edgesidebarcustomizeenabled)|Enable sidebar customize|
@@ -9127,9 +9127,9 @@ If you disable this policy, Microsoft Edge does not send authentications request
 
   ### SignInCtaOnNtpEnabled
 
-  #### Enable sign in click to action dialog
+  #### Enable sign in click to action dialog (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -9142,6 +9142,8 @@ If you disable this policy, Microsoft Edge does not send authentications request
 If you enable or don't configure this policy, sign in click to action dialog is shown on New tab page.
 
 If you disable this policy, sign in click to action dialog isn't shown on the New tab page.
+
+This policy is deprecated as the feature has not been enabled in Microsoft Edge, and this policy will not be supported for Microsoft Edge in the future.
 
   #### Supported features:
 
@@ -9160,7 +9162,7 @@ If you disable this policy, sign in click to action dialog isn't shown on the Ne
   ##### Group Policy (ADMX) info
 
   - GP unique name: SignInCtaOnNtpEnabled
-  - GP name: Enable sign in click to action dialog
+  - GP name: Enable sign in click to action dialog (deprecated)
   - GP path (Mandatory): N/A
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Identity and sign-in
   - GP ADMX file name: MSEdge.admx
@@ -21559,7 +21561,7 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   ### CopilotCDPPageContext
 
-  #### Control Copilot with Commerical Data Protection access to browser context for Microsoft Entra ID profiles
+  #### Control Copilot with Commercial Data Protection access to browser context for Microsoft Entra ID profiles
 
   
   
@@ -21569,13 +21571,13 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   #### Description
 
-  This policy controls access to page contents, browser history, and user preferences for Copilot with Commerical Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
+  This policy controls access to page contents, browser history, and user preferences for Copilot with Commercial Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
 
-If you enable this policy, Copilot with Commerical Data Protection will have access to browser context.
+If you enable this policy, Copilot with Commercial Data Protection will have access to browser context.
 
-If you don't configure this policy, a user can enable access to browser context for Copilot with Commerical Data Protection using the setting toggle in Edge.
+If you don't configure this policy, a user can enable access to browser context for Copilot with Commercial Data Protection using the setting toggle in Edge.
 
-If you disable this policy, Copilot with Commerical Data Protection will not be able to access browser context.
+If you disable this policy, Copilot with Commercial Data Protection will not be able to access browser context.
 
   #### Supported features:
 
@@ -21594,7 +21596,7 @@ If you disable this policy, Copilot with Commerical Data Protection will not be 
   ##### Group Policy (ADMX) info
 
   - GP unique name: CopilotCDPPageContext
-  - GP name: Control Copilot with Commerical Data Protection access to browser context for Microsoft Entra ID profiles
+  - GP name: Control Copilot with Commercial Data Protection access to browser context for Microsoft Entra ID profiles
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -22998,17 +23000,17 @@ Note: Even if you disable screenshots using this policy, users might still be ab
 
   ### DiscoverPageContextEnabled
 
-  #### Enable Discover access to page contents for AAD profiles
+  #### Enable Discover access to page contents for AAD profiles (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 127.
   #### Supported versions:
 
   - On Windows and macOS since 113, until 127
 
   #### Description
 
-  This policy has been obsoleted as of Edge 127. Two new Edge Policies have taken its place. Those policies are CopilotPageContext (Control Copilot access to page contents for AAD profiles), and CopilotCDPPageContext (Control Copilot with Commerical Data Protection access to page contents for AAD profiles).
+  This policy has been obsoleted as of Edge 127. Two new Edge Policies have taken its place. Those policies are CopilotPageContext (Control Copilot access to page contents for AAD profiles), and CopilotCDPPageContext (Control Copilot with Commercial Data Protection access to page contents for AAD profiles).
 
 This policy did not allow for separate control of Copilot and Copilot with Commercial Data Protection. The new policies allow separate control of these versions of Copilot. The new policies also allow admins to force-enable Copilot access to Edge page contents by enabling the policy, whereas DiscoverPageContextEnabled only allowed force-disabling of Copilot page access.
 
@@ -23035,7 +23037,7 @@ If you disable this policy, Discover will not be able to access page contents.
   ##### Group Policy (ADMX) info
 
   - GP unique name: DiscoverPageContextEnabled
-  - GP name: Enable Discover access to page contents for AAD profiles
+  - GP name: Enable Discover access to page contents for AAD profiles (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -24162,23 +24164,25 @@ If you disable this policy, Microsoft Edge will not enhance images.
 
   ### EdgeFollowEnabled
 
-  #### Enable Follow service in Microsoft Edge
+  #### Enable Follow service in Microsoft Edge (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 126.
   #### Supported versions:
 
-  - On Windows and macOS since 98 or later
+  - On Windows and macOS since 98, until 126
 
   #### Description
 
-  Allows the Microsoft Edge browser to enable Follow service and apply it to users.
+  Lets Microsoft Edge browser enable Follow service and apply it to users.
 
-Users can use the Follow an influencer, site, or topic in Microsoft Edge..
+Users can use the Follow feature for an influencer, site, or topic in Microsoft Edge..
 
 If you enable or don't configure this policy, Follow in Microsoft Edge can be applied.
 
 If you disable this policy, Microsoft Edge will not communicate with Follow service to provide the follow feature.
+
+This policy is obsolete after version 126.
 
   #### Supported features:
 
@@ -24197,7 +24201,7 @@ If you disable this policy, Microsoft Edge will not communicate with Follow serv
   ##### Group Policy (ADMX) info
 
   - GP unique name: EdgeFollowEnabled
-  - GP name: Enable Follow service in Microsoft Edge
+  - GP name: Enable Follow service in Microsoft Edge (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
