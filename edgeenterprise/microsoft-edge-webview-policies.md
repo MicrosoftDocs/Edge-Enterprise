@@ -1,4 +1,4 @@
----
+EdgeSidebarAppUrlHostBlockList---
 title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
@@ -179,7 +179,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ChannelSearchKind = "Name: WebView2API
 
   #### Set the release channel search order preference (deprecated)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  >DEPRECATED: This policy is deprecated. It's currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -559,7 +559,7 @@ Use the preceding information when configuring this policy.
   #### Description
 
   unload event handlers are being deprecated. Whether they fire depends on the unload Permissions-Policy.
-Currently, they're allowed by policy by default. In the future they will gradually move to being disallowed by default and sites must explicitly enable them using Permissions-Policy headers.
+Currently, they're allowed by policy by default. In the future they'll gradually move to being disallowed by default and sites must explicitly enable them using Permissions-Policy headers.
 This enterprise policy can be used to opt out of this gradual deprecation by forcing the default to stay enabled.
 
 Pages might depend on unload event handlers to save data or signal the end of a user session to the server.
@@ -619,7 +619,7 @@ If you enable this policy then unload event handlers will continue to work by de
 
   #### Description
 
-  Setting the policy specifies a list of hostnames or hostname patterns (such as '[\*.]example.com') that won't be upgraded to HTTPS and won't show an error interstitial if HTTPS-First Mode is enabled. Organizations can use this policy to maintain access to servers that do not support HTTPS, without needing to disable "AutomaticHttpsDefault".
+  Setting the policy specifies a list of hostnames or hostname patterns (such as '[\*.]example.com') that won't be upgraded to HTTPS and won't show an error interstitial if HTTPS-First Mode is enabled. Organizations can use this policy to maintain access to servers that don't support HTTPS, without needing to disable "AutomaticHttpsDefault".
 
 Supplied hostnames must be canonicalized: Any IDNs must be converted to their A-label format, and all ASCII letters must be lowercase.
 
@@ -739,9 +739,9 @@ If this policy is specified for an application, it is possible that it may impac
 
 Use a name-value pair to enable the new PDF reader for the application. Set the name to the Application User Model ID or the executable file name. You can use the "*" wildcard as value name to apply to all applications. Set the Value to true to enable the new reader or set it to false to use the existing one.
 
-If you enable this policy for the specified WebView2 applications, they will use the new Adobe Acrobat powered PDF reader to open all PDF files.
+If you enable this policy for the specified WebView2 applications, they'll use the new Adobe Acrobat powered PDF reader to open all PDF files.
 
-If you disable the policy for the specified WebView2 applications or don't configure it, they will use the existing PDF reader to open all PDF files.
+If you disable the policy for the specified WebView2 applications or don't configure it, they'll use the existing PDF reader to open all PDF files.
 
   #### Supported features:
 
@@ -804,7 +804,7 @@ connection's TLS parameters.
 If this policy is enabled,
 Microsoft Edge will perform this key
 check. This helps prevent attacks where an attacker manipulates the browser into
-interpreting a key in ways that the certificate owner did not intend.
+interpreting a key in ways that the certificate owner didn't intend.
 
 If this policy is set to disabled or not configured,
 Microsoft Edge will skip this key check in
