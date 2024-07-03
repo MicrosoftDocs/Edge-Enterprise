@@ -305,12 +305,12 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannels = "Name: WebView2APISa
 
 If you disable this policy, request methods are uppercased. This is the behavior on or before Microsoft Edge 108.
 
-If you enable or don't configure this policy, request methods are not uppercased, unless matching case-insensitively with DELETE, GET, HEAD, OPTIONS, POST, or PUT.
+If you enable or don't configure this policy, request methods aren't uppercased, unless matching case-insensitively with DELETE, GET, HEAD, OPTIONS, POST, or PUT.
 
 This would reject fetch(url, {method: 'Foo'}) + "Access-Control-Allow-Methods: FOO" response header,
 and would accept fetch(url, {method: 'Foo'}) + "Access-Control-Allow-Methods: Foo" response header.
 
-Note: request methods "post" and "put" are not affected, while "patch" is affected.
+Note: request methods "post" and "put" aren't affected, while "patch" is affected.
 
 This policy is intended to be temporary and will be removed in the future.
 
@@ -424,7 +424,7 @@ If you disable this policy, the old behavior is enabled.
 
 If you enable or don't configure this policy, Microsoft Edge will accept server responses compressed with zstd.
 
-If you disable this policy, the zstd content encoding feature will not be advertised or supported when processing server responses.
+If you disable this policy, the zstd content encoding feature won't be advertised or supported when processing server responses.
 
 This policy is temporary and will be removed in the future.
 
@@ -493,7 +493,7 @@ If you set this policy to 'FullMode', the full payload is downloaded from the Ex
 
 If you set this policy to 'ConfigurationsOnlyMode', only the configuration payload is downloaded.
 
-If you set this policy to 'RestrictedMode', the communication with the Experimentation and Configuration Service is stopped completely. Microsoft does not recommend this setting.
+If you set this policy to 'RestrictedMode', the communication with the Experimentation and Configuration Service is stopped completely. Microsoft doesn't recommend this setting.
 
 If you don't configure this policy on a managed device, the behavior on Beta and Stable channels is the same as the 'ConfigurationsOnlyMode'. On Canary and Dev channels the behavior is the same as 'FullMode'.
 
@@ -559,11 +559,11 @@ Use the preceding information when configuring this policy.
   #### Description
 
   unload event handlers are being deprecated. Whether they fire depends on the unload Permissions-Policy.
-Currently, they are allowed by policy by default. In the future they will gradually move to being disallowed by default and sites must explicitly enable them using Permissions-Policy headers.
+Currently, they're allowed by policy by default. In the future they will gradually move to being disallowed by default and sites must explicitly enable them using Permissions-Policy headers.
 This enterprise policy can be used to opt out of this gradual deprecation by forcing the default to stay enabled.
 
 Pages might depend on unload event handlers to save data or signal the end of a user session to the server.
-This is not recommended because it's unreliable and impacts performance by blocking use of BackForwardCache.
+This isn't recommended because it's unreliable and impacts performance by blocking use of BackForwardCache.
 Recommended alternatives exist, but the unload event has been used for a long time. Some applications might still rely on them.
 
 If you disable this policy or don't configure it, unload event handlers will gradually be deprecated in-line with the deprecation rollout and sites which don't set Permissions-Policy header will stop firing `unload` events.
@@ -619,13 +619,13 @@ If you enable this policy then unload event handlers will continue to work by de
 
   #### Description
 
-  Setting the policy specifies a list of hostnames or hostname patterns (such as '[\*.]example.com') that will not be upgraded to HTTPS and will not show an error interstitial if HTTPS-First Mode is enabled. Organizations can use this policy to maintain access to servers that do not support HTTPS, without needing to disable "AutomaticHttpsDefault".
+  Setting the policy specifies a list of hostnames or hostname patterns (such as '[\*.]example.com') that won't be upgraded to HTTPS and won't show an error interstitial if HTTPS-First Mode is enabled. Organizations can use this policy to maintain access to servers that do not support HTTPS, without needing to disable "AutomaticHttpsDefault".
 
 Supplied hostnames must be canonicalized: Any IDNs must be converted to their A-label format, and all ASCII letters must be lowercase.
 
-Blanket host wildcards (i.e., "*" or "[*]") are not allowed. Instead, HTTPS-First Mode and HTTPS Upgrades should be explicitly disabled via their specific policies.
+Blanket host wildcards (i.e., "*" or "[*]") aren't allowed. Instead, HTTPS-First Mode and HTTPS Upgrades should be explicitly disabled via their specific policies.
 
-Note: This policy does not apply to HSTS upgrades.
+Note: This policy doesn't apply to HSTS upgrades.
 
   #### Supported features:
 
