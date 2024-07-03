@@ -3,13 +3,13 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/19/2024
+ms.date: 06/29/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge WebView2"
 ---
 
