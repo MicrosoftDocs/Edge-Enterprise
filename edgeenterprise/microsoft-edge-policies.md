@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/19/2024
+ms.date: 06/29/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,13 +30,11 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the deprecated and obsolete policies that are in this article update.
+The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog (deprecated)|
-|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles (obsolete)|
-|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge (obsolete)|
+|[EdgeSidebarAppUrlHostBlockList](#edgesidebarappurlhostblocklist)|Control which apps cannot be opened in Microsoft Edge sidebar|
 
 ## Available policies
 
@@ -512,6 +510,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge (obsolete)|
 |[EdgeOpenInSidebarEnabled](#edgeopeninsidebarenabled)|Enable open in sidebar|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
+|[EdgeSidebarAppUrlHostBlockList](#edgesidebarappurlhostblocklist)|Control which apps cannot be opened in Microsoft Edge sidebar|
 |[EdgeSidebarCustomizeEnabled](#edgesidebarcustomizeenabled)|Enable sidebar customize|
 |[EdgeWalletCheckoutEnabled](#edgewalletcheckoutenabled)|Enable Wallet Checkout feature|
 |[EdgeWalletEtreeEnabled](#edgewalletetreeenabled)|Edge Wallet E-Tree Enabled|
@@ -24359,6 +24358,79 @@ Starting in version 90.0.818.56, the behavior of the messaging letting users kno
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeSidebarAppUrlHostBlockList
+
+  #### Control which apps cannot be opened in Microsoft Edge sidebar
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 128 or later
+
+  #### Description
+
+  Define a list of sites, based on URL patterns, that cannot be opened in sidebar.
+
+If you don't configure this policy, a user can open any app in sidebar.
+
+If the [HubsSidebarEnabled](#hubssidebarenabled) policy is disabled, this list isn't used and no sidebar can be opened.
+
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+Note: * will block all apps.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeSidebarAppUrlHostBlockList
+  - GP name: Control which apps cannot be opened in Microsoft Edge sidebar
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EdgeSidebarAppUrlHostBlockList
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EdgeSidebarAppUrlHostBlockList\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\EdgeSidebarAppUrlHostBlockList\2 = "[*.]contoso.edu"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeSidebarAppUrlHostBlockList
+  - Example value:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EdgeSidebarCustomizeEnabled
 
   #### Enable sidebar customize
@@ -24964,7 +25036,7 @@ As such, this policy is a temporary measure to control the initial experimental 
   
   #### Supported versions:
 
-  - On Windows and macOS since 113 or later
+  - On Windows and macOS since 113, until 127
 
   #### Description
 
@@ -24980,7 +25052,7 @@ If you disable this policy, Microsoft Edge will not enforce constraints encoded 
 
 This policy has no effect if the [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) policy is disabled.
 
-This policy is planned to be removed in Microsoft Edge version 118.
+This policy was removed in Microsoft Edge version 128. Starting with that version, constraints in trust anchors are always enforced.
 
   #### Supported features:
 
