@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 05/07/2024
+ms.date: 07/08/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -2478,7 +2478,11 @@ When the timeout from the IdleTimeout policy is reached, the browser runs the ac
 
 If this policy is empty or left unset, the IdleTimeout policy has no effect.
 
-Supported actions is 'close_tabs': close all open tabs and create a NTP (New Tab Page).
+Supported actions are:
+
+- 'close_tabs': close all open tabs and create a NTP (New Tab Page).
+- 'clear_browsing_history': clear the browsing history.
+- 'clear_cookies_and_other_site_data': clear browsing history and other site data.
 
 #### Supported features
 
@@ -2502,9 +2506,12 @@ IdleTimeoutActions
 ```
 [
 
-"close_tabs"
+"close_tabs",
+"clear_browsing_history",
+"clear_cookies_and_other_site_data"
 
 ]
+
 ```
 
 ##### Example value (iOS):
@@ -2512,9 +2519,12 @@ IdleTimeoutActions
 ```
 <array>
 
-  <string>close_tabs</string>
+  <string>close_tabs</string>
+  <string>clear_browsing_history</string>
+  <string>clear_cookies_and_other_site_data</string>
 
 </array>
+
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
