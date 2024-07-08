@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/05/2024
+ms.date: 07/08/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -2520,8 +2520,8 @@ IdleTimeoutActions
 <array>
 
   <string>close_tabs</string>
-  <string> clear_browsing_history</string>
-  <string> clear_cookies_and_other_site_data</string>
+  <string>clear_browsing_history</string>
+  <string>clear_cookies_and_other_site_data</string>
 
 </array>
 
