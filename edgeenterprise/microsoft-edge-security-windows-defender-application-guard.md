@@ -3,7 +3,7 @@ title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/04/2024
+ms.date: 07/08/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,7 +15,7 @@ description: "Microsoft Edge support for Microsoft Defender Application Guard"
 # Microsoft Edge support for Microsoft Defender Application Guard
 
 > [!IMPORTANT]
-> Microsoft Defender Application Guard, including the [Windows Isolated App Launcher APIs](/windows/win32/api/isolatedapplauncher), will be deprecated for Microsoft Edge for Business and [will no longer be updated](/windows/whats-new/feature-lifecycle).
+> Microsoft Defender Application Guard, including the [Windows Isolated App Launcher APIs](/windows/win32/api/isolatedapplauncher), will be deprecated for Microsoft Edge for Business and [will no longer be updated](/windows/whats-new/deprecated-features).
 >
 >**Existing installations of Application Guard**
 >
