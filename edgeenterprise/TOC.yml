@@ -224,7 +224,7 @@
      href: microsoft-edge-security-smartscreen.md
    - name: Support for Windows Information Protection
      href: microsoft-edge-security-windows-information-protection.md
-   - name: Configure Web Content Filtering on Edge using Edge management service
+   - name: Configure Web Content Filtering on Edge
      href: microsoft-edge-web-content-filtering.md
 - name: Microsoft Edge Privacy
   items:  
