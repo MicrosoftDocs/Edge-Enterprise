@@ -1,9 +1,9 @@
 ---
-title: "Configure Web Content Filtering on Edge using Edge management service"
+title: "Configure Web Content Filtering on Edge"
 ms.author: ssatti
 author: dan-wesley
 manager: vesesha
-ms.date: 06/21/2024
+ms.date: 07/09/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -13,13 +13,13 @@ ms.custom:
 description: "Configure Web Content Filtering on Edge using Edge management service "
 ---
 
-# Configure Web Content Filtering on Edge using Edge management service
+# Configure Web Content Filtering on Edge
 
 This article describes how to configure Web Content Filtering (WCF) for Microsoft Edge.
 
 ## Introduction
 
-Microsoft Edge is already one of the most secure browsers with features like phishing protection, typosquatting, and more to protect users when they're browsing online. Adding to these security features, Microsoft Edge is introducing Web Content Filtering (WCF) for Educational Institutions to help them keep students safe online. Using this feature, you can choose categories of websites that students aren't allowed to access while using Microsoft Edge.
+Microsoft Edge is already one of the most secure browsers with features like phishing protection, typosquatting, and more to protect users when they're browsing online. Adding to these security features, Microsoft Edge is introducing Web Content Filtering (WCF) for Educational Institutions to help them keep students safe online. Using this feature, you can choose [categories of websites](edge-learnmore-wcf-supported-categories.md) that students aren't allowed to access while using Microsoft Edge.
 
 To use this feature, set it up via the Microsoft Edge management service using the following the steps.
 
