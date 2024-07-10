@@ -3,7 +3,7 @@ title: "Supported categories for Web Content Filtering (WCF)"
 ms.author: ssatti
 author: dan-wesley
 manager: vesesha
-ms.date: 07/09/2024
+ms.date: 07/10/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -15,7 +15,7 @@ description: "How web content is categorized and the currently supported categor
 
 # Supported categories for Web Content Filtering
 
-This article describes how web content is categorized and gives the categories that are currently supported.
+This article describes how web content is categorized and lists the categories that are currently supported.
 
 ## Introduction
 
