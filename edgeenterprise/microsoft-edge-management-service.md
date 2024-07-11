@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 05/13/2024
+ms.date: 07/10/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -391,7 +391,7 @@ If you don't want to assign the profile using group assignment in the Microsoft 
 
 Use these steps as a guide for setting an enrollment token:
 
-1. Sign in to the Microsoft 365 Admin Center. Go to **Settings** > **Microsoft Edge**. Under the **Configuration profiles** pivot, select the profile you want to assign and then select **Copy token ID**.
+1. Sign in to the Microsoft 365 Admin Center. Go to **Settings** > **Microsoft Edge**. Under the **Configuration profiles** pivot, select the profile you want to assign and then click **Deploy** to select **Copy profile ID**.
 2. Set the [EdgeManagementEnrollmentToken](/deployedge/microsoft-edge-policies#edgemanagementenrollmenttoken) policy value to the token ID. 
 3. If Microsoft Edge is open, restart it.
 
