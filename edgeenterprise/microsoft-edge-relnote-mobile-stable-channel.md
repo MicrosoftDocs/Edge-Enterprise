@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 07/02/2024
+ms.date: 07/10/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -35,6 +35,29 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
+## Version 126.0.2592.56 (Android and iOS): June 17, 2024
+
+Fixed various bugs and performance issues, made general updates, added policies and enhancements.
+
+### General updates
+
+- [iOS] Upgrade MS Tunnel SDK version 1.1.0
+- [Android and iOS] Update OneAuth SDK to 2.3.1
+
+### Bug fixes
+
+- [Android] Scrolling screenshot will be disabled if Intune APP (App Protection Policy) is configured to block screenshot.
+
+### New policies
+
+- [Android and iOS] Manage contextual search via policy `com.microsoft.intune.mam.managedbrowser.disabledFeatures=contextualsearch`
+- [iOS] Introduce MDM policy **EdgeSharedDeviceSupportEnabled** to disable shared device mode.
+
+### Enhancements
+
+- [Android and iOS] Remove [Copilot](https://copilot.microsoft.com/#/) from default allowlist so that you can manage access to [Copilot](https://copilot.microsoft.com/#/) via URLs blocklist.
+- [iOS] Support Passkey on iOS. This feature is disabled by default. It can be enabled by turning on the `flag edge-iOS-enable-passkey-signin` from *Edge://flags*.
+
 ## Version 125.0.2535.96 (Android and iOS): June 11, 2024
 
 Fixed various bugs and performance issues.
@@ -53,12 +76,12 @@ Fixed various bugs and performance issues, provide general updates, add new feat
 
 ### General updates
 
-- MS Tunnel Tunnel SDK updated to 1.0.17.
+- MS Tunnel SDK updated to 1.0.17.
 - Upgrade Intune iOS SDK to 19.3.1, with working time support.
 
 ### New features
 
-- Shared links feature will appear in overflow menu in work account. 
+- Shared links feature appears in overflow menu in work account. 
 - PAC policy now supports fail-close.
 - Support certificate pinning via Intune, currently only supports limited number of Microsoft domains. Pending on Intune's improvements to support customizable cert-domain pair.
 - Support of new iOS 17 relay proxy via policy `com.microsoft.intune.mam.managedbrowser.ProxyRelayUrl`.
@@ -79,7 +102,7 @@ Fixed various bugs and performance issues, provide a general update, add new fea
 ### New features
 
 - Edge Android now supports kerberos/negotiate authentication on Android via an [external SPNEGO authenticator app](https://github.com/google/android-kerberos-authenticator) integrated with Android account management framework.
-- Shared links feature will appear in overflow menu in work account.
+- Shared links feature appears in overflow menu in work account.
 
 ### New Policies
 
