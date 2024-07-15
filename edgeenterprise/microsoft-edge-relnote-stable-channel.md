@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/11/2024
+ms.date: 07/15/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -29,6 +29,9 @@ These release notes provide information about new features and non-security upda
 ## Version 126.0.2592.102: July 11, 2024
 
 Fixed various bugs and performance issues.
+
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-11-2024).
  
 ## Version 126.0.2592.87: July 2, 2024
 
