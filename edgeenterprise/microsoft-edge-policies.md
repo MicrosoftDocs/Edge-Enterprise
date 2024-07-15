@@ -4085,8 +4085,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
   ### NotificationsAllowedForUrls
 
   #### Allow notifications on specific sites
-
-  
+ 
   
   #### Supported versions:
 
