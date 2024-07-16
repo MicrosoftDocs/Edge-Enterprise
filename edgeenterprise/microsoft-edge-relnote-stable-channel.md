@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 126.0.2592.x: July x, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, improved reliability.
 
 ### Improved reliability
 
