@@ -36,7 +36,7 @@ Fixed various bugs and performance issues, improved reliability.
 
 ### Fixes
 
-- Resolved an issue which allowed the Microsoft Edge New Tab Page feed to be activated even when the [NewTabPageContentEnabled](/deployedge/microsoft-edge-policies#newtabpagecontentenabled) policy was set to disabled.
+- Resolved an issue that allowed the Microsoft Edge New Tab Page feed to be activated even when the [NewTabPageContentEnabled](/deployedge/microsoft-edge-policies#newtabpagecontentenabled) policy was set to disabled.
 
 
 ## Version 126.0.2592.102: July 11, 2024
