@@ -3,7 +3,7 @@ title: "Windows updates to support Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/04/2024
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -14,13 +14,7 @@ description: "Windows updates to support Microsoft Edge."
 
 # Windows updates to support the next version of Microsoft Edge
 
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
-
 This article describes how Windows will be updated to support the next version of Microsoft Edge
-
-> [!IMPORTANT]
-> Refer to the Microsoft Edge product team [blog post](https://aka.ms/EdgeLegacyEOS) about Microsoft Edge Legacy end of service.
 
 > [!NOTE]
 > This article applies to the Microsoft Edge Stable channel.

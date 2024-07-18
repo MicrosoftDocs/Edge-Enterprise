@@ -3,7 +3,7 @@ title: "Microsoft Edge enterprise sync FAQ"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "Frequently asked questions about Microsoft Edge enterprise sync."
 ---
 
 # Microsoft Edge enterprise sync FAQ
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article answers frequently asked questions about enterprise sync for Microsoft Edge version 77 or later.
 

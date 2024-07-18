@@ -3,7 +3,7 @@ title: "Automate Microsoft Edge for macOS deployment with Jamf"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 01/10/2024
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "How to automate Microsoft Edge for macOS deployment with Jamf."
 ---
 
 # Deploy to macOS with Jamf
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article describes how to deploy Microsoft Edge for macOS using Jamf.
 
