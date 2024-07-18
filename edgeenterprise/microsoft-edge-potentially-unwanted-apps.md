@@ -3,7 +3,7 @@ title: "Use Microsoft Edge to protect against potentially unwanted applications"
 ms.author: kvice
 author: dan-wesley
 manager: likuba
-ms.date: 01/12/2024
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "Use Microsoft Edge to protect against potentially unwanted applica
 ---
 
 # Protect against potentially unwanted applications (PUAs)
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article explains how you can protect against potentially unwanted applications (PUAs) using Microsoft Edge or by using Windows Defender Antivirus.
 
@@ -47,7 +44,7 @@ You can set up protection by enabling the **Block potentially unwanted apps** fe
    > [!TIP]
    > You can safely explore the URL-blocking feature of PUA protection by testing it out on one of our Windows Defender SmartScreen [demo pages](https://demo.smartscreen.msft.net/).
 
-When Microsoft Edge detects a PUA, you will see a message like the one in the next screenshot.
+When Microsoft Edge detects a PUA, you'll see a message like the one in the next screenshot.
 
    ![Microsoft Edge PUA warning message](./media/microsoft-edge-potentially-unwanted-apps/security-pua-msg.png)
 
@@ -62,7 +59,7 @@ There are several ways admins can configure how Microsoft Edge and Windows Defen
 - [SmartScreenPuaEnabled policy](./microsoft-edge-policies.md#smartscreenpuaenabled)
 - [Configure Windows Defender SmartScreen](/microsoft-edge/deploy/available-policies?source=docs#configure-windows-defender-smartscreen)
 
-Admins can also customize the Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) block list. They can use the Microsoft Defender ATP portal to [create and manage indicators for IPs and URLs](/windows/security/threat-protection/microsoft-defender-atp/manage-indicators#create-indicators-for-ips-and-urlsdomains-preview).
+Admins can also customize the Microsoft Defender Advanced Threat Protection (ATP) blocklist. They can use the Microsoft Defender ATP portal to [create and manage indicators for IPs and URLs](/windows/security/threat-protection/microsoft-defender-atp/manage-indicators#create-indicators-for-ips-and-urlsdomains-preview).
 
 ## Protect against PUA with Windows Defender Antivirus
 
@@ -73,7 +70,7 @@ The [Detect and block potentially unwanted applications](/windows/security/threa
 - [Group Policy](/windows/security/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus#use-group-policy-to-configure-pua-protection)
 - [PowerShell cmdlets](/windows/security/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus#use-powershell-cmdlets-to-configure-pua-protection)
 
-When Windows Defender detects a PUA file on an endpoint it quarantines the file and notifies the user ([unless notifications are disabled](/windows/security/threat-protection/windows-defender-antivirus/configure-notifications-windows-defender-antivirus)) in the same format as a normal threat detection (prefaced with "PUA:".) Detected threats also appear in the [quarantine list in the Windows Security app](/windows/security/threat-protection/windows-defender-antivirus/windows-defender-security-center-antivirus#detection-history).
+When Windows Defender detects a PUA file on an endpoint, it quarantines the file and notifies the user ([unless notifications are disabled](/windows/security/threat-protection/windows-defender-antivirus/configure-notifications-windows-defender-antivirus)) in the same format as a normal threat detection (prefaced with "PUA:".) Detected threats also appear in the [quarantine list in the Windows Security app](/windows/security/threat-protection/windows-defender-antivirus/windows-defender-security-center-antivirus#detection-history).
 
 ### PUA notifications and events
 
@@ -86,9 +83,9 @@ There are several ways an admin can see PUA events:
 > [!NOTE]
 > Users will see "*.exe has been blocked as a potentially unwanted app by Microsoft Defender SmartScreen".
 
-### Allow-list an app
+### Allowlist an app
 
-Like Microsoft Edge, Windows Defender Antivirus provides a way to allow files that are blocked by mistake or needed to complete a task. If this happens you can allow-list a file. For more information, see [How to Configure Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508770(v=technet.10)#to-exclude-specific-files-or-folders) to learn how to exclude specific files or folders.
+Like Microsoft Edge, Windows Defender Antivirus provides a way to allow files blocked by mistake or needed to complete a task. If this happens, you can allowlist a file. For more information, see [How to Configure Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508770(v=technet.10)#to-exclude-specific-files-or-folders) to learn how to exclude specific files or folders.
 
 ## See also
 
