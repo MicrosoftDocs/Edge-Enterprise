@@ -3,7 +3,7 @@ title: "Password Monitor auto-enabled for users"
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/12/2024
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "Password Monitor auto-enabled for users"
 ---
 
 # Password Monitor auto-enabled for users
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article describes how admins can turn on Password Monitor in Microsoft Edge for select users. The article also gives the steps to control how monitoring is enabled.
 
