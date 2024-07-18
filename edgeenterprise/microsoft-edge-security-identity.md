@@ -3,7 +3,7 @@ title: "Microsoft Edge identity support and configuration"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/27/2024
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "Microsoft Edge identity support and configuration"
 ---
 
 # Microsoft Edge identity support and configuration
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article describes how Microsoft Edge uses identity to support features such as sync and single sign-on (SSO). Microsoft Edge supports signing in with Active Directory Domain Services (AD DS), Microsoft Entra ID, and Microsoft accounts (MSA). Currently, Microsoft Edge only supports Microsoft Entra accounts belonging to the global cloud or the GCC sovereign cloud. We're working on adding support for other sovereign clouds.
 

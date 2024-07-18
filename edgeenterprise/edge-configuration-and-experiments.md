@@ -3,7 +3,7 @@ title: "Microsoft Edge configurations and experimentation"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 08/21/2023
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "Microsoft Edge configurations and experimentation"
 ---
 
 # Microsoft Edge configurations and experimentation
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article describes the interaction between Microsoft Edge and the Experimentation and Configuration Service (ECS). Microsoft Edge communicates with this service to request and receive different kinds of payloads. These payloads include configurations, feature rollouts, and experiments.
 
