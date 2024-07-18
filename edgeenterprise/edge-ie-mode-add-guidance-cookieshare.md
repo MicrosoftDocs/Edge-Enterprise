@@ -3,7 +3,7 @@ title: "Cookie sharing between Microsoft Edge and Internet Explorer"
 ms.author: shisub
 author: dan-wesley
 manager: archandr
-ms.date: 01/10/2024
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,12 +13,6 @@ description: "Learn how to share cookies between Microsoft Edge and Internet Exp
 ---
 
 # Cookie sharing between Microsoft Edge and Internet Explorer
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
-
-> [!NOTE]
-> The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 
 This article explains how to configure session cookie sharing between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
 
@@ -30,7 +24,7 @@ To share session cookies from Microsoft Edge to Internet Explorer:
 
   - Windows 11
   - Windows 10 version 2004, Windows Server version 2004 - KB4571744 or higher
-  -    Windows 10 version 1909, Windows Server version 1909 – KB4566116 or higher
+  - Windows 10 version 1909, Windows Server version 1909 – KB4566116 or higher
   - Windows 10 version 1903, Windows Server version 1903 – KB4566116 or higher
   - Windows 10 version 1809, Windows Server version 1809, and Windows Server 2019 - KB4571748 or higher
   - Windows 10 version 1803 – KB4577032 or higher

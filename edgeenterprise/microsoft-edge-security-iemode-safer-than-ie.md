@@ -3,7 +3,7 @@ title: "Modern security protection for vulnerable legacy apps"
 ms.author: archandr
 author: dan-wesley
 manager: kawong
-ms.date: 04/04/2024
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "Learn how Microsoft Edge with IE mode provides modern security pro
 ---
 
 # Modern security protection for vulnerable legacy apps
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 As the Internet evolved over the last 20 years, so have user needs and expectations for the browsers they use. Today, the Internet is foundational to many businesses, and having a modern browser designed to securely meet business needs is paramount. Microsoft Edge is a modern browser built to securely access the modern web. This article shows how Internet Explorer (IE) mode on Microsoft Edge is more secure than Internet Explorer.
 
