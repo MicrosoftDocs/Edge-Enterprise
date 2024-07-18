@@ -3,7 +3,7 @@ title: "Set Microsoft Edge as the default browser on Windows and macOS"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/04/2024
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "Learn how to set Microsoft Edge as the default browser"
 ---
 
 # Set Microsoft Edge as the default browser
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article explains how you can set Microsoft Edge as the default browser on Windows and macOS.
 
