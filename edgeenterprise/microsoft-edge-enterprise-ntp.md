@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise new tab page"
 ms.author: mamayeka
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -14,14 +14,11 @@ description: "Learn how the Enterprise new tab page supports context switching a
 
 # Microsoft Edge Enterprise new tab page
 
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
-
 The Enterprise new tab page is a direct response to a new challenge that workers face daily: frequent context switching. Our research shows that in addition to managing schedules, workers juggle roughly three projects a day—and on average, switch between them two to three times a day. Combine that switching with a torrent of emails, pings, and calls (which, when combined, can easily number in the triple digits) and they're constantly switching contexts throughout their day. Finally, add on the challenge of hybrid workplaces and it's no wonder they want to work smarter not harder.
 
 ## The role of the browser
 
-As the browser role grows to become central for workers to finish everyday tasks, it’s more important now than ever that information workers can cut through the noise and find what they need. That’s why we’ve created a personalized productivity dashboard right in the Microsoft Edge Enterprise new tab page. Any enterprise user of Microsoft Edge can use this by opening a new tab and then selecting the **Work feed** tab.
+As the browser role grows to become central for workers to finish everyday tasks, it's more important now than ever that information workers can cut through the noise and find what they need. That's why we've created a personalized productivity dashboard right in the Microsoft Edge Enterprise new tab page. Any enterprise user of Microsoft Edge can use this by opening a new tab and then selecting the **Work feed** tab.
 
 ![Image of the work feed page.](media/microsoft-edge-enterprise-ntp/workfeed2.png)
 
@@ -81,7 +78,7 @@ Trying to find something for work, but can't quite figure out where to start? Ju
 
 The new tab page will remember the last tab the user selected, so simply selecting the Work feed tab will set it as default.
 
-For tenant admins, if you’d like to have your organization automatically set Work feed as the default tab, follow these steps:
+For tenant admins, if you'd like to have your organization automatically set Work feed as the default tab, follow these steps:
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage).
 2. In the Search bar type **News** and press **Enter**.

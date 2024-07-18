@@ -3,7 +3,7 @@ title: "Microsoft Edge for Virtual desktop infrastructure (VDI)"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "Microsoft Edge for Virtual desktop infrastructure (VDI)."
 ---
 
 # Microsoft Edge for Virtual desktop infrastructure (VDI)
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article describes the requirements and limitations for using Microsoft Edge in a virtual environment.
 
@@ -34,7 +31,7 @@ The following platforms are certified for Microsoft Edge:
 - Azure Virtual Desktop
 - Citrix Virtual Apps and Desktops (formerly known as XenApp and XenDesktop)
 
-Although other VDI solutions haven't been certified by the Microsoft Edge team yet, it's expected that the most common workflows in Microsoft Edge should be supported. The following guidance may or may not be applicable to your chosen solution.
+Although the Microsoft team hasn't certified other VDI solutions yet, it's expected that the most common workflows in Microsoft Edge should be supported. The following guidance might or might not be applicable to your chosen solution.
 
 ## Performance considerations for Microsoft Edge on VDI
 
@@ -45,13 +42,13 @@ The following minimum requirements are recommended for deploying Microsoft Edge 
 - vCPU – 2-4 cores per User
 - RAM – 1 GB per User
 
-Large and complex web applications and extensions will need more memory and processing capability, which must be considered when configuring your virtual environment.
+Large and complex web applications and extensions need more memory and processing capability, which must be considered when configuring your virtual environment.
 
 ## Microsoft Edge on non-persisted VDI environments
 
-Many VDI solutions allow access to persisted environments, where users are assigned a virtual environment that persists between sessions, and non-persisted environments, where users are assigned to one of several available machines, possibly a different machine each session, user data may or may not sync between sessions.
+Many VDI solutions allow access to persisted environments, where users are assigned a virtual environment that persists between sessions, and non-persisted environments, where users are assigned to one of several available machines, possibly a different machine each session, user data might or might not sync between sessions.
 
-When using a non-persisted environment, one usually creates a "golden image" that has the required apps and configurations that will be deployed on each device. Use the following recommendations as a guide for preparing a golden image.
+When using a non-persisted environment, one usually creates a "golden image" that has the required apps and configurations that are deployed on each device. Use the following recommendations as a guide for preparing a golden image.
 
 ### Deploy Microsoft Edge
 
@@ -77,9 +74,9 @@ For more information about disabling automatic updates, see the following polici
 
 ### Profile management
 
-On non-persisted setups, it's important to consider that VMs may not maintain user state between sessions or users may be assigned a VM they've never used before. In this scenario, the VM doesn't have any of the user's data.
+On non-persisted setups, it's important to consider that VMs might not maintain user state between sessions or users might be assigned a VM they've never used before. In this scenario, the VM doesn't have any of the user's data.
 
-Microsoft Edge supports several methods for syncing user data so it's available regardless of how they are accessing Microsoft Edge. Two methods are Microsoft Entra ID sync and on-premises sync for Micrsoft Microsoft Entra users.
+Microsoft Edge supports several methods for syncing user data so it's available regardless of how they're accessing Microsoft Edge. Two methods are Microsoft Entra ID sync and on-premises sync for Microsoft Entra users.
 
 <a name='microsoft-entra-sync'></a>
 
@@ -87,7 +84,7 @@ Microsoft Edge supports several methods for syncing user data so it's available 
 
 If your Microsoft Entra ID plan supports it, Enterprise sync is the fastest and easiest method to ensure that Microsoft Edge user data is synced to all user devices. For more information, see [Configure Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync)
 
-### On-premise Sync for Active Directory Users
+### On-premises Sync for Active Directory Users
 
 With on-premises sync, Microsoft Edge saves an Active Directory user's favorites and settings to a file that can easily be moved between different computers.  
 
