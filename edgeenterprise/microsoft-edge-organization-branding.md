@@ -90,7 +90,7 @@ Yes, organization isn't supported for the following scenarios.
 
 - Organization branding isn't applied if:  
   - OneDrive desktop sync is enabled.
-  - The OneDrive policy to exclude specific kinds of files from being uploaded is disabled.
+  - The OneDrive policy to [exclude specific kinds of files from being uploaded](/sharepoint/use-group-policy#exclude-specific-kinds-of-files-from-being-uploaded) is disabled.
 - Organization branding via Entra assets doesn't support the Microsoft Edge for Business taskbar icon overlay in macOS.
 - Organization branding via Microsoft Edge management service isn't supported for:
   - Microsoft Edge Mobile.
