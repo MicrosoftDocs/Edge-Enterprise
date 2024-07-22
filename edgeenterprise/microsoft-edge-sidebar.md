@@ -154,7 +154,7 @@ The second option is to set the [EdgeSidebarAppUrlHostBlockList](/deployedge/mic
 3. Click **Show**.
 4. Enter **\*** to block all sidebar apps except Search and then click **OK**.
 
-![Use group policy to control which extensions can't be installed in the sidebar.](media/microsoft-edge-sidebar/control-app-cannot-be-opened-sidebar2.png)
+![Use group policy to control which appsextensions can't be installed in the sidebar.](media/microsoft-edge-sidebar/control-app-cannot-be-opened-sidebar2.png)
 
 <!-- =========================================== -->
 ## Allow specific sidebar apps
