@@ -49,7 +49,7 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 
 ### New policies
 
-- [iOS & Android] Disable UIR prompt pop-up via **disabledFeatures** policy
+- [iOS & Android] Disable UIR prompt pop-up via **EdgeDisabledFeatures** policy
 - [iOS & Android] Add CIDR (Classless Inter-domain Routing) support in AllowListURLs/BlockListURLs feature
 - [iOS & Android] New **InternalPagesBlockList** policy to allow IT admin disable edge internal pages
 
