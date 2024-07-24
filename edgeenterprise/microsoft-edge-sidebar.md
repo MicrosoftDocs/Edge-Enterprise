@@ -166,7 +166,7 @@ The second option is to set the [EdgeSidebarAppUrlHostBlockList](/deployedge/mic
 3. Click **Show**.
 4. Enter **\*** to block all sidebar apps except Search and then click **OK**. For information about blocking Search, see [Block the Search app](#block-the-search-app).
 
-![Use group policy to control which appsextensions can't be installed in the sidebar.](media/microsoft-edge-sidebar/control-app-cannot-be-opened-sidebar2.png)
+![Use group policy to control which appsextensions can't be installed in the sidebar.](media/microsoft-edge-sidebar/control-app-cannot-be-opened-sidebar2-cropped.png)
 
 <!-- =========================================== -->
 ## Allow specific sidebar apps
@@ -180,7 +180,7 @@ You can use the [ExtensionInstallBlocklist](/deployedge/microsoft-edge-policies#
 
    Use group policy to see what extensions can't be enabled:
 
-   ![Use group policy to control which extensions can't be installed.](media/microsoft-edge-sidebar/control-extension-cannot-be-installed-2.png)
+   ![Use group policy to control which extensions can't be installed.](media/microsoft-edge-sidebar/control-extension-cannot-be-installed-2-cropped.png)
 
 5. In the group policy management editor, go to **Administrative Templates** > **Microsoft Edge** > **Extensions** and then select "Allow specific extensions to be installed".
 6. Enter the **Extension ID** of the sidebar app that you want to allow.
