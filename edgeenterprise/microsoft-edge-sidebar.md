@@ -85,7 +85,7 @@ Use the following steps as a guide to configuring this policy.
 ## Block specific sidebar apps (Deprecated)
 
 > [!NOTE]
-> This applies to Microsoft Edge 126 and earlier. It is recommended to use the [**block sidebar apps using URLs**](##block-sidebar-apps-except-search-using-urls) instead. 
+> This applies to Microsoft Edge 126 and earlier. It is recommended to use the [**block sidebar apps using URLs**](#block-sidebar-apps-except-search-using-urls) instead.
 
 You can use the [ExtensionInstallBlockList](/deployedge/microsoft-edge-policies#extensioninstallblocklist) policy to control which sidebar apps are blocked.
 
