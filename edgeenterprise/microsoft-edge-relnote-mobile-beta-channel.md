@@ -36,12 +36,12 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 
 - [iOS] Upgrade MS Tunnel SDK version 1.0.18
 - [iOS] Upgrade Intune MAM SDK to version 19.4.1
-- [Android] Exclude AAD Copilot from NTP's voice and camera search
+- [Android] Exclude Microsoft Entra ID Copilot from NTP's voice and camera search
 
 
 ### Bug fixes
 
-- [iOS] Fix **DefaultBrowserSettingEnabled** policy that did not work
+- [iOS] Fix **DefaultBrowserSettingEnabled** policy that didn't work
 - [iOS] Fix the UI layout issue caused by changes in UIWindow `safeAreaInsets` leading to Webview content offset shift in certain situations
 - [Android] Fix a bug related to policy **InPrivateModeAvailability**
 - [Android] Fix SSO bug when a blocked link is opened from Outlook
