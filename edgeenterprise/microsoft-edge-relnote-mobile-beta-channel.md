@@ -38,7 +38,6 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 - [iOS] Upgrade Intune MAM SDK to version 19.4.1
 - [Android] Exclude Microsoft Entra ID Copilot from NTP's voice and camera search
 
-
 ### Bug fixes
 
 - [iOS] Fix **DefaultBrowserSettingEnabled** policy that didn't work
@@ -46,21 +45,16 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 - [Android] Fix a bug related to policy **InPrivateModeAvailability**
 - [Android] Fix SSO bug when a blocked link is opened from Outlook
 
-
 ### New policies
 
-- [iOS & Android] Disable UIR prompt pop-up via **EdgeDisabledFeatures** policy
+- [iOS & Android] Disable UIR prompt pop-up via **com.microsoft.intune.mam.managedbrowser.disabledFeatures** or **EdgeDisabledFeatures** policy
 - [iOS & Android] Add CIDR (Classless Inter-domain Routing) support in AllowListURLs/BlockListURLs feature
-- [iOS & Android] New **InternalPagesBlockList** policy to allow IT admin disable edge internal pages
-
+- [iOS & Android] New **com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList** policy to allow IT admin disable edge internal pages
 
 ### Enhancements
 
 - [iOS] Avoid multiple auth prompt dialog for NTLMSSO management
 - [iOS] Enhance URL block list in MAM with respect to policy description
-- [iOS & Android] Check the login request URL’s environment type and tenant id for different scenarios
-
-
 
 ## Version 127.0.2651.59: (Android and iOS): July 19, 2024
 
