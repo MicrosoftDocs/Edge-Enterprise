@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/12/2024
+ms.date: 07/25/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -27,6 +27,50 @@ Archived versions of these release notes are available at [Archived release note
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 127.0.2651.73: (Android and iOS): July 25, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 127.0.2651.69 (Android and iOS): July 23, 2024
+
+Fixed various bugs and performance issues, general updates, new policies, and enhancements.
+
+### General updates
+
+- [iOS] Upgrade MS Tunnel SDK version 1.0.18
+- [iOS] Upgrade Intune MAM SDK to version 19.4.1
+- [Android] Exclude Microsoft Entra ID Copilot from NTP's voice and camera search
+
+### Bug fixes
+
+- [iOS] Fix **DefaultBrowserSettingEnabled** policy that didn't work
+- [iOS] Fix the UI layout issue caused by changes in UIWindow `safeAreaInsets` leading to Webview content offset shift in certain situations
+- [Android] Fix a bug related to policy **InPrivateModeAvailability**
+- [Android] Fix SSO bug when a blocked link is opened from Outlook
+
+### New policies
+
+- [iOS & Android] Disable UIR prompt pop-up via **com.microsoft.intune.mam.managedbrowser.disabledFeatures** or **EdgeDisabledFeatures** policy
+- [iOS & Android] Add CIDR (Classless Inter-domain Routing) support in AllowListURLs/BlockListURLs feature
+- [iOS & Android] New **com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList** policy to allow IT admin disable edge internal pages
+
+### Enhancements
+
+- [iOS] Avoid multiple auth prompt dialog for NTLMSSO management
+- [iOS] Enhance URL block list in MAM with respect to policy description
+
+## Version 127.0.2651.59: (Android and iOS): July 19, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 127.0.2651.55 (Android): July 16, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 127.0.2651.54 (iOS): July 16, 2024
+
+Fixed various bugs and performance issues.
 
 ## Version 127.0.2651.46 (Android and iOS): July 12, 2024
 

@@ -3,7 +3,7 @@ title: "Ready for Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/01/2024
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "Ready for Microsoft Edge"
 ---
 
 # Ready for Microsoft Edge
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 The article provides information for the IT Administrator who's planning a Microsoft Edge deployment and needs information about application compatibility and support.
 
@@ -43,7 +40,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Provider |  Product | Support statement |
 |-|-|-|
 | Accruent  | TMS 5.23  | https://www.accruent.com/resources/blog-posts/accruent-enhances-tms-microsoft-edge-compatibility-new-automations?utm_source=linkedin&utm_medium=organic-social&utm_campaign=healthcare-general  |
-| Acumatica  | Acumatica ERP  | https://help-2020r1.acumatica.com/Wiki/(W(1))/ShowWiki.aspx?pageid=a8d5d39d-513a-4f93-b484-a95eb33103a1  |
+| Acumatica  | Acumatica ERP  | https://www.acumatica.com/acumatica-erp-demo-video/?utm_deivce=c&msclkid=5e0566865828170bf91400d68d7f6d0e&utm_source=bing&utm_medium=cpc&utm_campaign=bing-us-acumatica_branded_terms-tm_editions_exact&utm_term=acumatica%20erp&utm_content=Acumatica%20Keywords%20%5BExact%5D   |
 | Adaptive (Workday)    | Workday Adaptive Planning   | https://www.adaptiveplanning.com/uk/products/adaptive-technology-foundation  |
 | Adobe  | Creative Cloud Products (Acrobat, Photoshop, Illustrator)  | https://helpx.adobe.com/creative-cloud/system-requirements.html?promoid=P79NQR4R&mv=other  |
 | Airtable   | Airtable   | https://support.airtable.com/hc/en-us/articles/217990018-What-are-the-technical-requirements-for-using-Airtable- |
@@ -93,7 +90,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Intuit | Quickbooks  | https://quickbooks.intuit.com/learn-support/global/help-articles/system-requirements-for-quickbooks-online/00/396218 |
 | Intuit | TurboTax  | https://turbotax.intuit.com/personal-taxes/online/system-requirements  |
 | InVision  | InVision  | https://support.invisionapp.com/hc/en-us/articles/203009869-Which-browsers-and-design-tools-are-required-for-InVision-services-    |
-| Ivanti, Inc.  | Workspace Control   | https://forums.ivanti.com/s/article/INFO-Microsoft-Edge-Chromium-is-added-as-a-default-application-in-Websites-Security?language=en_US  |
+| Ivanti, Inc.  | Workspace Control   | https://www.cdw.com/content/cdw/en/brand/ivanti.html?cm_mmc=Vanity-_-Ivanti--_-012723?cm_ven=acquirgy&cm_cat=bing&cm_pla=S3+Ivanti&cm_ite=Ivanti+General+B&s_kwcid=AL!4223!10!73530150798777!73530234791958&ef_id=0137ba0eeb6010d38d11dc5e3c6ce6bc:G:s&msclkid=0137ba0eeb6010d38d11dc5e3c6ce6bc  |
 | Jaggaer  | Jaggaer One | https://library.jaggaer.com/wp-content/uploads/Supported-Browsers-Devices.pdf |
 | Laserfiche  | Laserfiche  | https://support.laserfiche.com/kb/1014127/laserfiche-compatibility-information-for-microsoft-edge-based-on-chromium  |
 | LexisNexis  | LexisNexis  | https://www.lexisnexis.com/en-us/gateway.page   |

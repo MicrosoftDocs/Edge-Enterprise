@@ -14,9 +14,6 @@ description: "Password Monitor auto-enabled for users"
 
 # Password Monitor auto-enabled for users
 
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
-
 This article describes how admins can turn on Password Monitor in Microsoft Edge for select users. The article also gives the steps to control how monitoring is enabled.
 
 ## Introduction, benefits, and availability
@@ -42,6 +39,37 @@ When the feature is configured as recommended enabled or unconfigured, there are
 ![Prompt to save password](media/microsoft-edge-security-password-monitor/password-monitor-consent.png)
 
 - Direct activation. Users can go to **Settings** > **Passwords** anytime and turn the feature On or Off.
+
+=======
+  :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enabled-notice.png" alt-text="Password Monitor enabled notice":::
+
+-  Getting explicit consent. Users that don't have Password Sync turned on are asked for permission to turn on Password Monitor. They get a prompt when the following actions happen:
+   - When a user is saving a new password.
+ 
+     :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-save-pw-prompt.png" alt-text="Prompt to save password":::
+
+   - When a user has signed-in to the browser using a saved password.
+  
+     :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-after-signin.png" alt-text="Confirmation prompt after sign-in":::
+   
+- Direct activation. Users can go to **Settings** > **Passwords** anytime and turn the feature On or Off.
+
+## User scenarios with Password Monitor auto-enabled
+
+The following table shows scenarios where Password Monitor is auto-enabled and how it works on user devices.
+
+| Scenario | Base conditions | Impact |
+|--|--|--|
+| 1 with Sync on | Sync ON<br>Feature enabled previously: No<br>Response to Consent UI: None | Feature enabled by default and a notice bubble is shown 2 min after browser starts.<br>- If sync is turned off after that, the feature is disabled.<br>-  Feature turned off before altering sync, sync no longer affects the feature.   |
+| 2 with Sync on | Sync ON<br>Feature enabled previously: Yes<br>Response to Consent UI: None | Feature stays the same as user choice.  Notice bubble isn't shown and there's no effect of the sync change on feature value.|
+| 3 with Sync off | Sync Off<br>Feature enabled previously: No<br>Response to Consent UI: None | Sync is off and the feature stays disabled<br>- At any subsequent point if user turns on the sync without altering the feature: the feature is enabled and auto-enablement notification is shown 2 minutes after Sync is turned on. <br> - If sync is turned off again, the  feature is disabled <br>- If the feature is changed before turning on sync, sync no longer affects Password Monitor.  |  
+| 4 with Sync off | Sync OFF<br>Feature enabled previously: Yes<br>Response to Consent UI: None | Feature stays the same as user choice, notice bubble isn't shown, and there's no effect of sync change on the feature value.  |
+
+In addition, if a user signs in using a restricted work account via policies for any of the following, the feature is NOT auto-enabled for them:
+
+- Password Monitor is disabled  
+- Password Sync is disabled
+- Sharing of data with Microsoft servers is disabled
 
 ## Frequently Asked Questions
 

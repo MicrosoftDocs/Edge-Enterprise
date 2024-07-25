@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/29/2024
+ms.date: 07/12/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -34,7 +34,9 @@ The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[EdgeSidebarAppUrlHostBlockList](#edgesidebarappurlhostblocklist)|Control which apps cannot be opened in Microsoft Edge sidebar|
+|[ShowDownloadsInsecureWarningsEnabled](#showdownloadsinsecurewarningsenabled)|Enable insecure download warnings|
+|[ApplicationBoundEncryptionEnabled](#applicationboundencryptionenabled)|Enable Application Bound Encryption|
+|[DynamicCodeSettings](#dynamiccodesettings)|Dynamic Code Settings|
 
 ## Available policies
 
@@ -44,6 +46,7 @@ These tables list all of the browser-related group policies available in this re
 - [Cast](#cast)
 - [Content settings](#content-settings)
 - [Default search provider](#default-search-provider)
+- [Downloads](#downloads)
 - [Edge Website Typo Protection settings](#edge-website-typo-protection-settings)
 - [Edge Workspaces settings](#edge-workspaces-settings)
 - [Experimentation](#experimentation)
@@ -164,6 +167,11 @@ These tables list all of the browser-related group policies available in this re
 |[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)|Default search provider search URL|
 |[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|Default search provider URL for suggestions|
 |[NewTabPageSearchBox](#newtabpagesearchbox)|Configure the new tab page search box experience|
+### [*Downloads*](#downloads-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[ShowDownloadsInsecureWarningsEnabled](#showdownloadsinsecurewarningsenabled)|Enable insecure download warnings|
 ### [*Edge Website Typo Protection settings*](#edge-website-typo-protection-settings-policies)
 
 |Policy Name|Caption|
@@ -418,6 +426,7 @@ These tables list all of the browser-related group policies available in this re
 |[AlwaysOpenPdfExternally](#alwaysopenpdfexternally)|Always open PDF files externally|
 |[AmbientAuthenticationInPrivateModesEnabled](#ambientauthenticationinprivatemodesenabled)|Enable Ambient Authentication for InPrivate and Guest profiles|
 |[AppCacheForceEnabled](#appcacheforceenabled)|Allows the AppCache feature to be re-enabled, even if it's turned off by default (obsolete)|
+|[ApplicationBoundEncryptionEnabled](#applicationboundencryptionenabled)|Enable Application Bound Encryption|
 |[ApplicationLocaleValue](#applicationlocalevalue)|Set application locale|
 |[AskBeforeCloseEnabled](#askbeforecloseenabled)|Get user confirmation before closing a browser window with multiple tabs|
 |[AudioCaptureAllowed](#audiocaptureallowed)|Allow or block audio capture|
@@ -501,6 +510,7 @@ These tables list all of the browser-related group policies available in this re
 |[DoubleClickCloseTabEnabled](#doubleclickclosetabenabled)|Double Click feature in Microsoft Edge enabled (only available in China)|
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
+|[DynamicCodeSettings](#dynamiccodesettings)|Dynamic Code Settings|
 |[Edge3PSerpTelemetryEnabled](#edge3pserptelemetryenabled)|Edge 3P SERP Telemetry Enabled|
 |[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Allow features to download assets from the Asset Delivery Service|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
@@ -6447,6 +6457,74 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <string>bing</string>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ## Downloads policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ShowDownloadsInsecureWarningsEnabled
+
+  #### Enable insecure download warnings
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 128 or later
+
+  #### Description
+
+  Enables warnings when potentially dangerous content is downloaded over HTTP.
+
+If you enable or don't configure this policy, when a user tries to download potentially dangerous content from an HTTP site, the user will receive a UI warning, such as "Insecure download blocked." The user will still have an option to proceed and download the item.
+
+If you disable this policy, the warnings for insecure downloads will be suppressed.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShowDownloadsInsecureWarningsEnabled
+  - GP name: Enable insecure download warnings
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Downloads
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Downloads
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: ShowDownloadsInsecureWarningsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ShowDownloadsInsecureWarningsEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -17839,6 +17917,63 @@ If you set this policy to false, or don't set it, AppCache will follow Microsoft
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ApplicationBoundEncryptionEnabled
+
+  #### Enable Application Bound Encryption
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 127 or later
+
+  #### Description
+
+  Enabling this policy or leaving it unset binds the encryption keys used for local data storage to Microsoft Edge whenever possible.
+
+Disabling this policy has a detrimental effect on Microsoft Edge's security because unknown and potentially hostile apps can retrieve the encryption keys used to secure data.
+
+Only turn off this policy if there are compatibility issues, such as scenarios where other applications need legitimate access to Microsoft Edge's data. Encrypted user data is expected to be fully portable between different computers or the integrity and location of Microsoft Edge's executable files isn't consistent.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ApplicationBoundEncryptionEnabled
+  - GP name: Enable Application Bound Encryption
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ApplicationBoundEncryptionEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ApplicationLocaleValue
 
   #### Set application locale
@@ -23777,6 +23912,73 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### DynamicCodeSettings
+
+  #### Dynamic Code Settings
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 128 or later
+
+  #### Description
+
+  This policy controls the dynamic code settings for Microsoft Edge.
+
+Disabling dynamic code improves the security of Microsoft Edge by preventing potentially hostile dynamic code and third-party code from making changes to Microsoft Edge's behavior. However this might cause compatibility issues with third-party software that must run in the browser process.
+
+If you set this policy to 0 (the default) or leave unset, then Microsoft Edge will use the default settings.
+
+If you set this policy to 1 – (EnabledForBrowser) then the Microsoft Edge browser process is prevented from creating dynamic code.
+
+Policy options mapping:
+
+* Default (0) = Default dynamic code settings
+
+* EnabledForBrowser (1) = Prevent the browser process from creating dynamic code
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DynamicCodeSettings
+  - GP name: Dynamic Code Settings
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DynamicCodeSettings
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### Edge3PSerpTelemetryEnabled
 
   #### Edge 3P SERP Telemetry Enabled
@@ -24366,7 +24568,7 @@ Starting in version 90.0.818.56, the behavior of the messaging letting users kno
   
   #### Supported versions:
 
-  - On Windows and macOS since 128 or later
+  - On Windows and macOS since 127 or later
 
   #### Description
 
@@ -34107,7 +34309,7 @@ If you disable this policy, the QR Code Generator feature is disabled.
 
   - Can be mandatory: Yes
   - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  - Dynamic Policy Refresh: Yes
   - Per Profile: No
   - Applies to a profile that is signed in with a Microsoft account: Yes
 

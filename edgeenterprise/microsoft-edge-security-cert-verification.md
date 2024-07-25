@@ -3,7 +3,7 @@ title: "Changes to Microsoft Edge browser TLS server certificate verification"
 ms.author: erikan
 author: dan-wesley
 manager: arvindm
-ms.date: 08/21/2023
+ms.date: 07/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -13,9 +13,6 @@ description: "An overview of the changes to Microsoft Edge browser TLS server ce
 ---
 
 # Changes to Microsoft Edge browser TLS server certificate verification
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 When Microsoft Edge establishes connections to an HTTPS server, Edge verifies that the server has presented a certificate issued by an entity trusted by the browser. This trust relationship is established via a **certificate trust list** and the component responsible for performing the checks is called the **certificate verifier**.
 
