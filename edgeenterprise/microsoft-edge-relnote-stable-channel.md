@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/24/2024
+ms.date: 07/25/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -64,6 +64,11 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 ### Policy updates
 
+#### New policies
+
+- [EdgeSidebarAppUrlHostBlockList](/deployedge/microsoft-edge-policies#edgesidebarappurlhostblocklist) - Control which apps cannot be opened in Microsoft Edge sidebar
+- CSSCustomStateDeprecatedSyntaxEnabled- Controls whether the deprecated :--foo syntax for CSS custom state is enabled
+
 #### Deprecated policies
 
 - [SignInCtaOnNtpEnabled](/deployedge/microsoft-edge-policies#signinctaonntpenabled) - Enable sign in click to action dialog (deprecated)
@@ -71,6 +76,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 #### Obsolete policies
 
 - [ImmersiveReaderPictureDictionaryEnabled](/deployedge/microsoft-edge-policies#immersivereaderpicturedictionaryenabled) - Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete)
+- [EdgeFollowEnabled](/deployedge/microsoft-edge-policies#edgefollowenabled) - Enable Follow service in Microsoft Edge (obsolete)
 
 ## Version 126.0.2592.113: July 18, 2024
 
