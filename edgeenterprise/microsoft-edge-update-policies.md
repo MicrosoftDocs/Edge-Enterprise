@@ -3,7 +3,7 @@ title: "Microsoft Edge Update Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: archandr
-ms.date: 10/19/2023
+ms.date: 07/24/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -49,6 +49,7 @@ These tables lists all of the update-related group policies available in this re
 |[EdgePreview](#edgepreview)|Allow users in the Windows Insider Program to be enrolled in Edge Preview (per channel)|
 |[MeteredUpdatesDefault](#meteredupdatesdefault)|Let users update all apps on metered connections|
 |[MeteredUpdates](#meteredupdates)|Let users update on metered connections (per channel)|
+|[Uninstall](#uninstall)|Specify uninstall behavior for Microsoft Edge|
 
 ### [Preferences](#preferences-policies)
 |Policy Name|Caption|
@@ -85,9 +86,9 @@ These tables lists all of the update-related group policies available in this re
 #### Description
 You can specify the default behavior of all channels to allow or block Microsoft Edge on domain-joined devices.
 
-You can override this policy for individual channels by enabling the '[Allow installation](#install)' policy for specific channels.
+You can override this policy for individual channels by enabling (1) the '[Allow installation](#install)' policy for specific channels.
 
-If you disable this policy, the installation of Microsoft Edge is blocked. This only affects the installation of Microsoft Edge software when the '[Allow installation](#install)' policy is set to Not Configured.
+If you disable (2) this policy, the installation of Microsoft Edge is blocked. This only affects the installation of Microsoft Edge software when the '[Allow installation](#install)' policy is set to Not Configured.
 
 This policy doesn't prevent Microsoft Edge Update from running or prevent users from installing Microsoft Edge software using other methods.
 
@@ -117,17 +118,17 @@ This policy is available only on Windows instances that are joined to a Microsof
 #### Description
 Lets you specify the default behavior for all channels concerning the way Microsoft Edge Update handles available updates for Microsoft Edge. Can be overridden for individual channels by specifying the '[Update policy override](#update-webview)' policy for those specific channels.
 
-  If you enable this policy, Microsoft Edge Update handles Microsoft Edge updates according to how you configure the following options:
-   - Always allow updates: Updates are always applied when found, either by periodic update check or by a manual update check.
-   - Automatic silent updates only: Updates are applied only when they're found by the periodic update check.
-   - Manual updates only: Updates are applied only when the user runs a manual update check.
-   - Updates disabled: Updates are never applied.
+If you enable this policy, Microsoft Edge Update handles Microsoft Edge updates according to how you configure the following options:
+- Updates disabled (0): Updates are never applied.
+- Always allow updates (1) (recommended): Updates are always applied when found, either by periodic update check or by a manual update check.
+- Manual updates only (2): Updates are applied only when the user runs a manual update check.
+- Automatic silent updates only (3): Updates are applied only when they're found by the periodic update check.
 
-  If you select manual updates, make sure you periodically check for updates by using the app's manual update mechanism, if available. If you disable updates, periodically check for updates, and distribute them to users.
+If you select manual updates, make sure you periodically check for updates by using the app's manual update mechanism, if available. If you disable updates, periodically check for updates, and distribute them to users.
 
-  If you don't enable and configure this policy, Microsoft Edge Update handles available updates as specified by the '[Update policy override](#update-webview)' policy.
+If you don't enable and configure this policy, Microsoft Edge Update handles available updates as specified by the '[Update policy override](#update-webview)' policy.
 
-  This policy is available only on Windows instances that are joined to a Microsoft&reg; Active Directory&reg; domain.
+This policy is available only on Windows instances that are joined to a Microsoft&reg; Active Directory&reg; domain.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: UpdateDefault
@@ -153,17 +154,17 @@ Lets you specify the default behavior for all channels concerning the way Micros
 #### Description
 Specifies whether a Microsoft Edge channel can be installed on domain-joined devices.
 
-  If you enable this policy for a channel, Microsoft Edge will not be blocked from installation.
+  If you enable (1) this policy for a channel, Microsoft Edge will not be blocked from installation.
 
-  If you disable this policy for a channel (or set it to 'Installs disabled'), Microsoft Edge will be blocked from installation.
+  If you disable (0) this policy for a channel (or set it to 'Installs disabled'), Microsoft Edge will be blocked from installation.
 
   If you don't configure this policy for a channel, the '[Allow installation default](#installdefault)' policy configuration determines whether users can install that channel of Microsoft Edge.
 
-If you set this policy to Always allow Machine-Wide Installs but not Per-User Installs, 'Microsoft Edge' will only be deployed machine-wide.
+If you set this policy to Always allow Machine-Wide Installs but not Per-User Installs (4), 'Microsoft Edge' will only be deployed machine-wide.
 
-If you set this policy to Force Installs (Machine-Wide), 'Microsoft Edge' may only be deployed machine-wide if Microsoft Edge Update is pre-installed. Requires Microsoft Edge Update 1.3.155.43 or higher.
+If you set this policy to Force Installs (Machine-Wide) (5), 'Microsoft Edge' may only be deployed machine-wide if Microsoft Edge Update is pre-installed. Requires Microsoft Edge Update 1.3.155.43 or higher.
 
-If you set this policy to Force Installs (Per-User), 'Microsoft Edge' may only be deployed on a Per-User basis to all machines if Microsoft Edge Update is pre-installed Per-User. Requires Microsoft Edge Update 1.3.155.43 or higher.
+If you set this policy to Force Installs (Per-User) (6), 'Microsoft Edge' may only be deployed on a Per-User basis to all machines if Microsoft Edge Update is pre-installed Per-User. Requires Microsoft Edge Update 1.3.155.43 or higher.
 
 This policy is available only on Windows instances that are joined to a Microsoft&reg; Active Directory&reg; domain.
 #### Windows information and settings
@@ -200,10 +201,10 @@ This policy is available only on Windows instances that are joined to a Microsof
 Specifies how Microsoft Edge Update handles available updates from Microsoft Edge.
 
 If you enable this policy, Microsoft Edge Update handles Microsoft Edge updates according to how you configure the following options:
-  - Always allow updates: Updates are always applied when found, either by periodic update check or by a manual update check.
-  - Automatic silent updates only: Updates are applied only when they're found by the periodic update check.
-  - Manual updates only: Updates are applied only when the user runs a manual update check. (Not all apps provide an interface for this option.)
-  - Updates disabled: Updates are never applied.
+  - Updates disabled (0): Updates are never applied.
+  - Always allow updates (1) (Recommended): Updates are always applied when found, either by periodic update check or by a manual update check.
+  - Manual updates only (2): Updates are applied only when the user runs a manual update check. (Not all apps provide an interface for this option.)
+  - Automatic silent updates only (3): Updates are applied only when they're found by the periodic update check.
 
 If you select manual updates, make sure you periodically check for updates by using the app's manual update mechanism, if available. If you disable updates, periodically check for updates, and distribute them to users.
 
@@ -247,9 +248,9 @@ This policy lets a user run Microsoft Edge (Edge HTML) and Microsoft Edge (Chrom
 
 If this policy is set to "Not configured", Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the "Disabled" setting.
 
-The "Disabled" setting blocks a side-by-side experience and Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the "Not Configured" setting.
+The “Disabled” (0) setting blocks a side-by-side experience and Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the “Not Configured” setting.
 
-When this policy is "Enabled", Microsoft Edge (Chromium-based) and Microsoft Edge (Edge HTML) can run side-by-side after Microsoft Edge (Chromium-based) is installed.
+When this policy is “Enabled” (1), Microsoft Edge (Chromium-based) and Microsoft Edge (Edge HTML) can run side-by-side after Microsoft Edge (Chromium-based) is installed.
 
 For this group policy to take affect, it must be configured before the automatic install of Microsoft Edge (Chromium-based) by Windows Update. Note: ​A user can block the automatic update of Microsoft Edge (Chromium-based) by using the Microsoft Edge (Chromium-based) Blocker Toolkit.
 
@@ -279,8 +280,8 @@ Starting with Windows 10 version 20H2 Microsoft Edge Legacy and the side-by-side
 #### Description
 Lets you specify the default behavior for all channels for creating a desktop shortcut when Microsoft Edge is installed.
 
-  If you enable this policy a desktop shortcut is created when Microsoft Edge is installed.
-  If you disable this policy, no desktop shortcut will be created when Microsoft Edge is installed.
+  If you enable (1) this policy a desktop shortcut is created when Microsoft Edge is installed.
+  If you disable (0) this policy, no desktop shortcut will be created when Microsoft Edge is installed.
   If you don't configure this policy a desktop shortcut to Microsoft Edge will be created during installation.
   If Microsoft Edge is already installed, this policy will have no effect.
 #### Windows information and settings
@@ -306,8 +307,8 @@ Lets you specify the default behavior for all channels for creating a desktop sh
 >Microsoft Edge Update 1.3.128.0 and later
 
 #### Description
-If you enable this policy a desktop shortcut is created when Microsoft Edge is installed.
-  If you disable this policy, no desktop shortcut will be created when Microsoft Edge is installed.
+If you enable (1) this policy a desktop shortcut is created when Microsoft Edge is installed.
+  If you disable (0) this policy, no desktop shortcut will be created when Microsoft Edge is installed.
   If you don't configure this policy a desktop shortcut to Microsoft Edge will be created during installation.
   If Microsoft Edge is already installed, this policy will have no effect.
 
@@ -347,9 +348,9 @@ Specifies that Microsoft Edge Update should rollback installations of Microsoft 
 
 This policy has no effect unless '[Target version override](#targetversionprefix)' is set and '[Update policy override](#update-webview)' is set to one of the ON states (Always allow updates, Automatic silent updates only, Manual updates only).
 
-If you disable this policy or don't configure it, installs that have a version higher than that specified by '[Target version override](#targetversionprefix)' will be left as-is.
+If you disable (0) this policy or don't configure it, installs that have a version higher than that specified by '[Target version override](#targetversionprefix)' will be left as-is.
 
-If you enable this policy, installs that have a current version higher than specified by the '[Target version override](#targetversionprefix)' will be downgraded to the target version.
+If you enable (1) this policy, installs that have a current version higher than specified by the '[Target version override](#targetversionprefix)' will be downgraded to the target version.
 
 We recommend that users install the latest version of the Microsoft Edge browser to ensure protection by the latest security updates. Rollback to an earlier version risks exposure to known security issues. This policy is meant to be used as a temporary fix to address issues in a Microsoft Edge browser update.
 
@@ -437,7 +438,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 #### Description
 Specifies which Channel Microsoft Edge should be updated to.
 
-If you enable this poicy, the Microsoft Edge will be updated to the Channel according to how you configure the following options:
+If you enable this policy, Microsoft Edge will be updated to the Channel according to how you configure the following options:
 
   - Stable: Microsoft Edge will be updated to the latest stable version.
   - Beta: Microsoft Edge will be updated to the latest beta version.
@@ -474,9 +475,9 @@ dev
 #### Description
 Lets you specify the default behavior for all channels for creating a desktop shortcut when Microsoft Edge is installed.
 
-  If you set this policy to "Force delete system-level Desktop Shortcuts", any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots.
-  If you set this policy to "Force delete system-level and user-level Desktop Shortcuts", any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots and any existing user-level desktop shortcuts will be deleted when the browser updates. This includes user-level desktop shortcuts that users might have made themselves.
-  If you don't configure this policy, nothing will happen to existing Microsoft Edge desktop shortcuts.
+  If you set this policy to "Force delete system-level Desktop Shortcuts" (1), any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots.
+  If you set this policy to "Force delete system-level and user-level Desktop Shortcuts" (2), any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots and any existing user-level desktop shortcuts will be deleted when the browser updates. This includes user-level desktop shortcuts that users might have made themselves.
+  If you don't configure this policy or disable it (0), nothing will happen to existing Microsoft Edge desktop shortcuts.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: RemoveDesktopShortcutDefault
@@ -500,9 +501,9 @@ Lets you specify the default behavior for all channels for creating a desktop sh
 >Microsoft Edge Update 1.3.155.1 and later
 
 #### Description
-If you set this policy to "Force delete system-level Desktop Shortcuts", any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots.
-  If you set this policy to "Force delete system-level and user-level Desktop Shortcuts", any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots and any existing user-level desktop shortcuts will be deleted when the browser updates. This includes user-level desktop shortcuts that users might have made themselves.
-  If you don't configure this policy, nothing will happen to existing Microsoft Edge desktop shortcuts.
+If you set this policy to "Force delete system-level Desktop Shortcuts" (1), any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots.
+  If you set this policy to "Force delete system-level and user-level Desktop Shortcuts" (2), any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots and any existing user-level desktop shortcuts will be deleted when the browser updates. This includes user-level desktop shortcuts that users might have made themselves.
+  If you don't configure this policy or disable it (0), nothing will happen to existing Microsoft Edge desktop shortcuts.
 
   If you don't configure this policy for a channel, the '[Remove Desktop Shortcuts upon update default](#removedesktopshortcutdefault)' policy configuration determines desktop shortcut removal.
 #### Windows information and settings
@@ -538,9 +539,9 @@ If you set this policy to "Force delete system-level Desktop Shortcuts", any exi
 #### Description
 Lets you specify whether users in the Windows Insider Program are enrolled in Edge Preview via Microsoft Edge Update.
 
-  - If you enable this policy, users in the Windows Insider Program are enrolled in Edge Preview via Microsoft Edge Update.
+  - If you enable (1) this policy, users in the Windows Insider Program are enrolled in Edge Preview via Microsoft Edge Update.
 
-  - If you disable this policy, users in the Windows Insider Program cannot be enrolled in Edge Preview via Microsoft Edge Update.
+  - If you disable (0) this policy, users in the Windows Insider Program cannot be enrolled in Edge Preview via Microsoft Edge Update.
 
   - If you don't configure this policy, users in the Windows Insider Program are enrolled in Edge Preview via Microsoft Edge Update by default.
 #### Windows information and settings
@@ -578,9 +579,9 @@ Specifies whether Microsoft Edge Update will update on connections marked as met
 
 If you don't enable and configure this policy, updates occur based the 'Download Updates over metered connections' toggle in the About Page of the Microsoft Edge browser. If a user doesn't make a choice, the Windows setting is used. You can find out more about the Windows setting here: [/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork]/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork)
 
-Always allow updates: Updates are always downloaded when found, either by automatic update check or by a manual update check.
+Always allow updates (2): Updates are always downloaded when found, either by automatic update check or by a manual update check.
 
-Updates disabled: Updates are not downloaded when using a metered connection.
+Updates disabled (1): Updates are not downloaded when using a metered connection.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: MeteredUpdatesDefault
@@ -608,9 +609,9 @@ Specifies whether Microsoft Edge Update will update on connections marked as met
 
 If you don't enable and configure this policy, updates occur based the 'Download Updates over metered connections' toggle in the About Page of the Microsoft Edge browser. If a user doesn't make a choice, the Windows setting is used. You can find out more about the Windows setting here: [/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork](/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork)
 
-Always allow updates: Updates are always downloaded when found, either by automatic update check or by a manual update check.
+Always allow updates (2): Updates are always downloaded when found, either by automatic update check or by a manual update check.
 
-Disable updates: Updates are not downloaded when using a metered connection.
+Disable updates (1): Updates are not downloaded when using a metered connection.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: MeteredUpdates
@@ -635,6 +636,42 @@ Disable updates: Updates are not downloaded when using a metered connection.
 ```
 [Back to top](#microsoft-edge---update-policies)
 
+### Uninstall
+#### Specify uninstall behavior for Microsoft Edge
+>Microsoft Edge Update 1.3.193.5 and later
+
+#### Description
+You can specify whether Microsoft Edge (stable channel) is uninstalled, or is blocked from being uninstalled, on domain-joined devices in the European Economic Area (EEA).
+
+If this policy is set to 'Enabled', Microsoft Edge will be automatically uninstalled on all devices in the EEA where this policy is deployed. User data will be kept on the device. Microsoft Edge will be uninstalled the next time Microsoft Edge Update automatically checks for updates. If Microsoft Edge is uninstalled from the devices, applications, widgets (for example, News, Search, and Weather) or any other Progressive Web Applications (PWAs) that depend on Microsoft Edge will no longer be available.
+
+If this policy is set to 'Enabled and delete user data' (Setting '2'), Microsoft Edge will be automatically uninstalled on all devices in the EEA where this policy is deployed, and user data will be deleted from the device.
+
+If this policy is set to 'Disabled' (Setting '3'), all users in the EEA are prevented from uninstalling Microsoft Edge where this policy is deployed.
+
+If the policy is 'Not configured' (default setting), a user's Windows region setting determines whether they can uninstall Microsoft Edge on a domain-joined device. Only users in EEA countries will be able to uninstall Microsoft Edge if they choose to do so. Users outside of this area will not be able to uninstall Microsoft Edge.
+
+This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+
+If Microsoft Edge needs to be reinstalled:
+- You can set the 'Install' Policy to Force Installs (Machine-Wide) to reinstall Microsoft Edge.
+- If you set the Install policy to Force Installs (Machine-Wide), and also set the Uninstall policy to Enabled, the Force Installs (Machine-Wide) policy will override the Uninstall policy.
+#### Windows information and settings
+##### Group Policy (ADMX) info
+- GP unique name: Uninstall
+- GP name: Specify uninstall behavior for Microsoft Edge
+- GP path: Administrative Templates/Microsoft Edge Update/Applications
+- GP ADMX file name: msedgeupdate.admx
+##### Windows Registry Settings
+- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Value Name: 
+    - (Stable): Uninstall{56eb18f8-b008-4cbd-b6d2-8c97fe7e9062}
+- Value Type: REG_DWORD
+##### Example value:
+```
+0x00000001
+```
+[Back to top](#microsoft-edge---update-policies)
 
 ## Preferences policies
 
@@ -650,6 +687,8 @@ Minimum number of minutes between automatic update checks.
 Set this policy to the value 0 to disable all periodic network traffic by Microsoft Edge Update. This is not recommended, as it prevents Microsoft Edge Update itself from receiving stability and security updates.
 
 The 'Update policy override default' and per-application 'Update policy override' settings should be used to manage application updates rather than this setting.
+
+The values for this policy can range from 0 to 43200.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: AutoUpdateCheckPeriodMinutes
@@ -676,6 +715,8 @@ The 'Update policy override default' and per-application 'Update policy override
 If you enable this policy, update checks are suppressed each day starting at Hour:Minute for a period of Duration (in minutes). Duration isn't affected by daylight saving time. For example, if the start time is 22:00 and the duration is 480 minutes, updates will be suppressed for exactly 8 hours, regardless of whether daylight saving time starts or ends during this period.
 
   If you disable or don't configure this policy, update checks aren't suppressed during any specific period.
+
+  The values for this policy can range from 0 to 23 for hours, 0 to 59 for minutes and 0 to 960 for duration in minutes.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: UpdatesSuppressed
@@ -809,9 +850,9 @@ In Microsoft Edge Update, the Experimentation and Configuration Service is used 
 
 Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing and feedback.
 
-If you enable this policy, experimentation payload is downloaded from the Experimentation and Configuration Service.
+If you enable (1) this policy, experimentation payload is downloaded from the Experimentation and Configuration Service.
 
-If you disable this policy, communication with the Experimentation and Configuration Service is stopped completely.
+If you disable (0) this policy, communication with the Experimentation and Configuration Service is stopped completely.
 
 If you don't configure this policy, on a managed device the behavior is same as policy 'disabled'.
 
@@ -844,13 +885,13 @@ If you don't configure this policy, on an unmanaged device the behavior is same 
 #### Description
 Lets you specify whether the WebView2 Runtime can be installed using Microsoft Edge Update.
 
-  If you enable this policy, users can install the WebView2 Runtime through Microsoft Edge Update.
+  If you enable (1) this policy, users can install the WebView2 Runtime through Microsoft Edge Update.
 
-  If you disable this policy (or set it to 'Installs disabled'), users cannot install the WebView2 Runtime through Microsoft Edge Update.
+  If you disable (0) this policy (or set it to 'Installs disabled'), users cannot install the WebView2 Runtime through Microsoft Edge Update.
 
-  If you set this policy to Always allow Machine-Wide Installs but not Per-User Installs, the WebView2 Runtime will only be deployed machine-wide.
+  If you set this policy to Always allow Machine-Wide Installs but not Per-User Installs (4), the WebView2 Runtime will only be deployed machine-wide.
 
-  If you set the policy to Force Installs (Machine-Wide), users can install the WebView2 Runtime to all machines where Microsoft Edge Update is pre-installed. Requires Microsoft Edge Update 1.3.155.43 or higher.
+  If you set the policy to Force Installs (Machine-Wide) (5), users can install the WebView2 Runtime to all machines where Microsoft Edge Update is pre-installed. Requires Microsoft Edge Update 1.3.155.43 or higher.
 
   If you don't configure this policy, the WebView2 Runtime will be installed through Microsoft Edge Update.
 #### Windows information and settings
@@ -881,9 +922,9 @@ Lets you specify whether or not automatic updates are enabled for the WebView2 R
   Automatic updates are enabled by default. Disabling automatic updates for the WebView2 Runtime might cause compatibility issues with applications that depend on this component.
 
   If you enable this policy, Microsoft Edge Update handles the WebView2 Runtime updates according to how you configure the following options:
-  - Always allow updates: Updates are automatically downloaded and applied
-  - Updates disabled: Updates are never downloaded or applied
-
+  - Always allow updates (1): Updates are automatically downloaded and applied
+  - Updates disabled (0): Updates are never downloaded or applied
+ 
   If you don't enable this policy, updates are automatically downloaded and applied.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
