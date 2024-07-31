@@ -51,9 +51,6 @@ For more details on defaults and checking what is already configured in Microsof
 > If OneDrive desktop sync is enabled in the user environment, a OneDrive policy to
 [exclude specific kinds of files from being uploaded](/sharepoint/use-group-policy#exclude-specific-kinds-of-files-from-being-uploaded) needs to be enabled to prevent shortcut duplication and enable the organization branding feature.
 
-> [!NOTE]
-> This experience is in public preview and you can access it by opting in to targeted release in the Microsoft 365 Admin Center. Sign in to your account and go to **Settings** > **Org settings** > **Organization profile** > **Release preferences**, and then select the targeted release option.
-
 Looking for more advanced customization options? The Edge management service provides admins with an enhanced experience to control, preview, and customize the look of Edge for Business.
 
 To customize the Microsoft Edge browser with your organization's branding assets, sign in to the Microsoft 365 Admin Center and go to the **Organization branding** tab in the **Customization Settings** pivot within a configuration profile. A preview of how the browser elements look on a user's account is shown on the page.
