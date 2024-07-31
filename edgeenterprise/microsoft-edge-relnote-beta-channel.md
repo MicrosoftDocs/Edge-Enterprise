@@ -37,7 +37,6 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 - **SSE3 Requirement.** Microsoft Edge stopped supporting CPUs that lack SSE3. Devices with such CPUs won't receive any more updates. For more information, see [Microsoft Edge Supported Operating Systems](/deployedge/microsoft-edge-supported-operating-systems).
 
-
 - **Copilot browser Context Policies.** The [DiscoverPageContextEnabled](s/deployedge/microsoft-edge-policies#discoverpagecontextenabled) policy is obsoleted in Edge version 128 and doesn't work after Microsoft Edge 127.
 
   To summarize and answer questions based on browser context in Microsoft Edge, Copilot needs to be able to access the browser context. We're providing two new policies to offer more flexibility for admins to customize Edge browser context access across Copilot chats in Edge sidebar.
@@ -50,6 +49,8 @@ The following Dev channel updates preceded this Beta channel release. These note
 - **EnforceLocalAnchorConstraintsEnabled policy obsoletion.** The [EnforceLocalAnchorConstraintsEnabled](/deployedge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) policy was previously deprecated and is now obsolete in Edge version 128. Since Microsoft Edge 112, constraints in certificates loaded from the platform certificate store are enforced. The [EnforceLocalAnchorConstraintsEnabled](/deployedge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) policy existed as a temporary opt-out in case an enterprise encountered issues with the constraints encoded in their private roots.
 
 - **New Policy for Insecure Downloads over HTTP.** Users that download potentially dangerous content on HTTP sites will receive a UI warning in a future Microsoft Edge version. To prepare for this change, the [ShowDownloadsInsecureWarningsEnabled](/deployedge/microsoft-edge-policies#showdownloadsinsecurewarningsenabled) policy is now available for admins to enable or disable the warnings related to insecure downloads.
+
+- **Get the latest updates effortlessly with instant update.** Instant update in Microsoft Edge ensures you get the latest browser updates automatically, when you step away from your computer. So you can just keep browsing, knowing you already have the latest updates to keep you safe online. For more information, see [Get instant updates in Microsoft Edge - Microsoft Support](). **Note:** This feature is a controlled feature rollout to consumer customers. A release to enterprise users is TBD. If you don't see this feature, check back as we continue our rollout.
 
 ### Policy updates
 
