@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 07/18/2024
+ms.date: 07/31/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -220,9 +220,6 @@ Choose how an extension is displayed in the toolbar. Follow these steps to confi
 
 ### Manage extension requests
 
-> [!NOTE]
-> This feature is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
-
 If you have blocked any extension for your organization, you can allow users to request access to them. To turn on this feature, go to a configuration profile and navigate to the **Requests** tab in the **Extensions** pivot. Select **Manage request settings** and set the value to **Enabled** to allow users to request blocked extensions. Once enabled, you can view all extensions that your users have requested on this page.
 
 You can also choose to receive email notifications when new requests come in. To do this, use these steps:
@@ -299,9 +296,6 @@ The settings in this section let you configure Microsoft Edge settings that invo
 <!-- =================================================== -->
 #### Customize organization branding
 
-> [!NOTE]
-> This feature is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
-
 To customize the browser with your organization's branding assets, go to the **Organization branding** tab. You can use the default Edge for Business branding elements, or use custom branding assets. A preview of how the browser elements will look on a user's account is shown on the page.
 
 If you don't have any organization branding policies enabled, the default Edge for Business branding will be displayed. When you choose **Use custom branding**, any existing branding assets associated with your Microsoft Entra ID will be imported and displayed in the preview. These changes won't take effect until you choose **Save changes**.
@@ -341,9 +335,6 @@ You can specify individual hostnames and the profile you would like them to open
 <!-- ================ NEW ============================= -->
 
 #### Configure security protection settings
-
-> [!NOTE]
-> This feature is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
 
 To add settings that help protect against security threats, navigate to the security protections tab. Here you can choose to configure settings that help protect your users against security vulnerabilities.
 
