@@ -39,7 +39,7 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 
 ### New policies
 
-- [iOS] Disable UIR prompt pop-up via `com.microsoft.intune.mam`.managedbrowser.disabledFeatures or [EdgeDisabledFeatures](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) policy
+- [iOS] Disable UIR prompt pop-up via `com.microsoft.intune.mam.managedbrowser.disabledFeatures` or [EdgeDisabledFeatures](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) policy
 - [iOS] Add CIDR (Classless Inter-domain Routing) support in AllowListURLs/BlockListURLs feature
 - [iOS] New `com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList` policy to allow IT admin disable edge internal pages
 
