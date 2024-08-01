@@ -32,6 +32,19 @@ Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-1-2024).
 
+### Feature update
+
+Customize organizational branding using the Microsoft Edge management service. Admins can customize their organization's branding assets onto Edge for Business through the Microsoft Edge management service. This branding can help users signed in with a Microsoft Entra ID more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon.
+
+This Microsoft Edge management service feature gives admins an enhanced experience to configure, preview, and customize how Edge for Business shows the following organization brand assets:
+
+- Organization name
+- Accent color
+- Organization logo
+- Edge for Business taskbar icon overlay
+
+For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business) and [Organization branding](/deployedge/microsoft-edge-organization-branding).
+
 ## Version 126.0.2592.132: August 1, 2024
 
 Fixed various bugs and performance issues for Extended Stable channel.
