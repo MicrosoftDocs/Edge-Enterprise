@@ -37,7 +37,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 - **SSE3 Requirement.** Microsoft Edge stopped supporting CPUs that lack SSE3. Devices with such CPUs won't receive any more updates. For more information, see [Microsoft Edge Supported Operating Systems](/deployedge/microsoft-edge-supported-operating-systems).
 
-- **Copilot browser Context Policies.** The [DiscoverPageContextEnabled](s/deployedge/microsoft-edge-policies#discoverpagecontextenabled) policy is obsoleted in Edge version 128 and doesn't work after Microsoft Edge 127.
+- **Copilot browser Context Policies.** The [DiscoverPageContextEnabled](/deployedge/microsoft-edge-policies#discoverpagecontextenabled) policy is obsoleted in Edge version 128 and doesn't work after Microsoft Edge 127.
 
   To summarize and answer questions based on browser context in Microsoft Edge, Copilot needs to be able to access the browser context. We're providing two new policies to offer more flexibility for admins to customize Edge browser context access across Copilot chats in Edge sidebar.
 
