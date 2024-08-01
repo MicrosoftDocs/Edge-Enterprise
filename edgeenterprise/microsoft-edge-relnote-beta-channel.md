@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/31/2024
+ms.date: 08/01/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -50,7 +50,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 - **New Policy for Insecure Downloads over HTTP.** Users that download potentially dangerous content on HTTP sites will receive a UI warning in a future Microsoft Edge version. To prepare for this change, the [ShowDownloadsInsecureWarningsEnabled](/deployedge/microsoft-edge-policies#showdownloadsinsecurewarningsenabled) policy is now available for admins to enable or disable the warnings related to insecure downloads.
 
-- **Get the latest updates effortlessly with instant update.** Instant update in Microsoft Edge ensures you get the latest browser updates automatically, when you step away from your computer. So you can just keep browsing, knowing you already have the latest updates to keep you safe online. For more information, see [Get instant updates in Microsoft Edge - Microsoft Support](). **Note:** This feature is a controlled feature rollout to consumer customers. A release to enterprise users is TBD. If you don't see this feature, check back as we continue our rollout.
+- **Get the latest updates effortlessly with instant update.** Instant update in Microsoft Edge ensures you get the latest browser updates automatically, when you step away from your computer. So you can just keep browsing, knowing you already have the latest updates to keep you safe online. For more information, see [Get instant updates in Microsoft Edge - Microsoft Support](https://support.microsoft.com/en-us/microsoft-edge/get-instant-updates-in-microsoft-edge-4820adad-dd32-470c-9bd9-dba1de71a7f1). **Note:** This feature is a controlled feature rollout to consumer customers. A release to enterprise users is TBD. If you don't see this feature, check back as we continue our rollout.
 
 ### Policy updates
 
