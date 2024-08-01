@@ -58,13 +58,13 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 - [ApplicationBoundEncryptionEnabled](/deployedge/microsoft-edge-policies#applicationboundencryptionenabled) - Enable Application Bound Encryption
 - [DynamicCodeSettings](/deployedge/microsoft-edge-policies#dynamiccodesettings) - Dynamic Code Settings
-- [KeyboardFocusableScrollersEnabled]() - Enable keyboard focusable scrollers ***Not in the policy doc yet
+- [KeyboardFocusableScrollersEnabled] - Enable keyboard focusable scrollers ***Not in the policy doc yet
 - [ShowDownloadsInsecureWarningsEnabled](/deployedge/microsoft-edge-policies#showdownloadsinsecurewarningsenabled) - Enable insecure download warnings
 
 #### Obsoleted policies
 
 - [DiscoverPageContextEnabled](/deployedge/microsoft-edge-policies#discoverpagecontextenabled) - Enable Discover access to page contents for AAD profiles (obsolete)
-- [EnforceLocalAnchorConstraintsEnabled](/deployedge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) Determines whether the built-in certificate verifier enforces constraints encoded into trust anchors loaded from the platform trust store (deprecated) **Note:** The policy documentation hasn't been updated to say obsolete
+- [EnforceLocalAnchorConstraintsEnabled](/deployedge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) Determines whether the built-in certificate verifier enforces constraints encoded into trust anchors loaded from the platform trust store (deprecated) 
 
 ## Version 127.0.2651.74: July 25, 2024
 
