@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/29/2024
+ms.date: 08/01/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,6 +25,18 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 127.0.2651.86: August 1, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-1-2024).
+
+## Version 126.0.2592.132: August 1, 2024
+
+Fixed various bugs and performance issues for Extended Stable channel.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-1-2024).
 
 ## Version 127.0.2651.74: July 25, 2024
 
@@ -94,14 +106,12 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - Resolved an issue that allowed the Microsoft Edge New Tab Page feed to be activated even when the [NewTabPageContentEnabled](/deployedge/microsoft-edge-policies#newtabpagecontentenabled) policy was set to disabled.
 
-
 ## Version 126.0.2592.102: July 11, 2024
 
 Fixed various bugs and performance issues.
 
-
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-11-2024).
- 
+
 ## Version 126.0.2592.87: July 2, 2024
 
 Fixed various bugs and performance issues, improved reliability.
