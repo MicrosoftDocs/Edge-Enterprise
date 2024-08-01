@@ -3,7 +3,7 @@ title: "Organization branding"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/07/2024
+ms.date: 07/31/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -18,7 +18,7 @@ This document provides a guide to understanding and using organization branding 
 
 ## Introduction
 
-Want to customize the look of Edge for Business?
+Want to customize the look of Microsoft Edge for Business?
 
 Now you can with support for organization branding! This branding can help users signed in with a Microsoft Entra ID more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon. Organization branding  also allows companies to foster staff trust through customized branding, while growing affinity by serving an effective brand reinforcement strategy.
 
@@ -47,8 +47,9 @@ For more details on defaults and checking what is already configured in Microsof
 
 ## Customize organization branding through the Microsoft Edge management service
 
-> [!NOTE]
-> This experience is in public preview and you can access it by opting in to targeted release in the Microsoft 365 Admin Center. Sign in to your account and go to **Settings** > **Org settings** > **Organization profile** > **Release preferences**, and then select the targeted release option.
+> [!IMPORTANT]
+> If OneDrive desktop sync is enabled in the user environment, a OneDrive policy to
+[exclude specific kinds of files from being uploaded](/sharepoint/use-group-policy#exclude-specific-kinds-of-files-from-being-uploaded) needs to be enabled to prevent shortcut duplication and enable the organization branding feature.
 
 Looking for more advanced customization options? The Edge management service provides admins with an enhanced experience to control, preview, and customize the look of Edge for Business.
 
@@ -56,7 +57,7 @@ To customize the Microsoft Edge browser with your organization's branding assets
 
 ![Branding example](media/microsoft-edge-organization-branding/branding-config-profile-edited.png)
 
-If you don't have any branding policies enabled, the default Edge for Business branding will be displayed. When you choose **Use custom branding**, any existing branding assets associated with your Microsoft Entra ID are imported and displayed in the preview. These changes will not take effect until you choose **Save changes**.
+If you don't have any branding policies enabled, the default Edge for Business branding is displayed. When you choose **Use custom branding**, any existing branding assets associated with your Microsoft Entra ID are imported and displayed in the preview. These changes won't take effect until you choose **Save changes**.
 
 From here, you can customize each of the following browser elements with the brand assets you choose.
 
@@ -77,6 +78,22 @@ After you finish customizing the browser elements with your organization brandin
 - *Microsoft Edge Mobile*
 - *Microsoft Edge for Business on unmanaged PCs and macOS*
 - *Customers with an Office 365 GCC or Office 365 GCC High and DoD plan*
+
+## Frequently asked questions
+
+### Are there any scenarios where organization branding can't be used?
+
+Yes, organization isn't supported for the following scenarios.
+
+- Organization branding isn't applied if:  
+  - OneDrive desktop sync is enabled.
+  - The OneDrive policy to [exclude specific kinds of files from being uploaded](/sharepoint/use-group-policy#exclude-specific-kinds-of-files-from-being-uploaded) is disabled.
+- Organization branding via Entra assets doesn't support the Microsoft Edge for Business taskbar icon overlay in macOS.
+- Organization branding via Microsoft Edge management service isn't supported for:
+  - Microsoft Edge Mobile.
+  - Microsoft Edge for Business on unmanaged PCs and macOS.
+  - Customers with an Office 365 GCC, Office 365 GCC High, and DoD plans.
+
 
 ## See also
 
