@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 07/29/2024
+ms.date: 08/02/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -37,11 +37,11 @@ The following table lists the planned and actual release dates for major release
 | 131 | Target release | Week of 24-Oct-2024 | Week of 14-Nov-2024 | Not applicable |
 | 130 | Target release | Week of 26-Sep-2024 | Week of 17-Oct-2024 | Week of 17-Oct-2024 |
 | 129 | Target release | Week of 29-Aug-2024 | Week of 19-Sep-2024 | Not applicable |
-| 128 | Target release | Week of 1-Aug-2024 | Week of 22-Aug-2024 | Week of 22-Aug-2024 |
+| 128 | Release<br>Version | 1-Aug-2024<br>[128.0.2739.5](/deployedge/microsoft-edge-relnote-beta-channel#version-128027395-august-1-2024) | Week of 22-Aug-2024 | Week of 22-Aug-2024 |
 | 127 |  Release<BR>Version | 21-Jun-2024<br>[127.0.2651.8](/deployedge/microsoft-edge-relnote-beta-channel#version-127026518-june-21-2024) | 25-Jul-2024<br>[127.0.2651.74](/deployedge/microsoft-edge-relnote-stable-channel#version-1270265174-july-25-2024) | Not applicable |
 | 126 | Release<BR>Version | 23-May-2024<br>[126.0.2592.13](/deployedge/microsoft-edge-relnote-beta-channel#version-1260259213-may-23-2024) | 13-Jun-2024<br>[126.0.2592.56](/deployedge/microsoft-edge-relnote-stable-channel#version-1260259256-june-13-2024) | 13-Jun-2024<br>[126.0.2592.56](/deployedge/microsoft-edge-relnote-stable-channel#version-1260259256-june-13-2024) |
 | 125 | Release<BR>Version | 29-Apr-2024<br>[125.0.2535.13](/deployedge/microsoft-edge-relnote-beta-channel#version-1250253513-april-29-2024) | 17-May-2024<br>[125.0.2535.51](/deployedge/microsoft-edge-relnote-stable-channel#version-1250253551-may-17-2024) | Not applicable |
-| 124 | Release<BR>Version | 28-Mar-2024<br>[124.0.2478.10](/deployedge/microsoft-edge-relnote-beta-channel#version-1240247810-march-28-2024) | 18-Apr-2024<br>[124.0.2478.51](/deployedge/microsoft-edge-relnote-stable-channel#version-1240247851-april-18-2024) | 18-Apr-2024<br>[124.0.2478.51](/deployedge/microsoft-edge-relnote-stable-channel#version-1240247851-april-18-2024) |
+| 124 | Release<BR>Version | 28-Mar-2024<br>[124.0.2478.10](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-1240247810-march-28-2024) | 18-Apr-2024<br>[124.0.2478.51](/deployedge/microsoft-edge-relnote-stable-channel#version-1240247851-april-18-2024) | 18-Apr-2024<br>[124.0.2478.51](/deployedge/microsoft-edge-relnote-stable-channel#version-1240247851-april-18-2024) |
 | 123 | Release<BR>Version | 29-Feb-2024<br>[123.0.2420.10](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-1230242010-february-29-2024) | 22-Mar-2024<br>[123.0.2420.53](/deployedge/microsoft-edge-relnote-stable-channel#version-1230242053--march-22-2024) | Not applicable |
 | 122 | Release<BR>Version | 01-Feb-2024<br>[122.0.2365.8](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-122023658-february-1-2024) | 23-Feb-2024<br>[122.0.2365.52](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-1220236552-february-23-2024) | 23-Feb-2024<br>[122.0.2365.52](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-1220236552-february-23-2024) |
 | 121 | Release<br>Version| 15-Dec-2023<br>[121.0.2277.4](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-121022774-december-15-2023) | 25-Jan-2024<br>[121.0.2277.83](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-1210227783-january-25-2024) | Not applicable |
