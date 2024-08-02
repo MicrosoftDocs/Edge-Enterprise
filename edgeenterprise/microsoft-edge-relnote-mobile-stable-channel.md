@@ -46,15 +46,15 @@ Fixed various bugs and performance issues, general updates, and new policies.
 
 Fixed various bugs and performance issues, general updates, new policies, and enhancements.
 
-### General updates
-
-- [iOS] Upgrade MS Tunnel SDK version 1.0.18
-- [iOS] Upgrade Intune MAM SDK to version 19.4.1
-
 ### Bug fixes
 
 - [iOS] Fix [DefaultBrowserSettingEnabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) policy that didn't work
 - [iOS] Fix the UI layout issue caused by changes in UIWindow safeAreaInsets leading to Webview content offset shift in certain situations
+
+### General updates
+
+- [iOS] Upgrade MS Tunnel SDK version 1.0.18
+- [iOS] Upgrade Intune MAM SDK to version 19.4.1
 
 ### New policies
 
