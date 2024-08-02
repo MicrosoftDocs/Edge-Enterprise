@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/12/2024
+ms.date: 08/01/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,13 +30,15 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the new and obsolete policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[ShowDownloadsInsecureWarningsEnabled](#showdownloadsinsecurewarningsenabled)|Enable insecure download warnings|
-|[ApplicationBoundEncryptionEnabled](#applicationboundencryptionenabled)|Enable Application Bound Encryption|
-|[DynamicCodeSettings](#dynamiccodesettings)|Dynamic Code Settings|
+|[ExtensionDeveloperModeSettings](#extensiondevelopermodesettings)|Control the availability of developer mode on extensions page|
+|[ExtensionExtendedBackgroundLifetimeForPortConnectionsToUrls](#extensionextendedbackgroundlifetimeforportconnectionstourls)|Configure a list of origins that grant an extended background lifetime to connecting extensions.|
+|[CSSCustomStateDeprecatedSyntaxEnabled](#csscustomstatedeprecatedsyntaxenabled)|Controls whether the deprecated :--foo syntax for CSS custom state is enabled|
+|[KeyboardFocusableScrollersEnabled](#keyboardfocusablescrollersenabled)|Enable keyboard focusable scrollers|
+|[SiteSafetyServicesEnabled](#sitesafetyservicesenabled)|Allow users to configure Site safety services (obsolete)|
 
 ## Available policies
 
@@ -197,6 +199,8 @@ These tables list all of the browser-related group policies available in this re
 |[BlockExternalExtensions](#blockexternalextensions)|Blocks external extensions from being installed|
 |[ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](#controldefaultstateofallowextensionfromotherstoressettingenabled)|Configure default state of Allow extensions from other stores setting|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|Configure allowed extension types|
+|[ExtensionDeveloperModeSettings](#extensiondevelopermodesettings)|Control the availability of developer mode on extensions page|
+|[ExtensionExtendedBackgroundLifetimeForPortConnectionsToUrls](#extensionextendedbackgroundlifetimeforportconnectionstourls)|Configure a list of origins that grant an extended background lifetime to connecting extensions.|
 |[ExtensionInstallAllowlist](#extensioninstallallowlist)|Allow specific extensions to be installed|
 |[ExtensionInstallBlocklist](#extensioninstallblocklist)|Control which extensions cannot be installed|
 |[ExtensionInstallForcelist](#extensioninstallforcelist)|Control which extensions are installed silently|
@@ -460,6 +464,7 @@ These tables list all of the browser-related group policies available in this re
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determines whether the built-in certificate verifier will be used to verify server certificates (obsolete)|
 |[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 post-quantum key-agreement enabled for TLS (obsolete)|
 |[CORSNonWildcardRequestHeadersSupport](#corsnonwildcardrequestheaderssupport)|CORS non-wildcard request header support enabled|
+|[CSSCustomStateDeprecatedSyntaxEnabled](#csscustomstatedeprecatedsyntaxenabled)|Controls whether the deprecated :--foo syntax for CSS custom state is enabled|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes|
 |[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|Disable Certificate Transparency enforcement for a list of legacy certificate authorities|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Disable Certificate Transparency enforcement for specific URLs|
@@ -479,8 +484,8 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
-|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commercial Data Protection access to browser context for Microsoft Entra ID profiles|
-|[CopilotPageContext](#copilotpagecontext)|Control Copilot access to browser context for Microsoft Entra ID profiles|
+|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles|
+|[CopilotPageContext](#copilotpagecontext)|Control Copilot access to page context for Microsoft Entra ID profiles|
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
 |[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
@@ -620,6 +625,7 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerZoomDisplay](#internetexplorerzoomdisplay)|Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
+|[KeyboardFocusableScrollersEnabled](#keyboardfocusablescrollersenabled)|Enable keyboard focusable scrollers|
 |[LiveCaptionsAllowed](#livecaptionsallowed)|Live captions allowed|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Enable Windows to search local Microsoft Edge browsing data|
 |[LocalProvidersEnabled](#localprovidersenabled)|Allow suggestions from local providers|
@@ -720,7 +726,7 @@ These tables list all of the browser-related group policies available in this re
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow feature recommendations and browser assistance notifications from Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
-|[SiteSafetyServicesEnabled](#sitesafetyservicesenabled)|Allow users to configure Site safety services|
+|[SiteSafetyServicesEnabled](#sitesafetyservicesenabled)|Allow users to configure Site safety services (obsolete)|
 |[SmartActionsBlockList](#smartactionsblocklist)|Block smart actions for a list of services|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
@@ -7272,6 +7278,151 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 ``` xml
 <array>
   <string>hosted_app</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ExtensionDeveloperModeSettings
+
+  #### Control the availability of developer mode on extensions page
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 128 or later
+
+  #### Description
+
+  Control if users can turn on Developer Mode on edge://extensions.
+
+If the policy isn't set, users can turn on developer mode on the extension page unless DeveloperToolsAvailability policy is set to DeveloperToolsDisallowed (2).
+If the policy is set to Allow (0), users can turn on developer mode on the extensions page.
+If the policy is set to Disallow (1), users cannot turn on developer mode on the extensions page.
+
+If this policy is set, DeveloperToolsAvailability can no longer control extensions developer mode.
+
+Policy options mapping:
+
+* Allow (0) = Allow the usage of developer mode on extensions page
+
+* Disallow (1) = Do not allow the usage of developer mode on extensions page
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ExtensionDeveloperModeSettings
+  - GP name: Control the availability of developer mode on extensions page
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ExtensionDeveloperModeSettings
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ExtensionDeveloperModeSettings
+  - Example value:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ExtensionExtendedBackgroundLifetimeForPortConnectionsToUrls
+
+  #### Configure a list of origins that grant an extended background lifetime to connecting extensions.
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 128 or later
+
+  #### Description
+
+  Extensions that connect to one of these origins will keep running as long as the port is connected.
+If unset, the policy's default values are used. These are the app origins that offer SDKs that are known to not offer the possibility to restart a closed connection to a previous state:
+- Smart Card Connector
+- Citrix Receiver (stable, beta, back-up)
+- VMware Horizon (stable, beta)
+
+If set, the default value list is extended with the newly configured values. The defaults and policy-provided entries will grant the exception to the connecting extensions, as long as the port is connected.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ExtensionExtendedBackgroundLifetimeForPortConnectionsToUrls
+  - GP name: Configure a list of origins that grant an extended background lifetime to connecting extensions.
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionExtendedBackgroundLifetimeForPortConnectionsToUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ExtensionExtendedBackgroundLifetimeForPortConnectionsToUrls\1 = "chrome-extension://abcdefghijklmnopabcdefghijklmnop/"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionExtendedBackgroundLifetimeForPortConnectionsToUrls\2 = "chrome-extension://bcdefghijklmnopabcdefghijklmnopa/"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ExtensionExtendedBackgroundLifetimeForPortConnectionsToUrls
+  - Example value:
+``` xml
+<array>
+  <string>chrome-extension://abcdefghijklmnopabcdefghijklmnop/</string>
+  <string>chrome-extension://bcdefghijklmnopabcdefghijklmnopa/</string>
 </array>
 ```
   
@@ -20309,6 +20460,72 @@ This policy is a temporary workaround for the new CORS non-wildcard request head
 
   [Back to top](#microsoft-edge---policies)
 
+  ### CSSCustomStateDeprecatedSyntaxEnabled
+
+  #### Controls whether the deprecated :--foo syntax for CSS custom state is enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 127 or later
+
+  #### Description
+
+  The :--foo syntax for the CSS custom state feature is being changed to :state(foo) in Microsoft Edge in order to comply with changes that have been made in Firefox and Safari. This policy lets the deprecated syntax to be used until Stable 133.
+
+This deprecation might break some Microsoft Edge-only websites that use the deprecated :--foo syntax.
+
+If you enable this policy, the deprecated syntax will be enabled.
+
+If you disable this policy or don't set it, the deprecated syntax will be disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CSSCustomStateDeprecatedSyntaxEnabled
+  - GP name: Controls whether the deprecated :--foo syntax for CSS custom state is enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CSSCustomStateDeprecatedSyntaxEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: CSSCustomStateDeprecatedSyntaxEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### CertificateTransparencyEnforcementDisabledForCas
 
   #### Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes
@@ -21695,7 +21912,7 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   ### CopilotCDPPageContext
 
-  #### Control Copilot with Commercial Data Protection access to browser context for Microsoft Entra ID profiles
+  #### Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles
 
   
   
@@ -21705,13 +21922,13 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   #### Description
 
-  This policy controls access to page contents, browser history, and user preferences for Copilot with Commercial Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
+  This policy controls access to page contents for Copilot with Commercial Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
 
-If you enable this policy, Copilot with Commercial Data Protection will have access to browser context.
+If you enable this policy, Copilot with Commercial Data Protection will have access to page context.
 
-If you don't configure this policy, a user can enable access to browser context for Copilot with Commercial Data Protection using the setting toggle in Edge.
+If you don't configure this policy, a user can enable access to page context for Copilot with Commercial Data Protection using the setting toggle in Edge.
 
-If you disable this policy, Copilot with Commercial Data Protection will not be able to access browser context.
+If you disable this policy, Copilot with Commercial Data Protection will not be able to access page context.
 
   #### Supported features:
 
@@ -21730,7 +21947,7 @@ If you disable this policy, Copilot with Commercial Data Protection will not be 
   ##### Group Policy (ADMX) info
 
   - GP unique name: CopilotCDPPageContext
-  - GP name: Control Copilot with Commercial Data Protection access to browser context for Microsoft Entra ID profiles
+  - GP name: Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -21761,7 +21978,7 @@ If you disable this policy, Copilot with Commercial Data Protection will not be 
 
   ### CopilotPageContext
 
-  #### Control Copilot access to browser context for Microsoft Entra ID profiles
+  #### Control Copilot access to page context for Microsoft Entra ID profiles
 
   
   
@@ -21771,13 +21988,13 @@ If you disable this policy, Copilot with Commercial Data Protection will not be 
 
   #### Description
 
-  This policy controls access to page contents, browser history, and user preferences for Copilot in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot with Commercial Data Protection. Access for Copilot with Commercial Data Protection is controlled by the policy CopilotCDPPageContext.
+  This policy controls access to page contents for Copilot in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot with Commercial Data Protection. Access for Copilot with Commercial Data Protection is controlled by the policy CopilotCDPPageContext.
 
-If you enable this policy, Copilot will have access to browser context.
+If you enable this policy, Copilot will have access to page context.
 
-If you don't configure this policy, a user can enable access to browser context for Copilot using the setting toggle in Edge.
+If you don't configure this policy, a user can enable access to page context for Copilot using the setting toggle in Edge.
 
-If you disable this policy, Copilot will not be able to access browser context.
+If you disable this policy, Copilot will not be able to access page context.
 
   #### Supported features:
 
@@ -21796,7 +22013,7 @@ If you disable this policy, Copilot will not be able to access browser context.
   ##### Group Policy (ADMX) info
 
   - GP unique name: CopilotPageContext
-  - GP name: Control Copilot access to browser context for Microsoft Entra ID profiles
+  - GP name: Control Copilot access to page context for Microsoft Entra ID profiles
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -31305,6 +31522,72 @@ If you disable or don't configure this policy, pages will be isolated on a per-S
 
   [Back to top](#microsoft-edge---policies)
 
+  ### KeyboardFocusableScrollersEnabled
+
+  #### Enable keyboard focusable scrollers
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 128 or later
+
+  #### Description
+
+  This policy provides a temporary opt-out for the new keyboard focusable scrollers behavior.
+
+When this policy is Enabled or unset, scrollers without focusable children are keyboard focusable by default. Further, scrollers are click focusable and programmatically focusable by default.
+
+When this policy is Disabled, scrollers are not focusable by default.
+
+This policy is a temporary workaround and will be removed in Edge Stable 135.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: KeyboardFocusableScrollersEnabled
+  - GP name: Enable keyboard focusable scrollers
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: KeyboardFocusableScrollersEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: KeyboardFocusableScrollersEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### LiveCaptionsAllowed
 
   #### Live captions allowed
@@ -38140,17 +38423,19 @@ If you disable or don't configure this policy, a user can opt out of site isolat
 
   ### SiteSafetyServicesEnabled
 
-  #### Allow users to configure Site safety services
+  #### Allow users to configure Site safety services (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 127.
   #### Supported versions:
 
-  - On Windows and macOS since 101 or later
+  - On Windows and macOS since 101, until 127
 
   #### Description
 
-  This policy disables site safety services from showing top site info in the page info dialog.
+  This policy is obselete as the feature is being removed after Microsoft Edge version 127.
+
+This policy disables site safety services from showing top site info in the page info dialog.
 
 If you enable this policy or don't configure it, the top site info will be shown.
 
@@ -38173,7 +38458,7 @@ If you disable this policy, the top site info will not be shown.
   ##### Group Policy (ADMX) info
 
   - GP unique name: SiteSafetyServicesEnabled
-  - GP name: Allow users to configure Site safety services
+  - GP name: Allow users to configure Site safety services (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
