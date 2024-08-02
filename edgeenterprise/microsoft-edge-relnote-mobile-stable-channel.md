@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 08/01/2024
+ms.date: 08/02/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,7 +25,22 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 127.0.2651.82 (Android): August 1, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, general updates, and new policies.
+
+### General updates
+
+- [Android] Exclude Microsoft Entra ID Copilot from NTP's voice and camera search
+
+### Bug fixes
+
+- [Android] Fix a bug related to policy InPrivateModeAvailability
+- [Android] Fix SSO bug when a blocked link is opened from Outlook
+
+### New policies
+
+- [Android] Disable UIR prompt pop-up via `com.microsoft.intune.mam.managedbrowser.disabledFeatures` or [EdgeDisabledFeatures](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) policy
+- [Android] Add CIDR (Classless Inter-domain Routing) support in AllowListURLs/BlockListURLs feature
+- [Android] New `com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList` policy to allow IT admin disable edge internal pages
 
 ## Version 127.0.2651.81 (iOS): July 31, 2024
 
