@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/01/2024
+ms.date: 08/05/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -94,7 +94,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 #### New policies
 
 - [EdgeSidebarAppUrlHostBlockList](/deployedge/microsoft-edge-policies#edgesidebarappurlhostblocklist) - Control which apps cannot be opened in Microsoft Edge sidebar
-- CSSCustomStateDeprecatedSyntaxEnabled- Controls whether the deprecated :--foo syntax for CSS custom state is enabled
+- [CSSCustomStateDeprecatedSyntaxEnabled](/deployedge/microsoft-edge-policies#csscustomstatedeprecatedsyntaxenabled) - Controls whether the deprecated :--foo syntax for CSS custom state is enabled
 
 #### Deprecated policies
 
