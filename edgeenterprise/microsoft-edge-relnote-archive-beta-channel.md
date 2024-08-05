@@ -202,7 +202,7 @@ The following Dev channel updates preceded this Beta channel release. The follow
 
 ### Feature updates
 
-- **Customize organizational branding using the Microsoft Edge management service.** Admins can customize their organization's branding assets onto Edge for Business through the Microsoft Edge management service. This branding can help users signed in with a Microsoft Entra ID (formerly known as Azure Active Directory) more easily differentiate between multiple profiles and browser windows. This is done by visual cues on the profile pill, profile flyout, and Microsoft Edge for Business taskbar icon.
+- **Customize organization branding using the Microsoft Edge management service.** Admins can customize their organization's branding assets onto Edge for Business through the Microsoft Edge management service. This branding can help users signed in with a Microsoft Entra ID (formerly known as Azure Active Directory) more easily differentiate between multiple profiles and browser windows. This is done by visual cues on the profile pill, profile flyout, and Microsoft Edge for Business taskbar icon.
 
   The Microsoft Edge management service gives admins an enhanced experience to configure, preview, and customize how Microsoft Edge for Business shows the following organization brand assets:
 
@@ -330,9 +330,9 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Enable organizational branding in Edge for Business.**   Enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with a Microsoft Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon. This branding can help users more easily differentiate between multiple profiles and browser windows.
+- **Enable organization branding in Edge for Business.**   Enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with a Microsoft Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon. This branding can help users more easily differentiate between multiple profiles and browser windows.
 
-   Admins can enable default organizational branding through the following policies:
+   Admins can enable default organization branding through the following policies:
 
   - [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled
 )
