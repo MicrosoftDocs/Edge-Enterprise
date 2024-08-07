@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/05/2024
+ms.date: 08/07/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -296,7 +296,6 @@ Microsoft Defender Application Guard extension deprecation. Because Application 
 
 #### New policies
 
-- [ImageEditorServiceEnabled](/deployedge/microsoft-edge-policies#imageeditorserviceenabled) - Enable the Designer for Image Editor feature
 - [ZstdContentEncodingEnabled](/deployedge/microsoft-edge-policies#zstdcontentencodingenabled) - Enable zstd content encoding support
 - [QRCodeGeneratorEnabled](/deployedge/microsoft-edge-policies#qrcodegeneratorenabled) - Enable QR Code Generator
 
