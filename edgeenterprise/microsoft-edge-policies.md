@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/01/2024
+ms.date: 08/07/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -27,18 +27,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 > This article applies to Microsoft Edge version 77 or later.
 >
 > For Microsoft Edge Mobile policy reference, see [Microsoft Edge Mobile - Policies](/deployedge/microsoft-edge-mobile-policies).
-
-## New policies
-
-The following table lists the new and obsolete policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[ExtensionDeveloperModeSettings](#extensiondevelopermodesettings)|Control the availability of developer mode on extensions page|
-|[ExtensionExtendedBackgroundLifetimeForPortConnectionsToUrls](#extensionextendedbackgroundlifetimeforportconnectionstourls)|Configure a list of origins that grant an extended background lifetime to connecting extensions.|
-|[CSSCustomStateDeprecatedSyntaxEnabled](#csscustomstatedeprecatedsyntaxenabled)|Controls whether the deprecated :--foo syntax for CSS custom state is enabled|
-|[KeyboardFocusableScrollersEnabled](#keyboardfocusablescrollersenabled)|Enable keyboard focusable scrollers|
-|[SiteSafetyServicesEnabled](#sitesafetyservicesenabled)|Allow users to configure Site safety services (obsolete)|
 
 ## Available policies
 
@@ -24795,7 +24783,7 @@ If you don't configure this policy, a user can open any app in sidebar.
 
 If the [HubsSidebarEnabled](#hubssidebarenabled) policy is disabled, this list isn't used and no sidebar can be opened.
 
-For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2281313](https://go.microsoft.com/fwlink/?linkid=2281313).
 
 Note: * will block all apps.
 
@@ -42624,17 +42612,20 @@ This policy is deprecated due to the deprecation of the Web widget's vertical la
 
   Allows the Search bar to start running at Windows startup.
 
-       If you enable:
-         The Search bar will start running at Windows startup by default.
-         If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
+ If you enable this policy:
 
-       If you disable this policy:
-         The Search bar will not start at Windows startup for all profiles.
-         The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
+ - The Search bar will start running at Windows startup by default.
+ - If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
 
-       If you don't configure the policy:
-         The Search bar will not start at Windows startup for all profiles.
-         The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
+If you disable this policy:
+
+- The Search bar will not start at Windows startup for all profiles.
+- The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
+
+If you don't configure the policy:
+
+- The Search bar will not start at Windows startup for all profiles.
+- The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
 
 This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
 
