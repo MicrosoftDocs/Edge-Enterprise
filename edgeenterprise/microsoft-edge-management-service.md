@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 07/31/2024
+ms.date: 08/13/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -334,9 +334,9 @@ You can specify individual hostnames and the profile you would like them to open
 5. Select **Add**.
 <!-- ================ NEW ============================= -->
 
-#### Configure security protection settings
+#### Configure security settings
 
-To add settings that help protect against security threats, navigate to the security protections tab. Here you can choose to configure settings that help protect your users against security vulnerabilities.
+To add settings that help protect against security threats, navigate to the security settings tab. Here you can choose to configure settings that help protect your users against security vulnerabilities.
 
 ##### Enable enhanced security mode
 
@@ -346,12 +346,12 @@ To add settings that help protect against security threats, navigate to the secu
 2. Specify the **Balanced** or **Strict** mode depending on the level of security you would like.
 3. Select **Save changes**.
 
-##### Block third-party browser use
+##### Block alternative browser use
 
 > [!NOTE]
 > This setting is only available for customers with a Microsoft Intune license.
 
-Users with configured security protection settings may still be at risk on other browsers. To mitigate this risk, you can choose to block third-party browser use. When this setting is enabled, a new configuration policy will be created in Intune. Any modifications you make to this new policy in Intune or in a configuration profile with identical groups in the Microsoft Edge management service may lead to unexpected behaviors.
+Users with configured security settings may still be at risk on other browsers. To mitigate this risk, you can choose to block alternative browser use. When this setting is enabled, a new configuration policy will be created in Intune. Any modifications you make to this new policy in Intune or in a configuration profile with identical groups in the Microsoft Edge management service may lead to unexpected behaviors.
 
 <!-- =================================================== -->
 ## Configure Microsoft Edge to use a configuration profile
