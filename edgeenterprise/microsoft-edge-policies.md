@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/07/2024
+ms.date: 08/08/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -42612,20 +42612,20 @@ This policy is deprecated due to the deprecation of the Web widget's vertical la
 
   Allows the Search bar to start running at Windows startup.
 
- If you enable this policy:
+  If you enable this policy:
 
- - The Search bar will start running at Windows startup by default.
- - If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
+  - The Search bar will start running at Windows startup by default.
+  - If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
 
-If you disable this policy:
+  If you disable this policy:
 
-- The Search bar will not start at Windows startup for all profiles.
-- The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
+  - The Search bar will not start at Windows startup for all profiles.
+  - The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
 
-If you don't configure the policy:
+  If you don't configure the policy:
 
-- The Search bar will not start at Windows startup for all profiles.
-- The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
+  - The Search bar will not start at Windows startup for all profiles.
+  - The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
 
 This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
 
