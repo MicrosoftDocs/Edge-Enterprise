@@ -99,5 +99,5 @@ The "Target Channel override" group policy can also be used to seamlessly flight
 
 ## See also
 
-- [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Channel downloads](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)!
+- [Channel downloads](https://aka.ms/EdgeEnterprise)!
