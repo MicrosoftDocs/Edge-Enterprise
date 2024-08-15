@@ -22,8 +22,7 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 127.0
 
 This update contains the following Microsoft Edge-specific update:
 
-- [CVE-2024-x](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-x)
-- [CVE-2024-x](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-x)
+- [CVE-2024-43472](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43472)
 
 ## August 8, 2024
 
