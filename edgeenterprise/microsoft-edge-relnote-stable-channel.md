@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/09/2024
+ms.date: 08/15/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,6 +25,16 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 127.0.2651.105: August 15, 2024
+
+Fixed various bugs and performance issues, improved reliability.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-15-2024).
+
+### Improved reliability
+ 
+- Fixed a browser crash (STATUS_BREAKPOINT) that occurred when trying to upload documents on some websites.
 
 ## Version 126.0.2592.137: August 8, 2024
 
