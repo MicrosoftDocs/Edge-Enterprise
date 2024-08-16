@@ -53,7 +53,7 @@ This article describes the supported operating systems that apply to Microsoft E
 - macOS 11 and later starting with Microsoft Edge 129
 
 > [!NOTE]
-> Microsoft Edge 127 and 128 will keep working on Catalina 10.5 but won't get upadates after Microsoft Edge 129 is released.
+> Microsoft Edge 127 and 128 will keep working on Catalina 10.5 but won't get updates after Microsoft Edge 129 is released.
 
 ### iOS
 
