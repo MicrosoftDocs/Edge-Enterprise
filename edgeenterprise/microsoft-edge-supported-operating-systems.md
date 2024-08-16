@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: archandr
 author: srugh
 manager: likuba
-ms.date: 05/20/2024
+ms.date: 08/16/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -50,7 +50,10 @@ This article describes the supported operating systems that apply to Microsoft E
 
 ### macOS
 
-- Catalina (10.15) and later
+- macOS 11 and later starting with Microsoft Edge 129
+
+> [!NOTE]
+> Microsoft Edge 127 and 128 will keep working on Catalina 10.5 but won't get updates after Microsoft Edge 129 is released.
 
 ### iOS
 
