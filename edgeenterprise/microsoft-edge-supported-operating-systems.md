@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: archandr
 author: srugh
 manager: likuba
-ms.date: 05/20/2024
+ms.date: 08/16/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -50,7 +50,7 @@ This article describes the supported operating systems that apply to Microsoft E
 
 ### macOS
 
-- Catalina (10.15) and later
+- macOS 11 and later
 
 ### iOS
 
