@@ -18,7 +18,7 @@ These release notes provide information about security fixes that are included i
 
 ## August 15, 2024
 
-Microsoft has released the latest **Microsoft Edge Stable Channel (Version 127.0.2651.105)** which incorporates the latest security updates for Microsoft Edge. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 127.0.2651.105)** which incorporates the latest updates of the Chromium project.
 
 This update contains the following Microsoft Edge-specific update:
 
