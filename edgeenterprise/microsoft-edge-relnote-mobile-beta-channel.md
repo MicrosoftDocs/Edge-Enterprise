@@ -32,6 +32,7 @@ Archived versions of these release notes are available at [Archived release note
 
 Fixed various bugs and performance issues.
 
+
 ## Version 128.0.2739.27 (Android and iOS): August 15, 2024
 
 Fixed various bugs and performance issues.
