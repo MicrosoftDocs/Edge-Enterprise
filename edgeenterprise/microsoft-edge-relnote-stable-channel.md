@@ -45,7 +45,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 - Fixed an issue that caused high CPU usage of renderer processes when running Selenium tests and calling `driver.quit()` to end the testing session.
 
-### Web platform changes
+### Web Platform Changes
 
 - **Rename position-try-options to position-try-fallbacks.**  The CSS working group ([CSSWG](https://www.w3.org/groups/wg/css/)) resolved to rename this property, because fallbacks more accurately describe what this property controls. The word *options* is a bit unclear, since the styles outside of `position-try` blocks will be tested first, and if they result in a layout that fits within the containing block, none of the options will get used. So *fallbacks* is a better word to describe this behavior. For more information, see [GitHub](https://github.com/w3c/csswg-drafts/issues/10395#issuecomment-2192127524).
 
