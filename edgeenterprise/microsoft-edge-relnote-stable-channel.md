@@ -45,6 +45,8 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 - Fixed an issue that caused high CPU usage of renderer processes when running Selenium tests and calling `driver.quit()` to end the testing session.
 
+### Web platform changes
+
 - **Rename position-try-options to position-try-fallbacks.**  The CSS working group ([CSSWG](https://www.w3.org/groups/wg/css/)) resolved to rename this property, because fallbacks more accurately describe what this property controls. The word *options* is a bit unclear, since the styles outside of `position-try` blocks will be tested first, and if they result in a layout that fits within the containing block, none of the options will get used. So *fallbacks* is a better word to describe this behavior. For more information, see [GitHub](https://github.com/w3c/csswg-drafts/issues/10395#issuecomment-2192127524).
 
 - **Updates for CookiePartitionKey of partitioned cookies.**  A cross-site ancestor bit is added to the keying of the partitioned cookie's CookiePartitionKey. This change unifies the partition key with the partition key values used in storage partitioning and adds protection against clickjacking attacks by preventing cross-site embedded frames from having access to the top-level-site's partitioned cookies.
