@@ -44,12 +44,12 @@ Fixed various bugs and performance issues, new policies, general updates, and en
 
 ### New Policies
 
-- [iOS] Enable Web Inspector and add a new token (webinspector) of disabled features policy to disable it. Previously Web Inspector was disabled in Stable versions, but it is now enabled for general web site debugging and troubleshooting purposes.
+- [iOS] Enable Web Inspector and add a new token (`webinspector`) of disabled features policy to disable it. Previously Web Inspector was disabled in Stable versions, but it's now enabled for general web site debugging and troubleshooting purposes.
 
 ### Enhancements
 
 - [iOS] General enhancements to NTLMSSO policies to make it more useful, added support for 407 proxy auth challenges.
-- [iOS] Re-sign-in prompts and banners are changed to "re-verify account" for clarity. These prompts and banners remind a user to verify their account by re-inputting a password and refresh underlying tokens to keep account state healthy.
+- [iOS] Re-sign-in prompts and banners are changed to "re-verify account" for clarity. These prompts and banners remind a user to verify their account by reinputting a password and refresh underlying tokens to keep account state healthy.
 - [iOS] Clear opened tabs data when signing out of Microsoft Entra ID if clear data is chosen.
 
 ## Version 128.0.2739.34 (Android): August 19, 2024
@@ -69,7 +69,7 @@ Fixed various bugs and performance issues, general updates, and enhancements.
 ### Enhancements
 
 - [Android] General enhancements to NTLMSSO policies to make it more useful, and added support for 407 proxy auth challenges.
-- [Android] Re-sign-in prompts and banners are re-worded as "re-verify account" for clarity. These prompts and banners remind the user to verify their account by re-inputting a password and refresh underlying tokens to keep account state healthy.
+- [Android] Re-sign-in prompts and banners are reworded as "re-verify account" for clarity. These prompts and banners remind the user to verify their account by reinputting a password and refresh underlying tokens to keep account state healthy.
 - [Android] Clear opened tabs data when signing out of Microsoft Entra ID if clear data is chosen.
 
 ## Version 128.0.2739.27 (Android and iOS): August 15, 2024
@@ -122,7 +122,7 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 ### Enhancements
 
 - [iOS] Avoid multiple auth prompt dialog for NTLMSSO management
-- [iOS] Enhance URL block list in MAM with respect to policy description
+- [iOS] Enhance URL blocklist in MAM with respect to policy description
 
 ## Version 127.0.2651.59: (Android and iOS): July 19, 2024
 
@@ -180,7 +180,7 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 
 ### Enhancements
 
-- [Android and iOS] Remove [Copilot](https://copilot.microsoft.com/) from default allow list so that you can manage access to [Copilot](https://copilot.microsoft.com/) via URLs block list.
+- [Android and iOS] Remove [Copilot](https://copilot.microsoft.com/) from default allowlist so that you can manage access to [Copilot](https://copilot.microsoft.com/) via URLs blocklist.
 - [iOS] Support Passkey on iOS. This feature is disabled by default. It can be enabled by turning on the flag `edge-iOS-enable-passkey-signin` from *Edge://flags*.
 
 ## Version 126.0.2592.42 (Android and iOS): June 6, 2024
