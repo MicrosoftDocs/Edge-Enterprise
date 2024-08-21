@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/19/2024
+ms.date: 08/21/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -31,7 +31,27 @@ Archived versions of these release notes are available at [Archived release note
 
 ## Version 128.0.2739.35 (iOS): August 19, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, new policies, general updates, and enhancements.
+
+### General updates
+
+- [iOS] Upgrade MS Tunnel SDK version 1.1.7
+- [iOS] Upgrade Intune MAM SDK to version 19.5.1
+- [iOS] Upgrade OneAuth SDK to version 3.0.0
+
+### Bug fixes
+
+- [iOS] Fix a bug related to the `DefaultBrowserSettingEnabled` setting for Edge.
+
+### New Policies
+
+- [iOS] Enable Web Inspector and add a new token (webinspector) of disabled features policy to disable it. Previously Web Inspector was disabled in Stable versions, but it is now enabled for general web site debugging and troubleshooting purposes.
+
+### Enhancements
+
+- [iOS] General enhancements to NTLMSSO policies to make it more useful, added support for 407 proxy auth challenges.
+- [iOS] Re-sign-in prompts and banners are changed to "re-verify account" for clarity. These prompts and banners remind a user to verify their account by re-inputting a password and refresh underlying tokens to keep account state healthy.
+- [iOS] Clear opened tabs data when signing out of Microsoft Entra ID if clear data is chosen.
 
 ## Version 128.0.2739.34 (Android): August 19, 2024
 
