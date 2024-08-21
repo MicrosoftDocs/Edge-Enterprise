@@ -45,14 +45,6 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 - Fixed an issue that caused high CPU usage of renderer processes when running Selenium tests and calling `driver.quit()` to end the testing session.
 
-### Site compatibility-impacting changes
-
-- **Rename position-try-options to position-try-fallbacks.**  The CSS working group ([CSSWG](https://www.w3.org/groups/wg/css/)) resolved to rename this property, because fallbacks more accurately describe what this property controls. The word *options* is unclear, since the styles outside of `position-try` blocks will be tested first, and if they result in a layout that fits within the containing block, none of the options will get used. So *fallbacks* is a better word to describe this behavior. For more information, see [GitHub](https://github.com/w3c/csswg-drafts/issues/10395#issuecomment-2192127524).
-
-- **Updates for CookiePartitionKey of partitioned cookies.**  A cross-site ancestor bit is added to the keying of the partitioned cookie's `CookiePartitionKey`. This change unifies the partition key with the partition key values used in storage partitioning and adds protection against clickjacking attacks by preventing cross-site embedded frames from having access to the top-level-site's partitioned cookies.
-
-  If an organization experiences any breakage with embedded iframes, they can use the [CookiesAllowedForUrls](/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy or use **SameSite=None** cookies without the Partitioned attribute and then invoke the Storage Access API (SAA) to ensure that embedded iframes have access to the same cookies as the top level domain.
-
 ### Feature updates
 
 - **SSE3 Requirement.**  Microsoft Edge stopped supporting CPUs that lack SSE3. Devices with such CPUs won't receive any more updates. For more information, see [Microsoft Edge Supported Operating Systems](/deployedge/microsoft-edge-supported-operating-systems).
@@ -69,6 +61,14 @@ The following Dev channel updates preceded this Stable channel release. The foll
 - **EnforceLocalAnchorConstraintsEnabled policy obsoletion.** The [EnforceLocalAnchorConstraintsEnabled](/deployedge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) policy was previously deprecated and is now obsolete in Edge version 128. Since Microsoft Edge 112, constraints in certificates loaded from the platform certificate store are enforced. The [EnforceLocalAnchorConstraintsEnabled](/deployedge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) policy existed as a temporary opt-out in case an enterprise encountered issues with the constraints encoded in their private roots.
 
 - **New Policy for Insecure Downloads over HTTP.** Users that download potentially dangerous content on HTTP sites will receive a UI warning in a future Microsoft Edge version. To prepare for this change, the [ShowDownloadsInsecureWarningsEnabled](/deployedge/microsoft-edge-policies#showdownloadsinsecurewarningsenabled) policy is now available for admins to enable or disable the warnings related to insecure downloads
+
+### Site compatibility-impacting changes
+
+- **Rename position-try-options to position-try-fallbacks.**  The CSS working group ([CSSWG](https://www.w3.org/groups/wg/css/)) resolved to rename this property, because fallbacks more accurately describe what this property controls. The word *options* is unclear, since the styles outside of `position-try` blocks will be tested first, and if they result in a layout that fits within the containing block, none of the options will get used. So *fallbacks* is a better word to describe this behavior. For more information, see [GitHub](https://github.com/w3c/csswg-drafts/issues/10395#issuecomment-2192127524).
+
+- **Updates for CookiePartitionKey of partitioned cookies.**  A cross-site ancestor bit is added to the keying of the partitioned cookie's `CookiePartitionKey`. This change unifies the partition key with the partition key values used in storage partitioning and adds protection against clickjacking attacks by preventing cross-site embedded frames from having access to the top-level-site's partitioned cookies.
+
+  If an organization experiences any breakage with embedded iframes, they can use the [CookiesAllowedForUrls](/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy or use **SameSite=None** cookies without the Partitioned attribute and then invoke the Storage Access API (SAA) to ensure that embedded iframes have access to the same cookies as the top level domain.
 
 ### Policy updates
 
