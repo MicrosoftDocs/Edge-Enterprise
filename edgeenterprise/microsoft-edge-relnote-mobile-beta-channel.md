@@ -28,7 +28,6 @@ Archived versions of these release notes are available at [Archived release note
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-
 ## Version 128.0.2739.35 (iOS): August 19, 2024
 
 Fixed various bugs and performance issues, new policies, general updates, and enhancements.
@@ -41,7 +40,7 @@ Fixed various bugs and performance issues, new policies, general updates, and en
 
 ### Bug fixes
 
-- [iOS] Fix a bug related to the `DefaultBrowserSettingEnabled` setting for Edge.
+- [iOS] Fix a bug related to the [DefaultBrowserSettingEnabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) policy.
 
 ### New Policies
 
@@ -55,7 +54,23 @@ Fixed various bugs and performance issues, new policies, general updates, and en
 
 ## Version 128.0.2739.34 (Android): August 19, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, general updates, and enhancements.
+
+### General updates
+
+- [Android] Upgrade Intune MAM SDK to version 10.3.1
+- [Android] Upgrade OneAuth SDK to version 3.0.0
+
+### Bug fixes
+
+- [Android] Fix AppProxy translation worked in InPrivate context unexpectedly
+- [Android] Fix a bug related to policy of single device mode
+
+### Enhancements
+
+- [Android] General enhancements to NTLMSSO policies to make it more useful, and added support for 407 proxy auth challenges.
+- [Android] Re-sign-in prompts and banners are re-worded as "re-verify account" for clarity. These prompts and banners remind the user to verify their account by re-inputting a password and refresh underlying tokens to keep account state healthy.
+- [Android] Clear opened tabs data when signing out of Microsoft Entra ID if clear data is chosen.
 
 ## Version 128.0.2739.27 (Android and iOS): August 15, 2024
 
