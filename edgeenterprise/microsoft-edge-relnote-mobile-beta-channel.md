@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/19/2024
+ms.date: 08/21/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -28,14 +28,49 @@ Archived versions of these release notes are available at [Archived release note
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-
 ## Version 128.0.2739.35 (iOS): August 19, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, new policies, general updates, and enhancements.
+
+### General updates
+
+- [iOS] Upgrade MS Tunnel SDK version 1.1.7
+- [iOS] Upgrade Intune MAM SDK to version 19.5.1
+- [iOS] Upgrade OneAuth SDK to version 3.0.0
+
+### Bug fixes
+
+- [iOS] Fix a bug related to the [DefaultBrowserSettingEnabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) policy.
+
+### New Policies
+
+- [iOS] Enable Web Inspector and add a new token (`webinspector`) of disabled features policy to disable it. Previously Web Inspector was disabled in Stable versions, but it's now enabled for general web site debugging and troubleshooting purposes.
+
+### Enhancements
+
+- [iOS] General enhancements to NTLMSSO policies to make it more useful, added support for 407 proxy auth challenges.
+- [iOS] Re-sign-in prompts and banners are changed to "re-verify account" for clarity. These prompts and banners remind a user to verify their account by reinputting a password and refresh underlying tokens to keep account state healthy.
+- [iOS] Clear opened tabs data when signing out of Microsoft Entra ID if clear data is chosen.
 
 ## Version 128.0.2739.34 (Android): August 19, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, general updates, and enhancements.
+
+### General updates
+
+- [Android] Upgrade Intune MAM SDK to version 10.3.1
+- [Android] Upgrade OneAuth SDK to version 3.0.0
+
+### Bug fixes
+
+- [Android] Fix AppProxy translation worked in InPrivate context unexpectedly
+- [Android] Fix a bug related to policy of single device mode
+
+### Enhancements
+
+- [Android] General enhancements to NTLMSSO policies to make it more useful, and added support for 407 proxy auth challenges.
+- [Android] Re-sign-in prompts and banners are reworded as "re-verify account" for clarity. These prompts and banners remind the user to verify their account by reinputting a password and refresh underlying tokens to keep account state healthy.
+- [Android] Clear opened tabs data when signing out of Microsoft Entra ID if clear data is chosen.
 
 ## Version 128.0.2739.27 (Android and iOS): August 15, 2024
 
@@ -87,7 +122,7 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 ### Enhancements
 
 - [iOS] Avoid multiple auth prompt dialog for NTLMSSO management
-- [iOS] Enhance URL block list in MAM with respect to policy description
+- [iOS] Enhance URL blocklist in MAM with respect to policy description
 
 ## Version 127.0.2651.59: (Android and iOS): July 19, 2024
 
@@ -145,7 +180,7 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 
 ### Enhancements
 
-- [Android and iOS] Remove [Copilot](https://copilot.microsoft.com/) from default allow list so that you can manage access to [Copilot](https://copilot.microsoft.com/) via URLs block list.
+- [Android and iOS] Remove [Copilot](https://copilot.microsoft.com/) from default allowlist so that you can manage access to [Copilot](https://copilot.microsoft.com/) via URLs blocklist.
 - [iOS] Support Passkey on iOS. This feature is disabled by default. It can be enabled by turning on the flag `edge-iOS-enable-passkey-signin` from *Edge://flags*.
 
 ## Version 126.0.2592.42 (Android and iOS): June 6, 2024
