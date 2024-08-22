@@ -29,7 +29,7 @@ Fixed various bugs and performance issues, feature updates.
 
   For Windows 11 and Windows 10 users, clicking the gear icon now automatically opens the *edge://settings/sidebar* page.
 
-  Also, the ability for Edge Bar to start automatically when starting a Windows 10 device has been enabled again. The Close "X" icon has been moved below the ellipsis menu at the bottom right corner of Edge Bar.
+  Also, the ability for Edge Bar to start automatically when starting a Windows 10 device has been enabled again, the Close "X" icon has been moved below the ellipsis menu at the bottom right corner of Edge Bar, and Copilot in Edge will remain within the browser not in Edge Bar. **Note:** These features are a controlled feature rollout. If you don't see these features, check back as we continue our rollout.
 
   Disabling Edge Bar through the [StandaloneHubsSidebarEnabled](/deployedge/microsoft-edge-policies#standalonehubssidebarenabled) policy continues to work, there is a fix to make the UI and briefcase icon appear on the *edge://settings/sidebar* page coming very soon.
 
