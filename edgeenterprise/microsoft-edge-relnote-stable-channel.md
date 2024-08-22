@@ -62,6 +62,14 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 - **New Policy for Insecure Downloads over HTTP.** Users that download potentially dangerous content on HTTP sites will receive a UI warning in a future Microsoft Edge version. To prepare for this change, the [ShowDownloadsInsecureWarningsEnabled](/deployedge/microsoft-edge-policies#showdownloadsinsecurewarningsenabled) policy is now available for admins to enable or disable the warnings related to insecure downloads
 
+- **Edge Bar improvements.** Edge Bar, the detachable version of the Edge sidebar in Windows 10, has a changed entry point from the gear icon at the bottom of the Edge sidebar's fly out menu to the *edge://settings/sidebar* page.  
+
+  For Windows 11 and Windows 10 users, clicking the gear icon will now automatically open the *edge://settings/sidebar* page.
+
+  Also, the ability for Edge Bar to start automatically when starting a Windows 10 device has been enabled again and the Close "X" icon has been moved below the ellipsis menu at the bottom right corner of Edge Bar.
+
+  Disabling Edge Bar through the [StandaloneHubsSidebarEnabled](/deployedge/microsoft-edge-policies#standalonehubssidebarenabled) policy continues to work, there is a fix to make the UI and briefcase icon appear on the *edge://settings/sidebar* page coming very soon.
+
 ### Site compatibility-impacting changes
 
 - **Rename position-try-options to position-try-fallbacks.**  The CSS working group ([CSSWG](https://www.w3.org/groups/wg/css/)) resolved to rename this property, because fallbacks more accurately describe what this property controls. The word *options* is unclear, since the styles outside of `position-try` blocks will be tested first, and if they result in a layout that fits within the containing block, none of the options will get used. So *fallbacks* is a better word to describe this behavior. For more information, see [GitHub](https://github.com/w3c/csswg-drafts/issues/10395#issuecomment-2192127524).
