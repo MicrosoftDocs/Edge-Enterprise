@@ -26,7 +26,7 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 128.0.XXXX.XX: August X, 2024
+## Version 128.0.2739.42: August 22, 2024
 
 Fixed various bugs and performance issues, feature updates, and policy updates.
 
@@ -74,14 +74,6 @@ The following Dev channel updates preceded this Stable channel release. The foll
   Also, the ability for Edge Bar to start automatically when starting a Windows 10 device has been enabled again and the Close "X" icon has been moved below the ellipsis menu at the bottom right corner of Edge Bar.
 
   Disabling Edge Bar through the [StandaloneHubsSidebarEnabled](/deployedge/microsoft-edge-policies#standalonehubssidebarenabled) policy continues to work, there is a fix to make the UI and briefcase icon appear on the *edge://settings/sidebar* page coming very soon.
-
-### Site compatibility-impacting changes
-
-- **Rename position-try-options to position-try-fallbacks.**  The CSS working group ([CSSWG](https://www.w3.org/groups/wg/css/)) resolved to rename this property, because fallbacks more accurately describe what this property controls. The word *options* is unclear, since the styles outside of `position-try` blocks will be tested first, and if they result in a layout that fits within the containing block, none of the options will get used. So *fallbacks* is a better word to describe this behavior. For more information, see [GitHub](https://github.com/w3c/csswg-drafts/issues/10395#issuecomment-2192127524).
-
-- **Updates for CookiePartitionKey of partitioned cookies.**  A cross-site ancestor bit is added to the keying of the partitioned cookie's `CookiePartitionKey`. This change unifies the partition key with the partition key values used in storage partitioning and adds protection against clickjacking attacks by preventing cross-site embedded frames from having access to the top-level-site's partitioned cookies.
-
-  If an organization experiences any breakage with embedded iframes, they can use the [CookiesAllowedForUrls](/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy or use **SameSite=None** cookies without the Partitioned attribute and then invoke the Storage Access API (SAA) to ensure that embedded iframes have access to the same cookies as the top level domain.
 
 ### Policy updates
 
