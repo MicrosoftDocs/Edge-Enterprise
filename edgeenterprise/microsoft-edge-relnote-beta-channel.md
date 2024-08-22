@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/19/2024
+ms.date: 08/22/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -18,6 +18,20 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 128.0.2739.42: August 22, 2024
+
+Fixed various bugs and performance issues, feature updates.
+
+### Feature updates
+
+- **Edge Bar improvements.** Microsoft Edge Bar, the detachable version of the Edge sidebar in Windows 10, has a changed entry point from the gear icon at the bottom of the Edge sidebar's fly out menu to the *edge://settings/sidebar* page.  
+
+  For Windows 11 and Windows 10 users, clicking the gear icon now automatically opens the *edge://settings/sidebar* page.
+
+  Also, the ability for Edge Bar to start automatically when starting a Windows 10 device has been enabled again. The Close "X" icon has been moved below the ellipsis menu at the bottom right corner of Edge Bar.
+
+  Disabling Edge Bar through the [StandaloneHubsSidebarEnabled](/deployedge/microsoft-edge-policies#standalonehubssidebarenabled) policy continues to work, there is a fix to make the UI and briefcase icon appear on the *edge://settings/sidebar* page coming very soon.
 
 ## Version 128.0.2739.33: August 19, 2024
 
