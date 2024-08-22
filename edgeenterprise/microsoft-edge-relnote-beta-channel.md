@@ -25,15 +25,15 @@ Fixed various bugs and performance issues, feature updates.
 
 ### Fixes
 
-- **Policy updates to allow wildcards.** The documentation for the following policies were inaccurate and have been corrected. These polices support wildcards (*) in URL patterns when being configured: [ImagesAllowedForUrls](/deployedge/microsoft-edge-policies#imagesallowedforurls), [ImagesBlockedForUrls](/deployedge/microsoft-edge-policies#imagesblockedforurls), [InsecureContentAllowedForUrls](/deployedge/microsoft-edge-policies#insecurecontentallowedforurls), [InsecureContentBlockedForUrls](/deployedge/microsoft-edge-policies#insecurecontentblockedforurls), [PopupsAllowedForUrls](/deployedge/microsoft-edge-policies#popupsallowedforurls), [PopupsBlockedForUrls](/deployedge/microsoft-edge-policies#popupsblockedforurls).
+- **Policy updates to allow wildcards.** The documentation for the following policies were inaccurate and were corrected. These policies support wildcards (*) in URL patterns when being configured: [ImagesAllowedForUrls](/deployedge/microsoft-edge-policies#imagesallowedforurls), [ImagesBlockedForUrls](/deployedge/microsoft-edge-policies#imagesblockedforurls), [InsecureContentAllowedForUrls](/deployedge/microsoft-edge-policies#insecurecontentallowedforurls), [InsecureContentBlockedForUrls](/deployedge/microsoft-edge-policies#insecurecontentblockedforurls), [PopupsAllowedForUrls](/deployedge/microsoft-edge-policies#popupsallowedforurls), [PopupsBlockedForUrls](/deployedge/microsoft-edge-policies#popupsblockedforurls).
 
 ### Feature updates
 
-- **Edge Bar improvements.** Edge Bar, the detachable version of the Edge sidebar in Windows 10, has a changed entry point from the gear icon at the bottom of the Edge sidebar's fly out menu to the *edge://settings/sidebar* page.  
+- **Edge Bar improvements.** Microsoft Edge Bar, the detachable version of the Edge sidebar in Windows 10, has a changed entry point from the gear icon at the bottom of the Edge sidebar's fly out menu to the *edge://settings/sidebar* page.  
 
-  For Windows 11 and Windows 10 users, clicking the gear icon will now automatically open the *edge://settings/sidebar* page.
+  For Windows 11 and Windows 10 users, clicking the gear icon now automatically opens the *edge://settings/sidebar* page.
 
-  Also, the ability for Edge Bar to start automatically when starting a Windows 10 device has been enabled again and the Close "X" icon has been moved below the ellipsis menu at the bottom right corner of Edge Bar.
+  Also, the ability for Edge Bar to start automatically when starting a Windows 10 device has been enabled again. The Close "X" icon has been moved below the ellipsis menu at the bottom right corner of Edge Bar.
 
   Disabling Edge Bar through the [StandaloneHubsSidebarEnabled](/deployedge/microsoft-edge-policies#standalonehubssidebarenabled) policy continues to work, there is a fix to make the UI and briefcase icon appear on the *edge://settings/sidebar* page coming very soon.
 
