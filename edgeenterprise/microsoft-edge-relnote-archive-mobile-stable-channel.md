@@ -3,7 +3,7 @@ title: "Archived - release notes for Microsoft Edge Mobile Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/26/2024
+ms.date: 08/26/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,6 +15,78 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 # Archived - release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 124.0.2478.105 (iOS): May 17, 2024 to Version 124.0.2478.50 (Android and iOS): April 22, 2024 -->
+
+## Version 124.0.2478.105 (iOS): May 17, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 124.0.2478.104 (Android): May 15, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 124.0.2478.89 (iOS): May 8, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 124.0.2478.87 (Android): May 7, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 124.0.2478.71 (iOS): April 30, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 124.0.2478.71 (Android): April 29, 2024
+
+### Policy updates
+
+- MDM policy  [edgenewtabpagelayout](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayout) to manage New Tab Page layout settings.
+- MDM policy [edgenewtabpagelayoutcustom](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayoutcustom) to manage New Tab Page custom setting.
+- MDM policy [edgenewtabpagelayoutuserselectable](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayoutuserselectable) to manage whether the New Tab Page layout is selectable by users.
+
+Fixed various bugs and performance issues.
+
+## Version 124.0.2478.62 (Android): April 25, 2024
+
+Fixed various bugs and performance issues.
+
+### Bug fixes
+
+- [Android] Fixed a bug where setting Edge as the default browser caused repetition, and the button became unresponsive.
+- [Android] Fixed a bug in shared device mode where the sign-in process was getting hung on the loading screen.
+
+## Version 124.0.2478.50 (Android and iOS): April 22, 2024
+
+Made general updates, fixed various bugs and performance issues, added new features and policies.
+
+### General updates
+
+- [iOS] MS Tunnel updated to 1.0.15, added privacy manifest file to comply with Apple App Store requirements.
+- [iOS] updated Citrix mVPN iOS SDK to 24.2.1
+- [iOS] added 'protApp' parameter to Microsoft Bing Search resource token fetch request, so it is not blocked by the CA "requiring app protection" policy. This token is needed for Copilot in Edge
+- [iOS] Intune SDK updated to 19.2.0
+
+### Bug fixes
+
+- [iOS] Fix disableFeatures policy bug for inPrivate mode, handle corner cases where inPrivate not disabled
+- [Android] Fixed a bug in Guided switch
+
+### New features
+
+- [Android] Re-enable Kerberos authentication support on Android with an external Negotiate Authenticator app.
+- [Android and iOS] Copilot in Edge mobile now properly supports school scenarios.
+- [iOS] Shared Device Mode support
+- [Android and iOS] In-flight, the "Shared Links" feature can be opened from the Edge overflow menu.
+
+### Policy updates
+
+- [Android and iOS] Introduce MDM policy [EdgeCopilotEnabled](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled), to globally disable Copilot in Edge mobile, including the personal context.
+- [Android and iOS] MDM policy [HideFirstRunExperience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience), to hide first run experience.
+- [Android and iOS] MDM policy [DefaultBrowserSettingEnabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled), to disable default browser settings pop-up.
+- [Android] MDM policy [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-mobile-policies#preventtyposquattingpromptoverride), to prevent bypassing Edge Website Typo Protection prompts for sites.
+- [Android] MDM policy [TyposquattingAllowListDomains](/deployedge/microsoft-edge-mobile-policies#typosquattingallowlistdomains), to configure the list of domains for which Edge Website Typo Protection won't trigger warnings.
 
 <!-- Version 123.0.2420.108 (iOS): April 19, 2024 to Version 123.0.2420.56 (iOS): March 25, 2024 -->
 
