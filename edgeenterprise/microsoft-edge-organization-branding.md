@@ -3,7 +3,7 @@ title: "Organization branding"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/31/2024
+ms.date: 08/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -94,6 +94,9 @@ Yes, organization isn't supported for the following scenarios.
   - Microsoft Edge for Business on unmanaged PCs and macOS.
   - Customers with an Office 365 GCC, Office 365 GCC High, and DoD plans.
 
+### Why am I unable to see my taskbar icon overlay update?
+
+The taskbar icon overlay is currently not supported for macOS devices. It might also take a couple of restarts upon initial configuration to  see your icon overlay updated on the taskbar.
 
 ## See also
 
