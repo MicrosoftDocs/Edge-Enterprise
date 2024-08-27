@@ -16,58 +16,6 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 
-<!-- Version 125.0.2535.96 (Android and iOS): June 11, 2024 to Version 125.0.2535.51 (Android): May 21, 2024 --->
-
-## Version 125.0.2535.96 (Android and iOS): June 11, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 125.0.2535.87 (Android and iOS): June 5, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 125.0.2535.72 (Android and iOS): May 27, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 125.0.2535.60 (iOS): May 23, 2024
-
-Fixed various bugs and performance issues, provide general updates, add new features and policies.
-
-### General updates
-
-- MS Tunnel SDK updated to 1.0.17.
-- Upgrade Intune iOS SDK to 19.3.1, with working time support.
-
-### New features
-
-- Shared links feature appears in overflow menu in work account. 
-- PAC policy now supports fail-close.
-- Support certificate pinning via Intune, currently only supports limited number of Microsoft domains. Pending on Intune's improvements to support customizable cert-domain pair.
-- Support of new iOS 17 relay proxy via policy `com.microsoft.intune.mam.managedbrowser.ProxyRelayUrl`.
-
-### New Policies
-
-- `com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork` to resolve the conflict between Intune auto identity switch and Edge allow/block URL policies.
-- Introduce MDM policy [EdgeCopilotEnabled](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled), to globally disable Copilot in Edge mobile, including the personal context.
-
-## Version 125.0.2535.51 (Android): May 21, 2024
-
-Fixed various bugs and performance issues, provide a general update, add new features and policies.
-
-### General updates
-
-- Upgrade the Intune Android SDK to 10.3.0, with working time support.
-
-### New features
-
-- Edge Android now supports kerberos/negotiate authentication on Android via an [external SPNEGO authenticator app](https://github.com/google/android-kerberos-authenticator) integrated with Android account management framework.
-- Shared links feature appears in overflow menu in work account.
-
-### New Policies
-
-- Introduce the MDM policy [EdgeCopilotEnabled](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled), to globally disable Copilot in Edge mobile, including the personal context.
-
 <!-- Version 126.0.2592.56: June 13, 2024 to version 125.0.2535.51: May 17, 2024 -->
 
 ## Version 126.0.2592.56: June 13, 2024
