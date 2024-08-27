@@ -83,7 +83,7 @@ After you finish customizing the browser elements with your organization brandin
 
 ### Are there any scenarios where organization branding can't be used?
 
-Yes, organization isn't supported for the following scenarios.
+Yes, organization branding isn't supported for the following scenarios.
 
 - Organization branding isn't applied if:  
   - OneDrive desktop sync is enabled.
