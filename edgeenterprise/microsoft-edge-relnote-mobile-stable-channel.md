@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 08/26/2024
+ms.date: 08/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -22,6 +22,30 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 128.0.2739.42 (iOS): August 27, 2024
+
+Fixed various bugs and performance issues, new policies, general updates, and enhancements.
+
+### General updates
+
+- [iOS] Upgrade MS Tunnel SDK version 1.1.7
+- [iOS] Upgrade Intune MAM SDK to version 19.5.1
+- [iOS] Upgrade OneAuth SDK to version 3.0.0
+
+### Bug fixes
+
+- [iOS] Fix a bug related to the [DefaultBrowserSettingEnabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) policy.
+
+### New Policies
+
+- [iOS] Enable Web Inspector and add a new token (`webinspector`) of disabled features policy to disable it. Previously Web Inspector was disabled in Stable versions, but it's now enabled for general web site debugging and troubleshooting purposes.
+
+### Enhancements
+
+- [iOS] General enhancements to NTLMSSO policies to make it more useful, added support for 407 proxy auth challenges.
+- [iOS] Re-sign-in prompts and banners are changed to "re-verify account" for clarity. These prompts and banners remind a user to verify their account by reinputting a password and refresh underlying tokens to keep account state healthy.
+- [iOS] Clear opened tabs data when signing out of Microsoft Entra ID if clear data is chosen.
 
 ## Version 127.0.2651.111 (Android and iOS): August 20, 2024
 
