@@ -98,6 +98,11 @@ Yes, organization isn't supported for the following scenarios.
 
 The taskbar icon overlay is currently not supported for macOS devices. It might also take a couple of restarts upon initial configuration to  see your icon overlay updated on the taskbar.
 
+### Which Microsoft Entra admin center assets are used for the organization branding icons?
+
+- The organization logo uses the header logo. If this logo doesn't exist, it uses the favicon.
+- The taskbar icon uses the square logo. If this logo doesn't exist, it uses the favicon.
+
 ## See also
 
 - [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business)
