@@ -36,7 +36,7 @@ Fixed various bugs and performance issues, feature updates.
 
 ### Feature updates
 
-- **Security setting in the Microsoft Edge management service.** The Microsoft Edge management service givesd admins a dedicated experience to manage specific settings that help improve the security posture of their managed browser instances.
+- **Security setting in the Microsoft Edge management service.** The Microsoft Edge management service gives admins a dedicated experience to manage specific settings that help improve the security posture of their managed browser instances.
 
 
 ## Version 128.0.2739.42: August 22, 2024
