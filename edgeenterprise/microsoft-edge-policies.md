@@ -22120,9 +22120,8 @@ WebAssembly modules to windows and workers in the same origin.
   This policy is deprecated because this feature will no longer be supported, starting in Microsoft Edge 128. There is no replacement for this policy.
 Enables CryptoWallet feature in Microsoft Edge.
 
-      If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
-
-      If you disable this policy, users can't use CryptoWallet feature.
+  - If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
+  - If you disable this policy, users can't use CryptoWallet feature.
 
   #### Supported features:
 
@@ -42627,17 +42626,20 @@ If you disable this policy, Web select will not be available in Web Capture and 
 
   Allows the Search bar to start running at Windows startup.
 
-       If you enable:
-         The Search bar will start running at Windows startup by default.
-         If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
+  If you enable:
 
-       If you disable this policy:
-         The Search bar will not start at Windows startup for all profiles.
-         The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
+  - The Search bar will start running at Windows startup by default.
+  - If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
 
-       If you don't configure the policy:
-         The Search bar will not start at Windows startup for all profiles.
-         The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
+  If you disable this policy:
+
+  - The Search bar will not start at Windows startup for all profiles.
+  - The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
+
+  If you don't configure the policy:
+
+  - The Search bar will not start at Windows startup for all profiles.
+  - The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
 
 This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
 
