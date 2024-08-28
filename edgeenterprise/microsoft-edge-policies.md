@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/15/2024
+ms.date: 08/28/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -27,6 +27,15 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 > This article applies to Microsoft Edge version 77 or later.
 >
 > For Microsoft Edge Mobile policy reference, see [Microsoft Edge Mobile - Policies](/deployedge/microsoft-edge-mobile-policies).
+
+## New policies
+
+The following table lists the deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature (deprecated)|
+|[EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled)|Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge (deprecated)|
 
 ## Available policies
 
@@ -475,7 +484,7 @@ These tables list all of the browser-related group policies available in this re
 |[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles|
 |[CopilotPageContext](#copilotpagecontext)|Control Copilot access to page context for Microsoft Entra ID profiles|
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
-|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature|
+|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature (deprecated)|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
@@ -530,7 +539,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
 |[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[EnhanceSecurityModeIndicatorUIEnabled](#enhancesecuritymodeindicatoruienabled)|Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge|
-|[EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled)|Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge|
+|[EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled)|Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge (deprecated)|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
 |[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)|
@@ -22098,9 +22107,9 @@ WebAssembly modules to windows and workers in the same origin.
 
   ### CryptoWalletEnabled
 
-  #### Enable CryptoWallet feature
+  #### Enable CryptoWallet feature (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -22108,11 +22117,12 @@ WebAssembly modules to windows and workers in the same origin.
 
   #### Description
 
-  Enables CryptoWallet feature in Microsoft Edge.
+  This policy is deprecated because this feature will no longer be supported, starting in Microsoft Edge 128. There is no replacement for this policy.
+Enables CryptoWallet feature in Microsoft Edge.
 
-If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
+      If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
 
-If you disable this policy, users can't use CryptoWallet feature.
+      If you disable this policy, users can't use CryptoWallet feature.
 
   #### Supported features:
 
@@ -22131,7 +22141,7 @@ If you disable this policy, users can't use CryptoWallet feature.
   ##### Group Policy (ADMX) info
 
   - GP unique name: CryptoWalletEnabled
-  - GP name: Enable CryptoWallet feature
+  - GP name: Enable CryptoWallet feature (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -25913,9 +25923,9 @@ For detailed information about Enhanced Security Mode, see [https://go.microsoft
 
   ### EnhanceSecurityModeOptOutUXEnabled
 
-  #### Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge
+  #### Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -25931,7 +25941,9 @@ If you disable this policy, the UI for the opt-out user experience is off.
 
 Note: If this policy is used, only the User Interface for the opt-out experience is supressed - ESM is still turned on. For more information, see the [EnhanceSecurityMode](#enhancesecuritymode) policy.
 
-For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2185895](https://go.microsoft.com/fwlink/?linkid=2185895)
+For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2185895](https://go.microsoft.com/fwlink/?linkid=2185895).
+
+After careful evaluation, we have determined that this experimental opt-out UX is not required. As a result, this policy will be deprecated and stop working after Edge version 130.
 
   #### Supported features:
 
@@ -25950,7 +25962,7 @@ For detailed information about Enhanced Security Mode, see [https://go.microsoft
   ##### Group Policy (ADMX) info
 
   - GP unique name: EnhanceSecurityModeOptOutUXEnabled
-  - GP name: Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge
+  - GP name: Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -42612,22 +42624,19 @@ This policy is deprecated due to the deprecation of the Web widget's vertical la
 
   Allows the Search bar to start running at Windows startup.
 
-  If you enable this policy:
+       If you enable:
+         The Search bar will start running at Windows startup by default.
+         If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
 
-  - The Search bar will start running at Windows startup by default.
-  - If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
+       If you disable this policy:
+         The Search bar will not start at Windows startup for all profiles.
+         The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
 
-  If you disable this policy:
+       If you don't configure the policy:
+         The Search bar will not start at Windows startup for all profiles.
+         The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
 
-  - The Search bar will not start at Windows startup for all profiles.
-  - The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
-
-  If you don't configure the policy:
-
-  - The Search bar will not start at Windows startup for all profiles.
-  - The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
-
-  This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
+This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
 
   #### Supported features:
 
