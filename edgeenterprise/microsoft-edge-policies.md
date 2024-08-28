@@ -42555,21 +42555,24 @@ If you disable this policy, Web select will not be available in Web Capture and 
 
   Enables the search bar. When enabled, users can use the search bar to search the web from their desktop or from an application. The search bar provides a search box that shows web suggestions and opens all web searches in Microsoft Edge. The search box provides search (powered by Bing) and URL suggestions. The search bar can be launched  from the "More tools" menu or jump list in Microsoft Edge.
 
-If you enable or don't configure this policy:
-The search bar will be automatically enabled for all profiles.
-The option to enable the search bar at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
-If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the search bar at startup will be toggled off.
-Users will see the menu item to launch the search bar from the Microsoft Edge "More tools" menu. Users can launch the search bar from "More tools".
-Users will see the menu item to launch the search bar from the Microsoft Edge jump list menu. Users can launch the search bar from the Microsoft Edge jump list menu.
-The search bar can be turned off by the "Quit" option in the System tray or by closing the search bar from the 3 dot menu. The search bar will be restarted on system reboot if auto-start is enabled.
+  If you enable or don't configure this policy:
 
+  - The search bar will be automatically enabled for all profiles.
+  - The option to enable the search bar at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
 
-If you disable this policy:
-The search bar will be disabled for all profiles.
-The option to launch the search bar from Microsoft Edge "More tools" menu will be disabled.
-The option to launch the search bar from Microsoft Edge jump list menu will be disabled.
+  If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the search bar at startup will be toggled off.
 
-This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
+  - Users will see the menu item to launch the search bar from the Microsoft Edge "More tools" menu. Users can launch the search bar from "More tools".
+  - Users will see the menu item to launch the search bar from the Microsoft Edge jump list menu. Users can launch the search bar from the Microsoft Edge jump list menu.
+  - The search bar can be turned off by the "Quit" option in the System tray or by closing the search bar from the 3 dot menu. The search bar will be restarted on system reboot if auto-start is enabled.
+
+  If you disable this policy:
+
+  - The search bar will be disabled for all profiles.
+  - The option to launch the search bar from Microsoft Edge "More tools" menu will be disabled.
+  - The option to launch the search bar from Microsoft Edge jump list menu will be disabled.
+
+  This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
 
   #### Supported features:
 
