@@ -46,6 +46,12 @@ The following Dev channel updates preceded this Beta channel release. These note
   
   Administrators can control the availability of the sidebar using the [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) policy. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
+### Policy updates
+
+#### Deprecated policies
+
+- [CryptoWalletEnabled](/deployedge/microsoft-edge-policies#cryptowalletenabled)  - Enable CryptoWallet feature (deprecated)
+- [EnhanceSecurityModeOptOutUXEnabled](/deployedge/microsoft-edge-policies#enhancesecuritymodeoptoutuxenabled)  - Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge (deprecated)
 
 ## Version 128.0.2739.42: August 22, 2024
 
