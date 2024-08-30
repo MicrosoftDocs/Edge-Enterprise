@@ -20,7 +20,7 @@ The Microsoft Edge management service is a platform in the Microsoft 365 admin c
 ## Prerequisites
 
 - You must have Microsoft Edge 115.0.1901.7 or greater installed.
-- You must be a [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) to access the experience in Microsoft 365 Admin Center.
+- You must be a [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) to access the experience in Microsoft 365 Admin Center.
 - You must be using one of the following supported operating systems: Windows 10/11 or Windows Server 2016 or later. See [Microsoft Edge Supported Operating Systems](/deployedge/microsoft-edge-supported-operating-systems) for specifics.
 
 > [!IMPORTANT]
@@ -305,11 +305,11 @@ From **Use custom branding**, you can customize each of the following browser el
 - Organization name: This name will be displayed in the profile pill.
 - Accent color: This color will appear in the profile flyout header.
 - Organization logo: This logo will appear in the profile flyout header. To ensure that your logo displays properly:
-  - You must upload a SVG (Scalable Vector Graphics) file with a maximum size of 150 KB.
+  - You must upload an SVG (Scalable Vector Graphics) file with a maximum size of 150 KB.
   - The uploaded file should have dimensions with width >= height. We recommend choosing a rectangular logo.
   - For non-square logos, file dimensions must be included at the SVG level ("<svg width="500 pixels" height="200 pixels"...)
 - Taskbar icon: This logo will overlay the Edge for Business icon on the taskbar. To ensure that your logo displays properly:
-  - You must upload a SVG file with a maximum size of 150 KB.
+  - You must upload an SVG file with a maximum size of 150 KB.
   - The uploaded file should be a square logo that has dimensions with a 1:1 ratio. The file resolution should be no greater than 480 pixels x 480 pixels.
 
 After you finish customizing the browser elements with your organization branding assets, confirm that the preview displays the correct visual appearance and then select **Save changes**.
@@ -397,7 +397,7 @@ reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeManagementPolicyOverridesPl
 
 Microsoft Edge policy has the concept of the audience that the policy is meant to apply to, this can be either "User" or "Device". In Microsoft Edge management service, the policy applied via Group Assignment is applied as User Policy, while policy pulled down via [EdgeManagementEnrollmentToken](/deployedge/microsoft-edge-policies#edgemanagementenrollmenttoken) is applied as Device Policy.
 
-If there's a conflict with policy that User and Device are both trying to set, Device Policy takes precedence over User Policy. If you want to give User Policy precendence you can change precedence in [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy) policy.
+If there's a conflict with policy that User and Device are both trying to set, Device Policy takes precedence over User Policy. If you want to give User Policy precedence you can change precedence in [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy) policy.
 
 1. You can set precedence via the registry by setting the value of "EdgeManagementUserPolicyOverridesCloudMachinePolicy" under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there, create it.
 2. Add the reg key using the following command line example as a guide. (Remember to use your profile ID.)
