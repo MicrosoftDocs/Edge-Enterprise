@@ -49,7 +49,7 @@ Fixed various bugs and performance issues, general updates, enhancements, and fe
 
 ## Version 128.0.2739.42 (iOS): August 27, 2024
 
-Fixed various bugs and performance issues, new policies, general updates, and enhancements.
+Fixed various bugs and performance issues, new policies, general updates, enhancements, and feature updates.
 
 ### General updates
 
