@@ -25,7 +25,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 128.0.2739.60 (Android): September 3, 2024
 
-Fixed various bugs and performance issues, general updates,
+Fixed various bugs and performance issues, general updates, enhancements, and feature Updates.
 
 ### General updates
 
@@ -43,6 +43,9 @@ Fixed various bugs and performance issues, general updates,
 - [Android] Re-sign-in prompts and banners are reworded as "re-verify account" for clarity. These prompts and banners remind the user to verify their account by reinputting a password and refresh underlying tokens to keep account state healthy.
 - [Android] Clear opened tabs data when signing out of Microsoft Entra ID if clear data is chosen.
 
+### Feature updates
+
+- **Deprecation of Copilot on Edge mobile.** Microsoft Copilot and the corresponding settings are removed from the Edge mobile application.  
 
 ## Version 128.0.2739.42 (iOS): August 27, 2024
 
@@ -57,6 +60,10 @@ Fixed various bugs and performance issues, new policies, general updates, and en
 ### Bug fixes
 
 - [iOS] Fix a bug related to the [DefaultBrowserSettingEnabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) policy.
+
+### Feature updates
+
+- **Deprecation of Copilot on Edge mobile.** Microsoft Copilot and the corresponding settings are removed from the Edge mobile application.  
 
 ### New Policies
 
