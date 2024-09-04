@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/28/2024
+ms.date: 08/30/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -28,14 +28,18 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 >
 > For Microsoft Edge Mobile policy reference, see [Microsoft Edge Mobile - Policies](/deployedge/microsoft-edge-mobile-policies).
 
+
 ## New policies
 
-The following table lists the deprecated policies that are in this article update.
+The following table lists the obsolete policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature (deprecated)|
-|[EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled)|Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge (deprecated)|
+|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (obsolete)|
+|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (obsolete)|
+|[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (obsolete)|
+|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (obsolete)|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup (obsolete)|
 
 ## Available policies
 
@@ -419,7 +423,7 @@ These tables list all of the browser-related group policies available in this re
 |[AllowSurfGame](#allowsurfgame)|Allow surf game|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Allow pages to send synchronous XHR requests during page dismissal (obsolete)|
 |[AllowSystemNotifications](#allowsystemnotifications)|Allows system notifications|
-|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)|
+|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (obsolete)|
 |[AllowTrackingForUrls](#allowtrackingforurls)|Configure tracking prevention exceptions for specific sites|
 |[AllowWebAuthnWithBrokenTlsCerts](#allowwebauthnwithbrokentlscerts)|Allow Web Authentication requests on sites with broken TLS certificates.|
 |[AllowedDomainsForApps](#alloweddomainsforapps)|Define domains allowed to access Google Workspace|
@@ -532,7 +536,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
 |[EncryptedClientHelloEnabled](#encryptedclienthelloenabled)|TLS Encrypted ClientHello Enabled|
-|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)|
+|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (obsolete)|
 |[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
 |[EnhanceSecurityModeAllowUserBypass](#enhancesecuritymodeallowuserbypass)|Allow users to bypass Enhanced Security Mode|
 |[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
@@ -639,7 +643,7 @@ These tables list all of the browser-related group policies available in this re
 |[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Spell checking provided by Microsoft Editor|
 |[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Synonyms are provided when using Microsoft Editor spell checker|
 |[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu (deprecated)|
-|[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)|
+|[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (obsolete)|
 |[MouseGestureEnabled](#mousegestureenabled)|Mouse Gesture Enabled|
 |[MutationEventsEnabled](#mutationeventsenabled)|Enable deprecated/removed Mutation Events|
 |[NativeHostsExecutablesLaunchDirectly](#nativehostsexecutableslaunchdirectly)|Force Windows executable Native Messaging hosts to launch directly|
@@ -711,7 +715,7 @@ These tables list all of the browser-related group policies available in this re
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
 |[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
-|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (deprecated)|
+|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (obsolete)|
 |[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (obsolete)|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
 |[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
@@ -783,7 +787,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (obsolete)|
 |[WebSelectEnabled](#webselectenabled)|Web Select Enabled (obsolete)|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar (deprecated)|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup (deprecated)|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup (obsolete)|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver|
 |[WindowOcclusionEnabled](#windowocclusionenabled)|Enable Window Occlusion|
 
@@ -7891,7 +7895,7 @@ Note that you can still use [ExtensionInstallForcelist](#extensioninstallforceli
 
 If the 'sidebar_auto_open_blocked' flag is set to true in an extension's configuration, the hub-app (sidebar app) corresponding to the specified extension will be prevented from automatically opening.
 
-On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory&reg;`.
+On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory®`.
 
 On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, joined to a domain via MCX.
 
@@ -17521,17 +17525,17 @@ If set to False, Microsoft Edge will not use system notifications. Microsoft Edg
 
   ### AllowTokenBindingForUrls
 
-  #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)
+  #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 129.
   #### Supported versions:
 
-  - On Windows since 83 or later
+  - On Windows since 83, until 129
 
   #### Description
 
-  This policy is deprecated because Token Binding will no longer be supported, starting in Microsoft Edge 127.
+  This policy is obsolete because Token Binding is no longer supported, starting with Microsoft Edge 130.
 
 Configure the list of URL patterns for sites that the browser will attempt to perform the Token Binding protocol with.
 For the domains on this list, the browser will send the Token Binding ClientHello in the TLS handshake (See https://tools.ietf.org/html/rfc8472).
@@ -17560,7 +17564,7 @@ Starting in Microsoft Edge 86, this policy no longer supports dynamic refresh.
   ##### Group Policy (ADMX) info
 
   - GP unique name: AllowTokenBindingForUrls
-  - GP name: Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)
+  - GP name: Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -18081,7 +18085,7 @@ If you set this policy to false, or don't set it, AppCache will follow Microsoft
 
 Disabling this policy has a detrimental effect on Microsoft Edge's security because unknown and potentially hostile apps can retrieve the encryption keys used to secure data.
 
-Only turn off this policy if there are compatibility issues, such as scenarios where other applications need legitimate access to Microsoft Edge's data. Encrypted user data is expected to be fully portable between different computers or the integrity and location of Microsoft Edge's executable files isn't consistent.
+Only turn off this policy if there are compatibility issues, such as scenarios where other applications need legitimate access to Microsoft Edge's data. Encrypted user data is expected to be fully portable between different computers or the integrity and location of Microsoft Edge's executable files isn’t consistent.
 
   #### Supported features:
 
@@ -19517,16 +19521,16 @@ If you disable this setting the list of available templates will be downloaded o
 
   #### Description
 
-  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that's shown by the beforeunload event.
+  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that’s shown by the beforeunload event.
 
 When this policy is Enabled, the new (correct) behavior will be used.
 When this policy is Disabled, the old (legacy) behavior will be used.
 When this policy is left not set, the default behavior will be used.
 Note: This policy is a temporary workaround and will be removed in a future release.
 
-New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won't trigger the confirmation dialog.
+New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won’t trigger the confirmation dialog.
 
-Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won't trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
+Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won’t trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
 
   #### Supported features:
 
@@ -22120,8 +22124,9 @@ WebAssembly modules to windows and workers in the same origin.
   This policy is deprecated because this feature will no longer be supported, starting in Microsoft Edge 128. There is no replacement for this policy.
 Enables CryptoWallet feature in Microsoft Edge.
 
-  - If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
-  - If you disable this policy, users can't use CryptoWallet feature.
+      If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
+
+      If you disable this policy, users can't use CryptoWallet feature.
 
   #### Supported features:
 
@@ -25446,10 +25451,10 @@ As such, this policy is a temporary measure to control the initial experimental 
 
   ### EnforceLocalAnchorConstraintsEnabled
 
-  #### Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)
+  #### Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 127.
   #### Supported versions:
 
   - On Windows and macOS since 113, until 127
@@ -25487,7 +25492,7 @@ This policy was removed in Microsoft Edge version 128. Starting with that versio
   ##### Group Policy (ADMX) info
 
   - GP unique name: EnforceLocalAnchorConstraintsEnabled
-  - GP name: Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)
+  - GP name: Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -28000,7 +28005,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### Description
 
-  If you enable this policy, or leave it unconfigured, graphics acceleration will be utilized if it's available.
+  If you enable this policy, or leave it unconfigured, graphics acceleration will be utilized if it’s available.
 If you disable this policy, turns off graphics acceleration.
 
   #### Supported features:
@@ -32816,10 +32821,10 @@ If you disable this policy, users won't be able to access the Microsoft Office m
 
   ### MicrosoftRootStoreEnabled
 
-  #### Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)
+  #### Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 121.
   #### Supported versions:
 
   - On Windows and macOS since 109, until 114
@@ -32860,7 +32865,7 @@ when support for using the platform supplied certificate verifier and roots was 
   ##### Group Policy (ADMX) info
 
   - GP unique name: MicrosoftRootStoreEnabled
-  - GP name: Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)
+  - GP name: Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -37209,7 +37214,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "contoso.com"
 
 With this change, MouseEvents get dispatched on disabled form control elements. Exceptions for this behavior are click, mouseup, and mousedown. Some examples of the new events are mousemove, mouseenter, and mouseleave.
 
-This change also truncates the event path of click, mouseup, and mousedown when they're dispatched on children of disabled form controls. These events aren't dispatched on the disabled form control or any of its ancestors.
+This change also truncates the event path of click, mouseup, and mousedown when they’re dispatched on children of disabled form controls. These events aren’t dispatched on the disabled form control or any of its ancestors.
 
 Note: This new behavior might break some websites.
 
@@ -37627,10 +37632,10 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### SetTimeoutWithout1MsClampEnabled
 
-  #### Control Javascript setTimeout() function minimum timeout (deprecated)
+  #### Control Javascript setTimeout() function minimum timeout (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 109.
   #### Supported versions:
 
   - On Windows and macOS since 101, until 109
@@ -37666,7 +37671,7 @@ This policy was only provided temporarily to allow Enterprises to adapt to the n
   ##### Group Policy (ADMX) info
 
   - GP unique name: SetTimeoutWithout1MsClampEnabled
-  - GP name: Control Javascript setTimeout() function minimum timeout (deprecated)
+  - GP name: Control Javascript setTimeout() function minimum timeout (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -42554,24 +42559,23 @@ If you disable this policy, Web select will not be available in Web Capture and 
 
   Enables the search bar. When enabled, users can use the search bar to search the web from their desktop or from an application. The search bar provides a search box that shows web suggestions and opens all web searches in Microsoft Edge. The search box provides search (powered by Bing) and URL suggestions. The search bar can be launched  from the "More tools" menu or jump list in Microsoft Edge.
 
-  If you enable or don't configure this policy:
+If you enable or don't configure this policy:
 
-  - The search bar will be automatically enabled for all profiles.
-  - The option to enable the search bar at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
+- The search bar will be automatically enabled for all profiles.
+- The option to enable the search bar at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
+- If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the search bar at startup will be toggled off.
+  Users will see the menu item to launch the search bar from the Microsoft Edge "More tools" menu. Users can launch the search bar from "More tools".
+  Users will see the menu item to launch the search bar from the Microsoft Edge jump list menu. Users can launch the search bar from the Microsoft Edge jump list menu.
+  The search bar can be turned off by the "Quit" option in the System tray or by closing the search bar from the 3 dot menu. The search bar will be restarted on system reboot if auto-start is enabled.
 
-  If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the search bar at startup will be toggled off.
 
-  - Users will see the menu item to launch the search bar from the Microsoft Edge "More tools" menu. Users can launch the search bar from "More tools".
-  - Users will see the menu item to launch the search bar from the Microsoft Edge jump list menu. Users can launch the search bar from the Microsoft Edge jump list menu.
-  - The search bar can be turned off by the "Quit" option in the System tray or by closing the search bar from the 3 dot menu. The search bar will be restarted on system reboot if auto-start is enabled.
+If you disable this policy:
 
-  If you disable this policy:
+- The search bar will be disabled for all profiles.
+- The option to launch the search bar from Microsoft Edge "More tools" menu will be disabled.
+- The option to launch the search bar from Microsoft Edge jump list menu will be disabled.
 
-  - The search bar will be disabled for all profiles.
-  - The option to launch the search bar from Microsoft Edge "More tools" menu will be disabled.
-  - The option to launch the search bar from Microsoft Edge jump list menu will be disabled.
-
-  This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
+This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
 
   #### Supported features:
 
@@ -42614,34 +42618,23 @@ If you disable this policy, Web select will not be available in Web Capture and 
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Allow the Search bar at Windows startup (deprecated)
+  #### Allow the Search bar at Windows startup (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 119.
   #### Supported versions:
 
-  - On Windows since 88 or later
+  - On Windows since 88, until 119
 
   #### Description
 
-  Allows the Search bar to start running at Windows startup.
+  This policy is obsolete due to the deprecation of the Web widget, which is now known as Edge search bar. Admins should use SearchbarIsEnabledOnStartup for Edge search bar instead. Allows the Search bar to start running at Windows startup.
 
-  If you enable:
+If you enable this policy the Search bar will start running at Windows startup by default. If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
 
-  - The Search bar will start running at Windows startup by default.
-  - If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
+If you disable this policy, the Search bar will not start at Windows startup for all profiles. The option to start the Edge search bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
 
-  If you disable this policy:
-
-  - The Search bar will not start at Windows startup for all profiles.
-  - The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
-
-  If you don't configure the policy:
-
-  - The Search bar will not start at Windows startup for all profiles.
-  - The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
-
-This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
+If you don't configure this policy, the Search bar will not start at Windows startup for all profiles. The option to start the Edge search bar at Windows startup will be toggled off in Microsoft Edge settings.
 
   #### Supported features:
 
@@ -42660,7 +42653,7 @@ This policy is deprecated due to the deprecation of the Web widget's vertical la
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebWidgetIsEnabledOnStartup
-  - GP name: Allow the Search bar at Windows startup (deprecated)
+  - GP name: Allow the Search bar at Windows startup (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
