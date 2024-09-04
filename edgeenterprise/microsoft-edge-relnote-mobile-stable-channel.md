@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 09/03/2024
+ms.date: 09/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,7 +25,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 128.0.2739.60 (Android): September 3, 2024
 
-Fixed various bugs and performance issues, general updates, enhancements, and feature Updates.
+Fixed various bugs and performance issues, general updates, enhancements, and feature updates.
 
 ### General updates
 
@@ -47,9 +47,11 @@ Fixed various bugs and performance issues, general updates, enhancements, and fe
 
 - **Deprecation of Copilot on Edge mobile.** Microsoft Copilot and the corresponding settings are removed from the Edge mobile application.  
 
+  Copilot for work and web chat will be available to Entra ID users through the Microsoft 365 mobile application.
+
 ## Version 128.0.2739.42 (iOS): August 27, 2024
 
-Fixed various bugs and performance issues, new policies, general updates, enhancements, and feature updates.
+Fixed various bugs and performance issues, general updates, enhancements, feature updates, and new policies.
 
 ### General updates
 
@@ -61,19 +63,21 @@ Fixed various bugs and performance issues, new policies, general updates, enhanc
 
 - [iOS] Fix a bug related to the [DefaultBrowserSettingEnabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) policy.
 
-### Feature updates
-
-- **Deprecation of Copilot on Edge mobile.** Microsoft Copilot and the corresponding settings are removed from the Edge mobile application.  
-
-### New Policies
-
-- [iOS] Enable Web Inspector and add a new token (`webinspector`) of disabled features policy to disable it. Previously Web Inspector was disabled in Stable versions, but it's now enabled for general web site debugging and troubleshooting purposes.
-
 ### Enhancements
 
 - [iOS] General enhancements to NTLMSSO policies to make it more useful, added support for 407 proxy auth challenges.
 - [iOS] Re-sign-in prompts and banners are changed to "re-verify account" for clarity. These prompts and banners remind a user to verify their account by reinputting a password and refresh underlying tokens to keep account state healthy.
 - [iOS] Clear opened tabs data when signing out of Microsoft Entra ID if clear data is chosen.
+
+### Feature updates
+
+- **Deprecation of Copilot on Edge mobile.** Microsoft Copilot and the corresponding settings are removed from the Edge mobile application.  
+
+  Copilot for work and web chat will be available to Entra ID users through the Microsoft 365 mobile application.
+
+### New Policies
+
+- [iOS] Enable Web Inspector and add a new token (`webinspector`) of disabled features policy to disable it. Previously Web Inspector was disabled in Stable versions, but it's now enabled for general web site debugging and troubleshooting purposes.
 
 ## Version 127.0.2651.111 (Android and iOS): August 20, 2024
 
