@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/08/2024
+ms.date: 09/03/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -59,11 +59,12 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeBlockSignInEnabled](#edgeblocksigninenabled) | Block users from signing in to Edge |
 | [EdgeOneAuthProxy](#edgeoneauthproxy) | Specify a dedicated proxy to sign in to Edge in Android   |
 | [EdgeLockedViewModeEnabled](#edgelockedviewmodeenabled)  | Edge locked view mode    |
-|  [EdgeLockedViewModeAllowedActions](#edgelockedviewmodeallowedactions)  |  Configure allowed actions in Edge locked view mode   |
-|  [EdgeCopilotEnabled](#edgecopilotenabled)  |  Enable Copilot in Edge  |
-|  [EdgeNewTabPageLayout](#edgenewtabpagelayout)  |  Manage New Tab Page layout settings  |
-|  [EdgeNewTabPageLayoutCustom](#edgenewtabpagelayoutcustom)  | Manage New Tab Page custom setting   |
-|  [EdgeNewTabPageLayoutUserSelectable](#edgenewtabpagelayoutuserselectable)  |  Manage whether the New Tab Page layout is selectable by users  |
+| [EdgeLockedViewModeAllowedActions](#edgelockedviewmodeallowedactions)  |  Configure allowed actions in Edge locked view mode   |
+| [EdgeCopilotEnabled](#edgecopilotenabled)  |  Enable Copilot in Edge  |
+| [EdgeNewTabPageLayout](#edgenewtabpagelayout)  |  Manage New Tab Page layout settings  |
+| [EdgeNewTabPageLayoutCustom](#edgenewtabpagelayoutcustom)  | Manage New Tab Page custom setting   |
+| [EdgeNewTabPageLayoutUserSelectable](#edgenewtabpagelayoutuserselectable)  |  Manage whether the New Tab Page layout is selectable by users  |
+| [EdgeSharedDeviceSupportEnabled](#edgeshareddevicesupportenabled) | Disable shared device mode |
 
 <!-- ====================================== -->
 ### [*Proxy server*](#proxy-server)
@@ -2297,6 +2298,50 @@ EdgeNewTabPageLayoutUserSelectable
 ```
 
 ##### Example value (Android):
+
+```
+false
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeSharedDeviceSupportEnabled 
+
+#### Disable shared device mode
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 127
+- Microsoft Edge (iOS and iPadOS) since version 126
+
+#### Description
+
+By default, Edge for iOS and Android starts in shared device mode when the devices are enrolled with shared device mode. You can disable shared device mode even in shared devices.
+
+EdgeSharedDeviceSupportEnabled:
+
+- true (default) =  Shared device mode is enabled in shared devices.
+- false  = Shared device mode is disabled in shared devices.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+```
+Android:Boolean
+iOS:Boolean
+```
+
+#### Android and iOS restriction name:
+
+```
+EdgeSharedDeviceSupportEnabled
+```
+
+##### Example value (Android and iOS):
 
 ```
 false
