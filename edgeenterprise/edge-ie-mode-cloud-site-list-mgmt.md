@@ -35,7 +35,7 @@ The following prerequisites apply to this feature.
 
 1. Customers must have a Microsoft Entra tenant.
 2. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
-3. Admins need to be an [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
+3. Admins need to be an [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) on the tenant to access the Microsoft Edge site lists experience.
 
 ## Cloud Site List Management experience
 
