@@ -42,9 +42,6 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues, feature updates.
 
-> [!IMPORTANT]
-> This update to Stable channel contains a fix for [CVE-2024-7965](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-7965), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
 ### Fixes
 
 - Fixed an issue that caused custom configured start pages to be stuck in the loading state.
@@ -59,7 +56,7 @@ Fixed various bugs and performance issues, feature updates.
 Fixed various bugs and performance issues, feature updates, and policy updates.
 
 > [!IMPORTANT]
-> This update to Stable channel contains a fix for [CVE-2024-7971](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-7971), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+> This update to Stable channel contains a fix for [CVE-2024-7971](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-7971) and [CVE-2024-7965](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-7965), which have been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-22-2024).
 
