@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/30/2024
+ms.date: 09/06/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -27,19 +27,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 > This article applies to Microsoft Edge version 77 or later.
 >
 > For Microsoft Edge Mobile policy reference, see [Microsoft Edge Mobile - Policies](/deployedge/microsoft-edge-mobile-policies).
-
-
-## New policies
-
-The following table lists the obsolete policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (obsolete)|
-|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (obsolete)|
-|[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (obsolete)|
-|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (obsolete)|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup (obsolete)|
 
 ## Available policies
 
@@ -22122,6 +22109,7 @@ WebAssembly modules to windows and workers in the same origin.
   #### Description
 
   This policy is deprecated because this feature will no longer be supported, starting in Microsoft Edge 128. There is no replacement for this policy.
+
 Enables CryptoWallet feature in Microsoft Edge.
 
 If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
@@ -42561,19 +42549,19 @@ If you disable this policy, Web select will not be available in Web Capture and 
 
 If you enable or don't configure this policy:
 
-- The search bar will be automatically enabled for all profiles.
-- The option to enable the search bar at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
-- If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the search bar at startup will be toggled off.
-  Users will see the menu item to launch the search bar from the Microsoft Edge "More tools" menu. Users can launch the search bar from "More tools".
-  Users will see the menu item to launch the search bar from the Microsoft Edge jump list menu. Users can launch the search bar from the Microsoft Edge jump list menu.
-  The search bar can be turned off by the "Quit" option in the System tray or by closing the search bar from the 3 dot menu. The search bar will be restarted on system reboot if auto-start is enabled.
+The search bar will be automatically enabled for all profiles.
+The option to enable the search bar at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
+If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the search bar at startup will be toggled off.
+Users will see the menu item to launch the search bar from the Microsoft Edge "More tools" menu. Users can launch the search bar from "More tools".
+Users will see the menu item to launch the search bar from the Microsoft Edge jump list menu. Users can launch the search bar from the Microsoft Edge jump list menu.
+The search bar can be turned off by the "Quit" option in the System tray or by closing the search bar from the 3 dot menu. The search bar will be restarted on system reboot if auto-start is enabled.
 
 
 If you disable this policy:
 
-- The search bar will be disabled for all profiles.
-- The option to launch the search bar from Microsoft Edge "More tools" menu will be disabled.
-- The option to launch the search bar from Microsoft Edge jump list menu will be disabled.
+The search bar will be disabled for all profiles.
+The option to launch the search bar from Microsoft Edge "More tools" menu will be disabled.
+The option to launch the search bar from Microsoft Edge jump list menu will be disabled.
 
 This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
 
