@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/05/2024
+ms.date: 09/09/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -41,6 +41,9 @@ Fixed various bugs and performance issues.
 ## Version 128.0.2739.54: August 29, 2024
 
 Fixed various bugs and performance issues, feature updates.
+
+> [!IMPORTANT]
+> This update to Stable channel contains a fix for [CVE-2024-7965](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-7965), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ### Fixes
 
