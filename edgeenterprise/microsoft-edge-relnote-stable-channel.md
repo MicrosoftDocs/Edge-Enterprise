@@ -34,6 +34,8 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-3-2024).
+
 ### Fixes
 
 - Fixed an issue that prevented pages from fully loading when retrieving resources from the HTTP cache and DevTools showed the requests failing with net::ERR_FAILED.
@@ -41,6 +43,8 @@ Fixed various bugs and performance issues.
 ## Version 128.0.2739.54: August 29, 2024
 
 Fixed various bugs and performance issues, feature updates.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-29-2024).
 
 ### Fixes
 
