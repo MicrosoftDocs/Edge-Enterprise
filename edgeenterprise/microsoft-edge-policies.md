@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/06/2024
+ms.date: 09/11/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -22109,12 +22109,11 @@ WebAssembly modules to windows and workers in the same origin.
   #### Description
 
   This policy is deprecated because this feature will no longer be supported, starting in Microsoft Edge 128. There is no replacement for this policy.
+  Enables CryptoWallet feature in Microsoft Edge.
 
-Enables CryptoWallet feature in Microsoft Edge.
+  If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
 
-If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
-
-If you disable this policy, users can't use CryptoWallet feature.
+  If you disable this policy, users can't use CryptoWallet feature.
 
   #### Supported features:
 
@@ -31595,6 +31594,8 @@ This policy is a temporary workaround and will be removed in Edge Stable 135.
   Allow users to turn the Live captions feature on or off.
 
 Live captions is an accessibility feature that converts speech from the audio that plays in Microsoft Edge in to text and shows this text in a separate window. The entire process happens on the device and no audio or caption text ever leaves the device.
+
+Note: This feature is not generally available. Clients that have the [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) policy set to 'FullMode' may receive the feature before broad availability. Broad availability will be announced via Microsoft Edge release notes.
 
 If you enable or don't configure this policy, users can turn this feature on or off at edge://settings/accessibility.
 
@@ -42548,7 +42549,6 @@ If you disable this policy, Web select will not be available in Web Capture and 
   Enables the search bar. When enabled, users can use the search bar to search the web from their desktop or from an application. The search bar provides a search box that shows web suggestions and opens all web searches in Microsoft Edge. The search box provides search (powered by Bing) and URL suggestions. The search bar can be launched  from the "More tools" menu or jump list in Microsoft Edge.
 
 If you enable or don't configure this policy:
-
 The search bar will be automatically enabled for all profiles.
 The option to enable the search bar at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
 If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the search bar at startup will be toggled off.
@@ -42558,7 +42558,6 @@ The search bar can be turned off by the "Quit" option in the System tray or by c
 
 
 If you disable this policy:
-
 The search bar will be disabled for all profiles.
 The option to launch the search bar from Microsoft Edge "More tools" menu will be disabled.
 The option to launch the search bar from Microsoft Edge jump list menu will be disabled.
@@ -42618,11 +42617,11 @@ This policy is deprecated due to the deprecation of the Web widget's vertical la
 
   This policy is obsolete due to the deprecation of the Web widget, which is now known as Edge search bar. Admins should use SearchbarIsEnabledOnStartup for Edge search bar instead. Allows the Search bar to start running at Windows startup.
 
-If you enable this policy the Search bar will start running at Windows startup by default. If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
+  If you enable this policy the Search bar will start running at Windows startup by default. If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
 
-If you disable this policy, the Search bar will not start at Windows startup for all profiles. The option to start the Edge search bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
+  If you disable this policy, the Search bar will not start at Windows startup for all profiles. The option to start the Edge search bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
 
-If you don't configure this policy, the Search bar will not start at Windows startup for all profiles. The option to start the Edge search bar at Windows startup will be toggled off in Microsoft Edge settings.
+  If you don't configure this policy, the Search bar will not start at Windows startup for all profiles. The option to start the Edge search bar at Windows startup will be toggled off in Microsoft Edge settings.
 
   #### Supported features:
 
