@@ -126,6 +126,9 @@ The service that supports Copilot, and other apps, in the Edge sidebar.
 - `http://edgeservices.bing.com/`
 - `https://edgeservices.bing.com/`
 
+> [!NOTE]
+> Other endpoints that Copilot requires to function can be found in the [Copilot FAQ](/copilot/faq).
+
 ## Other browser support services
 
 Provide metadata for browser features such as tracking protection, certificate revocation lists, and other browser component updates. Provide downloadable spellcheck dictionaries and ad-blocking block lists. Provide services to support browser features such as collections, autofill, and extension store.
