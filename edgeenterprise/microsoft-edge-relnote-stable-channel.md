@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/09/2024
+ms.date: 09/12/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,6 +25,18 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 128.0.2739.79: September 12, 2024
+
+Fixed various bugs and performance issues, improved reliability.
+
+### Fixes
+
+- Fixed an issue that caused deployed pinned Shortcuts to the Taskbar to be duplicated.
+
+### Improved reliability
+
+- Fixed a browser crash that occurred when trying to launch a custom protocol from a web page when using the [URLAllowlist](/deployedge/microsoft-edge-policies#urlallowlist) policy on a managed device.
 
 ## Version 128.0.2739.67: September 5, 2024
 
