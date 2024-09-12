@@ -3,7 +3,7 @@ title: "Allow list for Microsoft Edge endpoints"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 07/18/2024
+ms.date: 09/12/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -118,6 +118,16 @@ The service that Microsoft Edge uses to download the configuration profiles. For
 - `https://*.smartscreen.microsoft.com/`
 - `https://*.smartscreen-prod.microsoft.com`
 - `https://*.urs.microsoft.com/`
+
+## Copilot and Sidebar
+
+The service that supports Copilot, and other apps, in the Edge sidebar.
+
+- `http://edgeservices.bing.com/`
+- `https://edgeservices.bing.com/`
+
+  > [!NOTE]
+  > Other endpoints that Copilot requires to function can be found in the [Copilot FAQ](/copilot/faq).
 
 ## Other browser support services
 
