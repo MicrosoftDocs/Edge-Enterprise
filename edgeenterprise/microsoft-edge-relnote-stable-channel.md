@@ -30,6 +30,8 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues, improved reliability.
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-12-2024).
+
 ### Fixes
 
 - Fixed an issue that caused deployed pinned Shortcuts to the Taskbar to be duplicated.
