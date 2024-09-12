@@ -3,7 +3,7 @@ title: "Allow list for Microsoft Edge endpoints"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 07/18/2024
+ms.date: 09/12/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -118,6 +118,13 @@ The service that Microsoft Edge uses to download the configuration profiles. For
 - `https://*.smartscreen.microsoft.com/`
 - `https://*.smartscreen-prod.microsoft.com`
 - `https://*.urs.microsoft.com/`
+
+## Bing Chat
+
+Service that supports Copilot and Sidebar apps.
+
+- `http://edgeservices.bing.com/`
+- `https://edgeservices.bing.com/`
 
 ## Other browser support services
 
