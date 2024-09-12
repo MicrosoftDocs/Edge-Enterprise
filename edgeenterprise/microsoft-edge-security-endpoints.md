@@ -119,9 +119,9 @@ The service that Microsoft Edge uses to download the configuration profiles. For
 - `https://*.smartscreen-prod.microsoft.com`
 - `https://*.urs.microsoft.com/`
 
-## Bing Chat
+## Copilot and Sidebar
 
-Service that supports Copilot and Sidebar apps.
+The service that supports Copilot, and other apps, in the Edge sidebar.
 
 - `http://edgeservices.bing.com/`
 - `https://edgeservices.bing.com/`
