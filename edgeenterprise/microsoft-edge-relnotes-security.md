@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 09/12/2024
+ms.date: 09/13/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -42,6 +42,7 @@ This update contains the following Microsoft Edge-specific updates:
 - [CVE-2024-38207](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38207)
 - [CVE-2024-38210](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38210)
 - [CVE-2024-38209](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38209)
+- [CVE-2024-38222](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38222)
 
 ## August 15, 2024
 
