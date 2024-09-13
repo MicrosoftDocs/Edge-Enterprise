@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 129.0.XXXX.X: September X, 2024
 
-Fixed various bugs and performance issues, feature updates, and site impacting compatibility changes.
+Fixed various bugs and performance issues, feature updates, site impacting compatibility changes, and policy updates.
 
 ### Dev Channel updates
 
