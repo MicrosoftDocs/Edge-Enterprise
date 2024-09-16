@@ -110,8 +110,9 @@ Follow these steps to assign a configuration profile to a Microsoft Entra group:
 1. Under the **Group assignment** pivot, select **Select group**.
 1. Under **Select a security group**, select the group to assign the profile to.
 1. Select **Select**. The profile will now be applied to all users in the selected group.
-
-### Manage extensions
+<!-- =================================================== -->
+<!------ ### Manage extensions ---------->
+## Manage extensions
 
 To manage extension settings for a profile, go **Microsoft Edge management**, select the profile you want to work with and then select the **Extensions** pivot. You can configure profile settings that apply to all extensions. Any extensions you add to be managed will appear in the profile. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. If you configure specific settings on an individual extension, then those settings override the profile settings.
 
@@ -251,8 +252,10 @@ Use the following steps to manage sidebar apps:
 1. Select **Select**.
 
 After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
+<!-- =================================================== -->
+<!------- ### Add customization settings ----------->
 
-### Add customization settings
+## Customization settings
 
 To configure groups of settings that create specific customizations for a profile, select the profile you want to work with and navigate to the **Customization settings** tab. Then, select the page that contains settings for the experiences you would like to create.
 
