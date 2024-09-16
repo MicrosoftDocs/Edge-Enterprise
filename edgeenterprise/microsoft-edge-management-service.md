@@ -111,8 +111,8 @@ Follow these steps to assign a configuration profile to a Microsoft Entra group:
 1. Under **Select a security group**, select the group to assign the profile to.
 1. Select **Select**. The profile will now be applied to all users in the selected group.
 <!-- =================================================== -->
-<!------ ### Manage extensions ---------->
-## Manage extensions
+<!----
+### Manage extensions
 
 To manage extension settings for a profile, go **Microsoft Edge management**, select the profile you want to work with and then select the **Extensions** pivot. You can configure profile settings that apply to all extensions. Any extensions you add to be managed will appear in the profile. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. If you configure specific settings on an individual extension, then those settings override the profile settings.
 
@@ -251,11 +251,10 @@ Use the following steps to manage sidebar apps:
 1. Under **Select an extension**, navigate to the **Sidebar apps** pivot and select an app.
 1. Select **Select**.
 
-After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
+After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force. --->
 <!-- =================================================== -->
-<!------- ### Add customization settings ----------->
-
-## Customization settings
+<!---
+### Add customization settings
 
 To configure groups of settings that create specific customizations for a profile, select the profile you want to work with and navigate to the **Customization settings** tab. Then, select the page that contains settings for the experiences you would like to create.
 
@@ -296,7 +295,6 @@ The settings in this section let you configure Microsoft Edge settings that invo
 1. Check/uncheck the box corresponding to the setting that you want to enable/disable respectively.
 2. Select **Save changes.** The settings in this section allow you to configure Microsoft Edge settings that involve the use of AI.
 
-<!-- =================================================== -->
 #### Customize organization branding
 
 To customize the browser with your organization's branding assets, go to the **Organization branding** tab. You can use the default Edge for Business branding elements, or use custom branding assets. A preview of how the browser elements will look on a user's account is shown on the page.
@@ -317,7 +315,7 @@ From **Use custom branding**, you can customize each of the following browser el
 
 After you finish customizing the browser elements with your organization branding assets, confirm that the preview displays the correct visual appearance and then select **Save changes**.
 
-<!-- =================================================== -->
+
 #### Manage automatic profile switching settings
 
 To manage profile switching behaviors for a profile, navigate to the **automatic profile switching** tab. You can choose which profile you want specific hostnames to open in for your users. 
@@ -335,7 +333,7 @@ You can specify individual hostnames and the profile you would like them to open
 3. Choose the profile you would like the hostname to open in. If you would like the profile to not switch on the hostname, select **Allow user preference**.
 4. (Optional) If the profile selected is work, you can optionally choose to specify the domain that the hostname opens in. This may be necessary for users with multiple work profiles. The domain entered should match the format *\*username@company.com* (note: the \* is required).
 5. Select **Add**.
-<!-- ================ NEW ============================= -->
+
 
 #### Configure security settings
 
@@ -355,7 +353,7 @@ To add settings that help protect against security threats, navigate to the secu
 > This setting is only available for customers with a Microsoft Intune license.
 
 Users with configured security settings may still be at risk on other browsers. To mitigate this risk, you can choose to block alternative browser use. When this setting is enabled, a new configuration policy will be created in Intune. Any modifications you make to this new policy in Intune or in a configuration profile with identical groups in the Microsoft Edge management service may lead to unexpected behaviors.
-
+--->
 <!-- =================================================== -->
 ## Configure Microsoft Edge to use a configuration profile
 
