@@ -1,4 +1,4 @@
-# last revised 07/09/2024
+# last revised 09/17/2024
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -115,7 +115,13 @@
       - name: Organization branding
         href: microsoft-edge-organization-branding.md
    - name: Microsoft Edge management service
-     href: microsoft-edge-management-service.md
+     items:
+      - name: Microsoft Edge management service
+        href: microsoft-edge-management-service.md
+      - name: Manage extensions
+        href: microsoft-edge-management-service-extensions.md
+      - name: Customization settings
+        href: microsoft-edge-management-service-customizations.md
    - name: Microsoft Edge Workspaces
      href: microsoft-edge-workspaces.md
    - name: Microsoft Edge for Virtual desktop infrastructure 
