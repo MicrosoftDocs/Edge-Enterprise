@@ -3,7 +3,7 @@ title: "Manage extensions"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 09/16/2024
+ms.date: 09/17/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
