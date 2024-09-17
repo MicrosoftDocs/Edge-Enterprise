@@ -96,8 +96,7 @@ You can specify individual hostnames and the profile you would like them to open
 4. (Optional) If the profile selected is work, you can optionally choose to specify the domain that the hostname opens in. This may be necessary for users with multiple work profiles. The domain entered should match the format *\*username@company.com* (note: the \* is required).
 5. Select **Add**.
 
-
-#### Configure security settings
+### Configure security settings
 
 To add settings that help protect against security threats, navigate to the security settings tab. Here you can choose to configure settings that help protect your users against security vulnerabilities.
 
