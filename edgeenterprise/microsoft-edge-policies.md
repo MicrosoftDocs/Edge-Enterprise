@@ -22175,11 +22175,11 @@ WebAssembly modules to windows and workers in the same origin.
   #### Description
 
   This policy is deprecated because this feature will no longer be supported, starting in Microsoft Edge 128. There is no replacement for this policy.
-Enables CryptoWallet feature in Microsoft Edge.
+  Enables CryptoWallet feature in Microsoft Edge.
 
-      If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
+  If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
 
-      If you disable this policy, users can't use CryptoWallet feature.
+  If you disable this policy, users can't use CryptoWallet feature.
 
   #### Supported features:
 
