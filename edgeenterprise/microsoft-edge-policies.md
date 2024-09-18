@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/11/2024
+ms.date: 09/17/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -27,6 +27,14 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 > This article applies to Microsoft Edge version 77 or later.
 >
 > For Microsoft Edge Mobile policy reference, see [Microsoft Edge Mobile - Policies](/deployedge/microsoft-edge-mobile-policies).
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[PrintingLPACSandboxEnabled](#printinglpacsandboxenabled)|Enable Printing LPAC Sandbox|
 
 ## Available policies
 
@@ -323,6 +331,7 @@ These tables list all of the browser-related group policies available in this re
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restrict background graphics printing mode|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Default background graphics printing mode|
 |[PrintingEnabled](#printingenabled)|Enable printing|
+|[PrintingLPACSandboxEnabled](#printinglpacsandboxenabled)|Enable Printing LPAC Sandbox|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Default printing page size|
 |[PrintingWebpageLayout](#printingwebpagelayout)|Sets layout for printing|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Print using system print dialog|
@@ -13202,6 +13211,63 @@ If you disable this policy, users can't print from Microsoft Edge. Printing is d
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PrintingLPACSandboxEnabled
+
+  #### Enable Printing LPAC Sandbox
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 129 or later
+
+  #### Description
+
+  Setting this policy to Enabled or leaving it unset enables the LPAC Sandbox for printing services when the system configuration supports it.
+
+Setting this policy to Disabled has a detrimental effect on Microsoft Edge's security because services used for printing might run in a weaker sandbox configuration.
+
+Only turn this policy off if there are compatibility issues with third party software that prevent printing services from operating correctly inside the LPAC Sandbox.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintingLPACSandboxEnabled
+  - GP name: Enable Printing LPAC Sandbox
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintingLPACSandboxEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PrintingPaperSizeDefault
 
   #### Default printing page size
@@ -20757,7 +20823,7 @@ If you disable or don't configure this policy, users can configure the Clear bro
 If you enable this policy, don't configure the [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or the [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit) policy, because they all deal with deleting browsing data. If you configure the preceding policies and this policy, all browsing data is deleted when Microsoft Edge closes, regardless of how you configured [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
 
 To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
-To exclude passwords from being deleted on exit, configure the "SavePasswordsOnExit" policy.
+To exclude passwords from being deleted on exit, configure the [PasswordDeleteOnBrowserCloseEnabled](#passworddeleteonbrowsercloseenabled) policy.
 
   #### Supported features:
 
@@ -22109,11 +22175,11 @@ WebAssembly modules to windows and workers in the same origin.
   #### Description
 
   This policy is deprecated because this feature will no longer be supported, starting in Microsoft Edge 128. There is no replacement for this policy.
-  Enables CryptoWallet feature in Microsoft Edge.
+Enables CryptoWallet feature in Microsoft Edge.
 
-  If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
+      If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
 
-  If you disable this policy, users can't use CryptoWallet feature.
+      If you disable this policy, users can't use CryptoWallet feature.
 
   #### Supported features:
 
@@ -42617,11 +42683,11 @@ This policy is deprecated due to the deprecation of the Web widget's vertical la
 
   This policy is obsolete due to the deprecation of the Web widget, which is now known as Edge search bar. Admins should use SearchbarIsEnabledOnStartup for Edge search bar instead. Allows the Search bar to start running at Windows startup.
 
-  If you enable this policy the Search bar will start running at Windows startup by default. If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
+If you enable this policy the Search bar will start running at Windows startup by default. If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
 
-  If you disable this policy, the Search bar will not start at Windows startup for all profiles. The option to start the Edge search bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
+If you disable this policy, the Search bar will not start at Windows startup for all profiles. The option to start the Edge search bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
 
-  If you don't configure this policy, the Search bar will not start at Windows startup for all profiles. The option to start the Edge search bar at Windows startup will be toggled off in Microsoft Edge settings.
+If you don't configure this policy, the Search bar will not start at Windows startup for all profiles. The option to start the Edge search bar at Windows startup will be toggled off in Microsoft Edge settings.
 
   #### Supported features:
 
