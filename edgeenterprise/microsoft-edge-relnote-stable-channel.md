@@ -58,10 +58,6 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 - **Deprecation of the CryptoWallet feature.** To improve end user experience, the CryptoWallet feature and the [CryptoWalletEnabled](/deployedge/microsoft-edge-policies#cryptowalletenabled) policy is deprecated. The [CryptoWalletEnabled](/deployedge/microsoft-edge-policies#cryptowalletenabled) policy will be obsolete in an upcoming release.
 
-- **Microsoft Edge sidebar updates.** For non-active sidebar users and new Edge users, the sidebar will be turned OFF. Users can always return to the **Settings** > **Sidebar** and turn the sidebar ON again at any time. For active sidebar users, the current sidebar state will stay the same.
-
-  Administrators can control the availability of the sidebar using the [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) policy.
-
 ### Site compatibilty impacting changes
 
 - **Deprecation of non-standard declarative shadow DOM serialization.** The prototype implementation, which shipped in 2020 and then updated in 2023, contained a method called `getInnerHTML()` that could be used to serialize DOM trees containing shadow roots. That part of the prototype was not standardized with the rest of the declarative shadow DOM, and has only recently reached spec consensus (for details, see [Github](https://github.com/whatwg/html/issues/8867). As part of that consensus, the shape of the `getInnerHTML` API changed.
