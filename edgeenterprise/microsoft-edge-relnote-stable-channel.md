@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 128.0.2739.90: September 19, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues Extended Stable channel.
 
 ## Version 129.0.2792.52: September 19, 2024
 
@@ -38,8 +38,6 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 > [!NOTE]
 > Portions of this release note are modifications based on work created and shared by Chromium.org and used according to terms described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
-
-
 
 ### Dev Channel updates
 
