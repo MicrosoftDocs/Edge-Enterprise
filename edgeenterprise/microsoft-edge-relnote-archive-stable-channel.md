@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/27/2024
+ms.date: 09/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,6 +15,60 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 # Archived release notes for Microsoft Edge Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 126.0.2592.113: July 18, 2024 to Version 126.0.2592.61: June 17, 2024 --->
+
+## Version 126.0.2592.113: July 18, 2024
+
+Fixed various bugs and performance issues, improved reliability.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-18-2024).
+
+### Improved reliability
+
+- Fixed a renderer crash (STATUS_ACCESS_VIOLATION) that occurred when using some sites with web contents accessibility enabled, including on the Azure portal or Intune dashboard.
+
+### Fixes
+
+- Resolved an issue that allowed the Microsoft Edge New Tab Page feed to be activated even when the [NewTabPageContentEnabled](/deployedge/microsoft-edge-policies#newtabpagecontentenabled) policy was set to disabled.
+
+## Version 126.0.2592.102: July 11, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-11-2024).
+
+## Version 126.0.2592.87: July 2, 2024
+
+Fixed various bugs and performance issues, improved reliability.
+
+### Improved reliability
+
+- Fixed a browser crash that occurred when an on-premises sync user deleted a Favorite.
+
+## Version 126.0.2592.81: June 27, 2024
+
+Fixed various bugs and performance issues, improved reliability.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-27-2024).
+
+### Improved reliability
+
+- Fixed a browser crash that occurred when a user interacted with a drop-down list with over 1,000 items.
+
+### Fixes
+
+- Resolved an issue that affected printing after scrolling down a webpage.  This fix adjusts for scroll offset when printing.
+
+## Version 126.0.2592.68: June 20, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-20-2024).
+
+## Version 126.0.2592.61: June 17, 2024
+
+Fixed various bugs and performance issues.
 
 <!-- Version 126.0.2592.56: June 13, 2024 to version 125.0.2535.51: May 17, 2024 -->
 
