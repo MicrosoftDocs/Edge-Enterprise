@@ -32,18 +32,18 @@ Archived versions of these release notes are available at [Archived release note
 
 Fixed various bugs and performance issues, general updates, new policies, and enhancements.
 
-## General updates
+### General updates
 
 - [Android] Upgrade Intune MAM SDK to version 10.4.0
 - [Android] Upgrade MS OneAuth SDK version 3.3.0
 - [Android] Remove native AAD Copilot support
 
-## New Policies
+### New Policies
 
 - [Android] Support to disable Share and SendtoDevices via DisableFeature policy
 (`com.microsoft.intune.mam.managedbrowser.disabledFeatures` in MAM and EdgeDisabledFeatures in MDM now support to config to disable Share and Sendtodevices in overflow menu by value `share|sendtodevices`)
 
-## Enhancements
+### Enhancements
 
 - [Android] Improve the occurrence of re-sign-in prompts by disallow user interaction for proactive-auth
 - [Android] Improve account verification by consider sync and news feed status
