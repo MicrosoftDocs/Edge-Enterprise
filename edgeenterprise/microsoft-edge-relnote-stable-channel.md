@@ -26,12 +26,20 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 129.0.XXXX.X: September X, 2024
+## Version 128.0.2739.90: September 19, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 129.0.2792.52: September 19, 2024
 
 Fixed various bugs and performance issues, feature updates, site impacting compatibility changes, and policy updates.
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-19-2024).
+
 > [!NOTE]
 > Portions of this release note are modifications based on work created and shared by Chromium.org and used according to terms described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+
 
 ### Dev Channel updates
 
