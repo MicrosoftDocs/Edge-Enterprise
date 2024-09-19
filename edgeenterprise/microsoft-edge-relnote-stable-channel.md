@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/12/2024
+ms.date: 09/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,6 +25,73 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 128.0.2739.90: September 19, 2024
+
+Fixed various bugs and performance issues Extended Stable channel.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-19-2024).
+
+## Version 129.0.2792.52: September 19, 2024
+
+Fixed various bugs and performance issues, feature updates, site impacting compatibility changes, and policy updates.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-19-2024).
+
+> [!NOTE]
+> Portions of this release note are modifications based on work created and shared by Chromium.org and used according to terms described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Stable channel release. The following Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 129.0.2752.4 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-129-0-2752-4-is-live/m-p/4215208)
+- [Dev Channel update to 129.0.2766.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-129-0-2766-0-is-live/m-p/4218361)
+- [Dev Channel update to 129.0.2779.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-129-0-2779-0-is-live/m-p/4226574)
+- [Dev Channel update to 129.0.2792.10 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-129-0-2792-10-is-live/m-p/4232423)
+
+### Fixes
+
+- **Policy updates to allow wildcards.** The documentation for the following policies were inaccurate and were corrected. These policies support wildcards (*) in URL patterns when being configured: [ImagesAllowedForUrls](/deployedge/microsoft-edge-policies#imagesallowedforurls), [ImagesBlockedForUrls](/deployedge/microsoft-edge-policies#imagesblockedforurls), [InsecureContentAllowedForUrls](/deployedge/microsoft-edge-policies#insecurecontentallowedforurls), [InsecureContentBlockedForUrls](/deployedge/microsoft-edge-policies#insecurecontentblockedforurls), [PopupsAllowedForUrls](/deployedge/microsoft-edge-policies#popupsallowedforurls), [PopupsBlockedForUrls](/deployedge/microsoft-edge-policies#popupsblockedforurls).
+
+### Feature updates
+
+- **Update to Microsoft Edge supported operating systems.** The minimum supported macOS version is increased to macOS 11. Users on older versions of macOS will no longer receive Microsoft Edge updates. For more information, see [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems).
+
+- **Deprecation of the CryptoWallet feature.** To improve end user experience, the CryptoWallet feature and the [CryptoWalletEnabled](/deployedge/microsoft-edge-policies#cryptowalletenabled) policy is deprecated. The [CryptoWalletEnabled](/deployedge/microsoft-edge-policies#cryptowalletenabled) policy will be obsolete in an upcoming release.
+
+### Site compatibilty impacting changes
+
+- **Deprecation of non-standard declarative shadow DOM serialization.** The prototype implementation, which shipped in 2020 and then updated in 2023, contained a method called `getInnerHTML()` that could be used to serialize DOM trees containing shadow roots. That part of the prototype was not standardized with the rest of the declarative shadow DOM, and has only recently reached spec consensus (for details, see [Github](https://github.com/whatwg/html/issues/8867). As part of that consensus, the shape of the `getInnerHTML` API changed.
+
+- **Deprecate the includeShadowRoots argument on DOMParser.** The `includeShadowRoots` argument was a never-standardized argument to the `DOMParser.parseFromString()` function, which was there to allow imperative parsing of HTML content that contains declarative shadow DOM. This was shipped as part of the initial shipment of declarative shadow DOM. Since the standards discussion rematerialized in 2023, the shape of DSD APIs changed, including this feature for imperative parsing.
+
+  Now that a standardized version of this API, in the form of `setHTMLUnsafe()` and `parseHTMLUnsafe()` shipped, the non-standard `includeShadowRoots` argument needs to be deprecated and removed. All usage should shift accordingly:
+
+  Instead of:
+
+  `(new DOMParser()).parseFromString(html,'text/html',{includeShadowRoots: true});`
+
+  This can be used instead:
+
+  `document.parseHTMLUnsafe(html);`
+
+- **Rename inset-area to position-area**. The CSS working group ([CSSWG](https://www.w3.org/groups/wg/css/)) resolved to rename this property from `inset-area` to `position-area`. For more details, see the CSSWG discussion in [Github](https://github.com/w3c/csswg-drafts/issues/10209#issuecomment-2221005001).
+
+  The old and new property names will be supported for a few milestones, to help developers migrate to the new position-area name. We are shipping the new property name, `position-area`, as a synonym for `inset-area`.
+
+  The `inset-area` property is currently planned for removal in Microsoft Edge version 131.
+
+### Policy updates
+
+#### New policies
+
+- [PrintingLPACSandboxEnabled](/deployedge/microsoft-edge-policies#printinglpacsandboxenabled) - Enable Printing LPAC Sandbox
+
+#### Deprecated policies
+
+- [CryptoWalletEnabled](/deployedge/microsoft-edge-policies#cryptowalletenabled) - Enable CryptoWallet feature (deprecated)
+- [EnhanceSecurityModeOptOutUXEnabled](/deployedge/microsoft-edge-policies#enhancesecuritymodeoptoutuxenabled) - Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge (deprecated)
 
 ## Version 128.0.2739.79: September 12, 2024
 
@@ -240,60 +307,10 @@ The following Dev channel updates preceded this Stable channel release. The foll
 - [ImmersiveReaderPictureDictionaryEnabled](/deployedge/microsoft-edge-policies#immersivereaderpicturedictionaryenabled) - Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete)
 - [EdgeFollowEnabled](/deployedge/microsoft-edge-policies#edgefollowenabled) - Enable Follow service in Microsoft Edge (obsolete)
 
-## Version 126.0.2592.113: July 18, 2024
-
-Fixed various bugs and performance issues, improved reliability.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-18-2024).
-
-### Improved reliability
-
-- Fixed a renderer crash (STATUS_ACCESS_VIOLATION) that occurred when using some sites with web contents accessibility enabled, including on the Azure portal or Intune dashboard.
-
-### Fixes
-
-- Resolved an issue that allowed the Microsoft Edge New Tab Page feed to be activated even when the [NewTabPageContentEnabled](/deployedge/microsoft-edge-policies#newtabpagecontentenabled) policy was set to disabled.
-
-## Version 126.0.2592.102: July 11, 2024
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-11-2024).
-
-## Version 126.0.2592.87: July 2, 2024
-
-Fixed various bugs and performance issues, improved reliability.
-
-### Improved reliability
-
-- Fixed a browser crash that occurred when an on-premises sync user deleted a Favorite.
-
-## Version 126.0.2592.81: June 27, 2024
-
-Fixed various bugs and performance issues, improved reliability.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-27-2024).
-
-### Improved reliability
-
-- Fixed a browser crash that occurred when a user interacted with a drop-down list with over 1,000 items.
-
-### Fixes
-
-- Resolved an issue that affected printing after scrolling down a webpage.  This fix adjusts for scroll offset when printing.
-
-## Version 126.0.2592.68: June 20, 2024
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-20-2024).
-
-## Version 126.0.2592.61: June 17, 2024
-
-Fixed various bugs and performance issues.
-
-<!-- Version 124.0.2478.109: May 16, 2024 to Version 124.0.2478.51: April 18, 2024 -->
 <!-- ===================== snip for archive ========================== -->
+
+<!-- Version 126.0.2592.113: July 18, 2024 to Version 126.0.2592.61: June 17, 2024 --->
+<!-- Version 124.0.2478.109: May 16, 2024 to Version 124.0.2478.51: April 18, 2024 -->
 <!-- Version 123.0.2420.97: April 12, 2024 to Version 123.0.2420.53: March 22, 2024 -->
 <!-- Version 122.0.2365.106: March 21, 2024 to Version 120.0.2210.181: February 20, 2024 -->
 <!-- Version 121.0.2277.128: February 15, 2024 to Version 118.0.2088.122: November 29, 2023 -->
