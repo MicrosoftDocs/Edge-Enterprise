@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/18/2024
+ms.date: 09/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -28,9 +28,26 @@ Archived versions of these release notes are available at [Archived release note
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 129.0.2792.49 (Android): September 18, 2024
+## Version 129.0.2792.49 (Android): September 19, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, general updates, new policies, and enhancements.
+
+## General updates
+
+- [Android] Upgrade Intune MAM SDK to version 10.4.0
+- [Android] Upgrade MS OneAuth SDK version 3.3.0
+- [Android] Remove native AAD Copilot support
+
+## New Policies
+
+- [Android] Support to disable Share and SendtoDevices via DisableFeature policy
+(`com.microsoft.intune.mam.managedbrowser.disabledFeatures` in MAM and EdgeDisabledFeatures in MDM now support to config to disable Share and Sendtodevices in overflow menu by value `share|sendtodevices`)
+
+## Enhancements
+
+- [Android] Improve the occurrence of re-sign-in prompts by disallow user interaction for proactive-auth
+- [Android] Improve account verification by consider sync and news feed status
+- [Android] General enhancements to NTLMSSO policies to make it more useful
 
 ## Version 129.0.2792.37 (Android and iOS): September 12, 2024
 
