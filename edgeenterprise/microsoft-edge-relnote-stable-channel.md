@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/17/2024
+ms.date: 09/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -299,60 +299,10 @@ The following Dev channel updates preceded this Stable channel release. The foll
 - [ImmersiveReaderPictureDictionaryEnabled](/deployedge/microsoft-edge-policies#immersivereaderpicturedictionaryenabled) - Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete)
 - [EdgeFollowEnabled](/deployedge/microsoft-edge-policies#edgefollowenabled) - Enable Follow service in Microsoft Edge (obsolete)
 
-## Version 126.0.2592.113: July 18, 2024
-
-Fixed various bugs and performance issues, improved reliability.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-18-2024).
-
-### Improved reliability
-
-- Fixed a renderer crash (STATUS_ACCESS_VIOLATION) that occurred when using some sites with web contents accessibility enabled, including on the Azure portal or Intune dashboard.
-
-### Fixes
-
-- Resolved an issue that allowed the Microsoft Edge New Tab Page feed to be activated even when the [NewTabPageContentEnabled](/deployedge/microsoft-edge-policies#newtabpagecontentenabled) policy was set to disabled.
-
-## Version 126.0.2592.102: July 11, 2024
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-11-2024).
-
-## Version 126.0.2592.87: July 2, 2024
-
-Fixed various bugs and performance issues, improved reliability.
-
-### Improved reliability
-
-- Fixed a browser crash that occurred when an on-premises sync user deleted a Favorite.
-
-## Version 126.0.2592.81: June 27, 2024
-
-Fixed various bugs and performance issues, improved reliability.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-27-2024).
-
-### Improved reliability
-
-- Fixed a browser crash that occurred when a user interacted with a drop-down list with over 1,000 items.
-
-### Fixes
-
-- Resolved an issue that affected printing after scrolling down a webpage.  This fix adjusts for scroll offset when printing.
-
-## Version 126.0.2592.68: June 20, 2024
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-20-2024).
-
-## Version 126.0.2592.61: June 17, 2024
-
-Fixed various bugs and performance issues.
-
-<!-- Version 124.0.2478.109: May 16, 2024 to Version 124.0.2478.51: April 18, 2024 -->
 <!-- ===================== snip for archive ========================== -->
+
+<!-- Version 126.0.2592.113: July 18, 2024 to Version 126.0.2592.61: June 17, 2024 --->
+<!-- Version 124.0.2478.109: May 16, 2024 to Version 124.0.2478.51: April 18, 2024 -->
 <!-- Version 123.0.2420.97: April 12, 2024 to Version 123.0.2420.53: March 22, 2024 -->
 <!-- Version 122.0.2365.106: March 21, 2024 to Version 120.0.2210.181: February 20, 2024 -->
 <!-- Version 121.0.2277.128: February 15, 2024 to Version 118.0.2088.122: November 29, 2023 -->
