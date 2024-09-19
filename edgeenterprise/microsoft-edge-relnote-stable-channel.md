@@ -30,6 +30,8 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues Extended Stable channel.
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-19-2024).
+
 ## Version 129.0.2792.52: September 19, 2024
 
 Fixed various bugs and performance issues, feature updates, site impacting compatibility changes, and policy updates.
