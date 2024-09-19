@@ -34,6 +34,37 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 
 ### General updates
 
+- [iOS] Upgrade Intune MAM SDK to version 19.6.0
+- [iOS] Upgrade MS OneAuth SDK version 3.3.0
+- [iOS] Remove native AAD Copilot support
+
+### Bug fixes
+
+- [iOS] Fix managed bookmarks dismiss under AAD account (missing "XXX's Favorites" folder under favorites)
+- [iOS] Fix downloaded files not properly moved in work profile
+- [iOS] Fix a bug related to MAM Tunnel cannot be disconnected automatically when change to personal account
+- [iOS] Fix disableFeatures policy - InPrivate mode disablement bug & support policy auto change
+(The problem is when set `com.microsoft.intune.mam.managedbrowser.disabledFeatures='inprivate'`, the InPrivate mode can still be accessed, and the corresponding toolbar button remains functional. Expects the policy to support dynamic switching without needing to restart Edge. When InPrivate mode is disabled by the policy, the application should automatically exit InPrivate mode and close all open InPrivate tabs)
+
+### New Policies
+
+- [iOS] Support to disable Share and SendtoDevices via **DisableFeature** policy
+(`com.microsoft.intune.mam.managedbrowser.disabledFeatures` in MAM and `EdgeDisabledFeatures` in MDM now support to config to disable Share and Sendtodevices in overflow menu by value `share|sendtodevices`)
+
+### Enhancements
+
+- [iOS] Improve the transition user experience for account switcher in iPad
+- [iOS] Improve Web SSO for CMC (copilot.microsoft.com) login in MSA
+- [iOS] Improve the occurrence of re-sign-in prompts by disallow user interaction for proactive-auth
+- [iOS] Improve account verification by consider sync and news feed status
+- [iOS] General enhancements to NTLMSSO policies to make it more useful
+
+## Version 129.0.2792.49 (Android): September 19, 2024
+
+Fixed various bugs and performance issues, general updates, new policies, and enhancements.
+
+### General updates
+
 - [Android] Upgrade Intune MAM SDK to version 10.4.0
 - [Android] Upgrade MS OneAuth SDK version 3.3.0
 - [Android] Remove native AAD Copilot support
