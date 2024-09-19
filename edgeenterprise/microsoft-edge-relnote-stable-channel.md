@@ -82,6 +82,10 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 ### Policy updates
 
+#### New policies
+
+- [PrintingLPACSandboxEnabled](/deployedge/microsoft-edge-policies#printinglpacsandboxenabled) - Enable Printing LPAC Sandbox
+
 #### Deprecated policies
 
 - [CryptoWalletEnabled](/deployedge/microsoft-edge-policies#cryptowalletenabled) - Enable CryptoWallet feature (deprecated)
