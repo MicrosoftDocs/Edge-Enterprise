@@ -33,6 +33,14 @@ The following table lists the planned and actual release dates for major release
 
 | Version | Release status | Beta Channel<br>Release week | Stable Channel<br>Release week | Extended Stable Channel<br>Release week |
 |:-----|:-----|:-----|:-----|:-----|
+| 140 | Target release | Week of 14-Aug-2025 | Week of 04-Sep-2025 | Week of 04-Sep-2025 |
+| 139 | Target release | Week of 03-Jul-2025 | Week of 07-Aug-2025 | Not applicable |
+| 138 | Target release | Week of 05-Jun-2025 | Week of 26-Jun-2025 | Week of 26-Jun-2025 |
+| 137 | Target release | Week of 08-May-2025 | Week of 29-May-2025 | Not applicable |
+| 136 | Target release | Week of 10-Apr-2025 | Week of 01-May-2025 | Week of 01-May-2025 |
+| 135 | Target release | Week of 13-Mar-2025 | Week of 03-Apr-2025 | Not applicable |
+| 134 | Target release | Week of 13-Feb-2025 | Week of 06-Mar-2025 | Week of 06-Mar-2025 |
+| 133 | Target release | Week of 16-Jan-2025 | Week of 06-Feb-2025 | Not applicable |
 | 132 | Target release | Week of 21-Nov-2024 | Week of 09-Jan-2025 | Week of 09-Jan-2025 |
 | 131 | Target release | Week of 24-Oct-2024 | Week of 14-Nov-2024 | Not applicable |
 | 130 | Target release | Week of 26-Sep-2024 | Week of 17-Oct-2024 | Week of 17-Oct-2024 |
