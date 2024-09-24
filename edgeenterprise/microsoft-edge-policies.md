@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/17/2024
+ms.date: 09/24/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,11 +30,11 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[PrintingLPACSandboxEnabled](#printinglpacsandboxenabled)|Enable Printing LPAC Sandbox|
+|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature (obsolete)|
 
 ## Available policies
 
@@ -235,7 +235,7 @@ These tables list all of the browser-related group policies available in this re
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
 |[ProactiveAuthWorkflowEnabled](#proactiveauthworkflowenabled)|Enable proactive authentication|
-|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog (deprecated)|
+|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog|
 |[SwitchIntranetSitesToWorkProfile](#switchintranetsitestoworkprofile)|Switch intranet sites to a work profile|
 |[SwitchSitesOnIEModeSiteListToWorkProfile](#switchsitesoniemodesitelisttoworkprofile)|Switch sites on the IE mode site list to a work profile|
 |[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|WAM for authentication below Windows 10 RS3 enabled|
@@ -484,7 +484,7 @@ These tables list all of the browser-related group policies available in this re
 |[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles|
 |[CopilotPageContext](#copilotpagecontext)|Control Copilot access to page context for Microsoft Entra ID profiles|
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
-|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature (deprecated)|
+|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature (obsolete)|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
@@ -9352,13 +9352,13 @@ If you disable this policy, Microsoft Edge does not send authentications request
 
   ### SignInCtaOnNtpEnabled
 
-  #### Enable sign in click to action dialog (deprecated)
+  #### Enable sign in click to action dialog
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
   
   #### Supported versions:
 
-  - On Windows and macOS since 99 or later
+  - On Windows and macOS since 99, until 130
 
   #### Description
 
@@ -9368,7 +9368,7 @@ If you enable or don't configure this policy, sign in click to action dialog is 
 
 If you disable this policy, sign in click to action dialog isn't shown on the New tab page.
 
-This policy is deprecated as the feature has not been enabled in Microsoft Edge, and this policy will not be supported for Microsoft Edge in the future.
+This policy is obsoleted as the feature has not been enabled in Microsoft Edge, and this policy will not be supported for Microsoft Edge in the future.
 
   #### Supported features:
 
@@ -9387,7 +9387,7 @@ This policy is deprecated as the feature has not been enabled in Microsoft Edge,
   ##### Group Policy (ADMX) info
 
   - GP unique name: SignInCtaOnNtpEnabled
-  - GP name: Enable sign in click to action dialog (deprecated)
+  - GP name: Enable sign in click to action dialog
   - GP path (Mandatory): N/A
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Identity and sign-in
   - GP ADMX file name: MSEdge.admx
@@ -18378,7 +18378,7 @@ This policy affects all types of audio inputs, not only the built-in microphone.
 
   #### Description
 
-  Specify websites, based on URL patterns, that can use audio capture devices without asking the user for permission. Patterns in this list are matched against the security origin of the requesting URL. If they match, the site is automatically granted access to audio capture devices.
+  Specify websites, based on URL patterns, that can use audio capture devices without asking the user for permission. Patterns in this list are matched against the security origin of the requesting URL. If they match, the site is automatically granted access to audio capture devices. Note, however, that the pattern "*", which matches any URL, is not supported by this policy.
 
   #### Supported features:
 
@@ -22164,17 +22164,17 @@ WebAssembly modules to windows and workers in the same origin.
 
   ### CryptoWalletEnabled
 
-  #### Enable CryptoWallet feature (deprecated)
+  #### Enable CryptoWallet feature (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 128.
   #### Supported versions:
 
-  - On Windows since 112 or later
+  - On Windows since 112, until 128
 
   #### Description
 
-  This policy is deprecated because this feature will no longer be supported, starting in Microsoft Edge 128. There is no replacement for this policy.
+  This policy is obsoleted because this feature will no longer be supported, starting in Microsoft Edge 128. There is no replacement for this policy.
   Enables CryptoWallet feature in Microsoft Edge.
 
   If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
@@ -22198,7 +22198,7 @@ WebAssembly modules to windows and workers in the same origin.
   ##### Group Policy (ADMX) info
 
   - GP unique name: CryptoWalletEnabled
-  - GP name: Enable CryptoWallet feature (deprecated)
+  - GP name: Enable CryptoWallet feature (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -30718,7 +30718,7 @@ This setting is applicable only when the [InternetExplorerIntegrationSiteList](#
 
 If you configure this policy, Microsoft Edge will attempt to retrieve an updated version of the configured Enterprise Mode Site List using the specified refresh interval.
 
-If you disable or don't configure this policy, Microsoft Edge will use a default refresh interval, currently 120 minutes.
+If you disable or don't configure this policy, Microsoft Edge will use a default refresh interval, it is 10080 minutes (7 days) starting from version 110 or later, 120 minutes from version 93 to 110, and 30 minutes before version 93.
 
   #### Supported features:
 
@@ -41229,7 +41229,7 @@ This policy affects all types of video inputs, not only the built-in camera.
 
   #### Description
 
-  Specify websites, based on URL patterns, that can use video capture devices without asking the user for permission. Patterns in this list are matched against the security origin of the requesting URL. If they match, the site is automatically granted access to video capture devices.
+  Specify websites, based on URL patterns, that can use video capture devices without asking the user for permission. Patterns in this list are matched against the security origin of the requesting URL. If they match, the site is automatically granted access to video capture devices. Note, however, that the pattern "*", which matches any URL, is not supported by this policy.
 
   #### Supported features:
 
