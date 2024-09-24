@@ -190,56 +190,7 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 
 - [iOS] Shared device mode support is generally available.
 
-## Version 126.2592.120 (iOS): July 24, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 126.0.2592.117 (Android): July 23, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 126.0.2592.106 (Android and iOS): July 16, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 126.0.2592.100 (Android and iOS): July 11, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 126.0.2592.86 (Android and iOS): July 2, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 126.0.2592.80 (Android): June 27, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 126.0.2592.74 (Android): June 25, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 126.0.2592.56 (Android and iOS): June 17, 2024
-
-Fixed various bugs and performance issues, made general updates, added policies and enhancements.
-
-### General updates
-
-- [iOS] Upgrade MS Tunnel SDK version 1.1.0
-- [Android and iOS] Update OneAuth SDK to 2.3.1
-
-### Bug fixes
-
-- [Android] Scrolling screenshot will be disabled if Intune APP (App Protection Policy) is configured to block screenshot.
-
-### New policies
-
-- [Android and iOS] Manage contextual search via policy `com.microsoft.intune.mam.managedbrowser.disabledFeatures=contextualsearch`
-- [iOS] Introduce MDM policy **EdgeSharedDeviceSupportEnabled** to disable shared device mode.
-
-### Enhancements
-
-- [Android and iOS] Remove [Copilot](https://copilot.microsoft.com/#/) from default allowlist so that you can manage access to [Copilot](https://copilot.microsoft.com/#/) via URLs blocklist.
-- [iOS] Support Passkey on iOS. This feature is disabled by default. It can be enabled by turning on the `flag edge-iOS-enable-passkey-signin` from *Edge://flags*.
+<!-- Version 126.2592.120 (iOS): July 24, 2024 to Version 126.0.2592.56 (Android and iOS): June 17, 2024 -->
 
 <!-- ranges cut out for mobile stable archive -->
 <!-- Version 125.0.2535.96 (Android and iOS): June 11, 2024 to Version 125.0.2535.51 (Android): May 21, 2024 --->
