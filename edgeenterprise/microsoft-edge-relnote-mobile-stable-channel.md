@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 09/18/2024
+ms.date: 09/24/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -22,6 +22,38 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 129.0.2792.58 (Android and iOS): September 24, 2024
+
+Fixed various bugs and performance issues, general updates, bug fixes, enhancements, and new policies.
+
+### General updates
+
+- [iOS] Upgrade Intune MAM SDK to version 19.6.0
+- [Android] Upgrade Intune MAM SDK to version 10.4.0
+- [Android and iOS] Upgrade MS OneAuth SDK version 3.3.0 
+- [Android and iOS] Remove native AAD Copilot support
+
+### Bug fixes
+
+- [iOS] Fix managed bookmarks dismiss under AAD account (without "XXX's Favorites" folder under favorites)
+- [iOS] Fix downloaded files not properly moved in work profile
+- [iOS] Fix a bug related to MAM Tunnel cannot be disconnected automatically when change to personal account
+- [iOS] Fix disableFeatures policy - InPrivate mode disablement bug & support policy auto change
+(The problem is when set `com.microsoft.intune.mam.managedbrowser.disabledFeatures='inprivate'`, the InPrivate mode can still be accessed, and the corresponding toolbar button remains functional. Expects the policy to support dynamic switching without needing to restart Edge. When InPrivate mode is disabled by the policy, the application should automatically exit InPrivate mode and close all open InPrivate tabs)
+
+### Enhancements
+
+- [iOS] Improve the transition user experience for account switcher in iPad
+- [iOS] Improve Web SSO for CMC (copilot.microsoft.com) login in MSA
+- [Android and iOS] Improve the occurrence of re-sign-in prompts by disallow user interaction for proactive-auth
+- [Android and iOS] Improve account verification by consider sync and news feed status
+- [Android and iOS] General enhancements to NTLMSSO policies to make it more useful
+
+### New Policies
+
+- [Android and iOS] Support to disable Share and SendtoDevices via **DisableFeature** policy
+(`com.microsoft.intune.mam.managedbrowser.disabledFeatures` in MAM and `EdgeDisabledFeatures` in MDM now support to config to disable Share and Sendtodevices in overflow menu by value share|sendtodevices)
 
 ## Version 128.0.2739.82 (iOS): September 18, 2024
 
