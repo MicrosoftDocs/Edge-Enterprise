@@ -60,7 +60,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 ### Site compatibilty impacting changes
 
--	**CSS Container Queries flat tree lookup.** The specification for container queries changed to look up flat tree ancestors. This change is only relevant for shadow DOM where an element will now be able to see non-named containers inside shadow trees into which the element or one of its ancestors are slotted, even if the CSS rule does not use `::part()` or `::slotted()`.
+- **CSS Container Queries flat tree lookup.** The specification for container queries changed to look up flat tree ancestors. This change is only relevant for shadow DOM where an element will now be able to see non-named containers inside shadow trees into which the element or one of its ancestors are slotted, even if the CSS rule does not use `::part()` or `::slotted()`.
 
 - **CSS Nesting: The nested declarations rule.** Keeps bare declarations following a nested rule in their place, by wrapping those declarations in `CSSNestedDeclarations` rules during parsing.
 
@@ -90,14 +90,37 @@ The following Dev channel updates preceded this Beta channel release. These note
 
   Now a DOMException will be raised with the name "NotFoundError" when the file containing the data being read by an IDBRequest is missing from the disk so that sites can take the appropriate corrective action when an unrecoverable failure occurs. Corrective actions could include deleting the entry from the DB, notifying the user, or re-fetching the data from servers.
 
+- **Keyboard focusable scroll containers.** This feature makes scrollers without focusable children keyboard-focusable by default.
 
+  This is an important improvement to help make scrollers and contents within scrollers more accessible to all users. You can read more about its benefits in [Keyboard focusable scrollers](https://developer.chrome.com/blog/keyboard-focusable-scrollers). Keyboard focusable scrollers will be enabled by default starting in version 130.
 
+  If more time is needed to implement this feature, the [KeyboardFocusableScrollersEnabled](/deployedge/microsoft-edge-policies#keyboardfocusablescrollersenabled) policy is available starting with Edge 128.
 
+- **Support non-special scheme URLs.** Previously, the URL parser didn't support non-special URLs. The parser parses non-special URLs as if they had an "opaque path", which is not aligned with the URL Standard. Now, the URL parser parses non-special URLs correctly, following the URL Standard.
 
+  See [bit.ly/url-non-special](https://docs.google.com/document/d/1LjxHl32fE4tCKugrK_PIso7mfXQVEeoD1wSnX2y0ZU8/edit?resourcekey=0-d1gP4X2sG7GPl9mlTeptIA#heading=h.voahsyj6c2dh) for more details.
 
+- **WebAssembly JavaScript String Builtins.** This feature exposes common JavaScript string operations for import into WebAssembly. This lets you create and manipulate JavaScript strings from WebAssembly without support within WebAssembly. This still allows for a similar performance as supported string references.
 
+- **WebGPU: Dual source blending.** Adds the optional GPU feature "dual-source-blending" that enables combining two fragment shader outputs into a single framebuffer. This technique is particularly useful for applications that require complex blending operations, such as those based on Porter-Duff blend modes. By reducing the need for frequent pipeline state object changes, dual source blending can enhance performance and flexibility.
+
+- **Web Serial: connected attribute and RFCOMM connection events.** This feature adds a boolean `SerialPort.connected` attribute. The attribute returns true if the serial port is logically connected. For wired serial ports, a port is logically connected if the port is physically attached to the system. For wireless serial ports, a port is logically connected if the device hosting the port has any open connections to the host.
+
+  Previously, only wired serial ports dispatched connect and disconnect events. With this feature, Bluetooth RFCOMM serial ports will dispatch these events when the port becomes logically connected or disconnected.
+
+  This feature is intended to allow applications to detect when a Bluetooth RFCOMM serial port is available without opening the port.
+
+  For more information, see [Bluetooth RFCOMM updates in Web Serial](https://developer.chrome.com/blog/bluetooth-rfcomm-updates-web-serial).
+
+- **Remove expectedImprovement in DelegatedInkTrailPresenter.** The expectedImprovement attribute tells web developers how much improvement the DelegatedInkTrails API will provide to their current ink latency. However, this attribute is not worth the increase to fingerprinting entropy.
+
+- **Deprecate non-standard GPUAdapter requestAdapterInfo() method.** The `requestAdapterInfo()` asynchronous method in WebGPU is redundant because developers can already get GPUAdapterInfo synchronously using the GPUAdapter info attribute.
 
 ### Policy updates
+
+#### Obsoleted policies
+
+- [AllowTokenBindingForUrls](/deployedge/microsoft-edge-policies#allowtokenbindingforurls) - Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (obsolete).
 
 ## Version 129.0.2792.52: September 19, 2024
 
