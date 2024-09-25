@@ -21,7 +21,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 130.0.xxxx.52: September xx, 2024
 
-Fixed various bugs and performance issues, feature updates, site compatibilty impacting changes, and policy updates.
+Fixed various bugs and performance issues, feature updates, site compatibility impacting changes, and policy updates.
 
 > [!NOTE]
 > Portions of this release note are modifications based on work created and shared by Chromium.org and used according to terms described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
@@ -40,15 +40,15 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 ### Announcement
 
-- **Live Captions.** The [LiveCaptionsAllowed](/deployedge/microsoft-edge-policies#livecaptionsallowed) policy has been available since Microsoft Edge version 103 but this feature is not generally available. Clients that have the [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-policies#experimentationandconfigurationservicecontrol) policy set to 'FullMode' may receive the feature before broad availability. Broad availability will be announced via Microsoft Edge release notes.
+- **Live Captions.** The [LiveCaptionsAllowed](/deployedge/microsoft-edge-policies#livecaptionsallowed) policy has been available since Microsoft Edge version 103 but this feature isn't generally available. Clients that have the [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-policies#experimentationandconfigurationservicecontrol) policy set to 'FullMode' may receive the feature before broad availability. Broad availability will be announced via Microsoft Edge release notes.
 
 ### Feature updates
 
-- **Token Binding.** Token Binding uses cryptographic certificates on both ends of the TLS connection in an attempt to close the security gap of bearer tokens, which may be lost or stolen. Token Binding is deprecated in Microsoft Edge version 130.  Also, the [AllowTokenBindingForUrls](/deployedge/microsoft-edge-policies#allowtokenbindingforurls) policy is now obsolete.
+- **Token Binding.** Token Binding uses cryptographic certificates on both ends of the TLS connection in an attempt to close the security gap of bearer tokens, which may be lost or stolen. Token Binding is deprecated in Microsoft Edge version 130. Also, the [AllowTokenBindingForUrls](/deployedge/microsoft-edge-policies#allowtokenbindingforurls) policy is now obsolete.
 
-- **Edge on MacOS now seamlessly opens links in Teams.** When you set the default browser to Microsoft Edge on MacOS and enable the feature, web links from the Teams desktop app are sent via chats, channels, calendar, and other entry points. These links will seamlessly open automatically in the profile that’s signed into Teams app and skips the need to reauthenticate in the browser. This makes it faster and easier to access content. Administrators can control the availability of this feature using the "Choose Which Browser Opens Web Links" Microsoft 365 policy. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+- **Edge on macOS now seamlessly opens links in Teams.** When you set the default browser to Microsoft Edge on macOS and enable the feature, web links from the Teams desktop app are sent via chats, channels, calendar, and other entry points. These links seamlessly open automatically in the profile signed into Teams app and skips the need to reauthenticate in the browser. This feature makes it faster and easier to access content. Administrators can control the availability of this feature using the "Choose Which Browser Opens Web Links" Microsoft 365 policy. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
-- **Elevating top settings and improving settings page navigability.** To make finding browser settings more efficient, Microsoft Edge is introducing three navigation improvements to Edge Settings. We aren’t changing the functionality of any setting, and all the settings will stay on the same page as they are today but will be behind clickable sections. These changes are as follows.
+- **Elevating top settings and improving settings page navigability.** To make finding browser settings more efficient, Microsoft Edge is introducing three navigation improvements to Edge Settings. We aren’t changing the functionality of any setting, and all the settings stay on the same page as they're today but will be behind clickable sections. These changes are as follows.
 
   - Introduce quick access to the most used Settings actions on the first place users land when entering Edge Settings (the Profiles page). Clicking the button with the name of the setting navigates users directly to its location.
 
@@ -58,9 +58,9 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
-### Site compatibilty impacting changes
+### Site compatibility impacting changes
 
-- **CSS Container Queries flat tree lookup.** The specification for container queries changed to look up flat tree ancestors. This change is only relevant for shadow DOM where an element will now be able to see non-named containers inside shadow trees into which the element or one of its ancestors are slotted, even if the CSS rule does not use `::part()` or `::slotted()`.
+- **CSS Container Queries flat tree lookup.** The specification for container queries changed to look up flat tree ancestors. This change is only relevant for shadow DOM where an element will now be able to see non-named containers inside shadow trees into which the element or one of its ancestors is slotted, even if the CSS rule doesn't use `::part()` or `::slotted()`.
 
 - **CSS Nesting: The nested declarations rule.** Keeps bare declarations following a nested rule in their place, by wrapping those declarations in `CSSNestedDeclarations` rules during parsing.
 
@@ -68,7 +68,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 
   Previously, only `box-decoration-break:slice` (the initial value) was supported for block fragmentation, whereas for inline fragmentation, `box-decoration-break:clone` was also supported, but only when using the `prefixed -webkit-box-decoration-break` property.
 
-- **Allow more pseudo-elements and pseudo-classes after ::part().** CSS selectors that use the `::part()` pseudo-element are allowed to have other CSS pseudo-elements (except `::part()`) and many types of other CSS pseudo-classes after them. Combinators are still not allowed after `::part()`, and pseudo-classes that depend on tree structure are not allowed.
+- **Allow more pseudo-elements and pseudo-classes after ::part().** CSS selectors that use the `::part()` pseudo-element are allowed to have other CSS pseudo-elements (except `::part()`) and many types of other CSS pseudo-classes after them. Combinators are still not allowed after `::part()`, and pseudo-classes that depend on tree structure aren't allowed.
  
   Previously only a limited set of pseudo-classes and pseudo-elements after `::part()` was allowed. This change allows all of the pseudo-classes and pseudo-elements that should be allowed. It means selectors such as `::part(part-name):enabled` and `::part(part-name)::marker` are now allowed.
 
@@ -76,43 +76,43 @@ The following Dev channel updates preceded this Beta channel release. These note
 
   Enterprises might experience potential compatibility issues with enterprise network infrastructure that intercepts HTTPS traffic and is sensitive to unknown content encodings. The enterprise policy [CompressionDictionaryTransportEnabled](/deployedge/microsoft-edge-policies#compressiondictionarytransportenabled) is available to turn off the compression dictionary transport feature.
 
-- **Concurrent smooth scrollIntoView().** The [scrollIntoView()](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) method with behavior: "smooth" lets developers create scroll containers that scroll to their descendants with a gentle scroll animation. This feature fixes the implementation of the API so that ongoing scrollIntoView animations are not canceled by unrelated scrolls on other scroll containers.
+- **Concurrent smooth scrollIntoView().** The [scrollIntoView()](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) method with behavior: "smooth" lets developers create scroll containers that scroll to their descendants with a gentle scroll animation. This feature fixes the implementation of the API so that ongoing scrollIntoView animations aren't canceled by unrelated scrolls on other scroll containers.
 
   The feature also fixes cases where Edge fails to scroll to a page's fragment anchor because of a competing scrollIntoView that is invoked when the page loads.
 
-- **Document picture-in-picture: add option to ignore window bounds cache.** This adds a new parameter (`preferInitialWindowPlacement`) to the document picture-in-picture API that, when set to true, hints to the user agent that it shouldn't try to reuse the position or size of the previous document picture-in-picture from this site when opening this one.
+- **Document picture-in-picture: add option to ignore window bounds cache.** This change adds a new parameter (`preferInitialWindowPlacement`) to the document picture-in-picture API that, when set to true, hints to the user agent that it shouldn't try to reuse the position or size of the previous document picture-in-picture from this site when opening this one.
 
-  Often, a document picture-in-picture window will close and re-open multiple times for the same site, such as moving a video conference to and from PiP. The user agent is free to re-open the PiP window at its most recent size and location, so that it stays where the user last moved it and provides continuity between the PiP windows. However, if the new window is semantically unrelated to the previous window, such as if it is a new video call, then the developer can use this parameter to provide a hint to the user agent that this window might be better opened in its default position and size instead.
+  Often, a document picture-in-picture window closes and re-opens multiple times for the same site, such as moving a video conference to and from PiP. The user agent is free to re-open the PiP window at its most recent size and location, so that it stays where the user last moved it and provides continuity between the PiP windows. However, if the new window is semantically unrelated to the previous window, such as if it's a new video call, then the developer can use this parameter to provide a hint to the user agent that this window might be better opened in its default position and size instead.
 
   Learn [how to open the window in its default position and size](https://developer.chrome.com/docs/web-platform/document-picture-in-picture#open_the_picture-in-picture_window_in_its_default_position_and_size).
 
-- **Improved error reporting in IndexedDB for large value read failures.** Change to reporting for certain error cases that were previously reported with a DOMException and the message "Failed to read large IndexedDB value".
+- **Improved error reporting in IndexedDB for large value read failures.** Change to reporting for certain error cases that were previously reported with a DOMException and the message "Failed to read large IndexedDB value."
 
-  Now a DOMException will be raised with the name "NotFoundError" when the file containing the data being read by an IDBRequest is missing from the disk so that sites can take the appropriate corrective action when an unrecoverable failure occurs. Corrective actions could include deleting the entry from the DB, notifying the user, or re-fetching the data from servers.
+  Now a DOMException is raised with the name "NotFoundError" when the file containing the data being read by an IDBRequest is missing from the disk so that sites can take the appropriate corrective action when an unrecoverable failure occurs. Corrective actions could include deleting the entry from the DB, notifying the user, or re-fetching the data from servers.
 
 - **Keyboard focusable scroll containers.** This feature makes scrollers without focusable children keyboard-focusable by default.
 
-  This is an important improvement to help make scrollers and contents within scrollers more accessible to all users. You can read more about its benefits in [Keyboard focusable scrollers](https://developer.chrome.com/blog/keyboard-focusable-scrollers). Keyboard focusable scrollers will be enabled by default starting in version 130.
+  This is an important improvement to help make scrollers and contents within scrollers more accessible to all users. You can read more about its benefits in [Keyboard focusable scrollers](https://developer.chrome.com/blog/keyboard-focusable-scrollers). Keyboard focusable scrollers are enabled by default starting in version 130.
 
   If more time is needed to implement this feature, the [KeyboardFocusableScrollersEnabled](/deployedge/microsoft-edge-policies#keyboardfocusablescrollersenabled) policy is available starting with Edge 128.
 
-- **Support non-special scheme URLs.** Previously, the URL parser didn't support non-special URLs. The parser parses non-special URLs as if they had an "opaque path", which is not aligned with the URL Standard. Now, the URL parser parses non-special URLs correctly, following the URL Standard.
+- **Support non-special scheme URLs.** Previously, the URL parser didn't support non-special URLs. The parser parses non-special URLs as if they had an "opaque path," which isn't aligned with the URL Standard. Now, the URL parser parses non-special URLs correctly, following the URL Standard.
 
   See [bit.ly/url-non-special](https://docs.google.com/document/d/1LjxHl32fE4tCKugrK_PIso7mfXQVEeoD1wSnX2y0ZU8/edit?resourcekey=0-d1gP4X2sG7GPl9mlTeptIA#heading=h.voahsyj6c2dh) for more details.
 
 - **WebAssembly JavaScript String Builtins.** This feature exposes common JavaScript string operations for import into WebAssembly. This lets you create and manipulate JavaScript strings from WebAssembly without support within WebAssembly. This still allows for a similar performance as supported string references.
 
-- **WebGPU: Dual source blending.** Adds the optional GPU feature "dual-source-blending" that enables combining two fragment shader outputs into a single framebuffer. This technique is particularly useful for applications that require complex blending operations, such as those based on Porter-Duff blend modes. By reducing the need for frequent pipeline state object changes, dual source blending can enhance performance and flexibility.
+- **WebGPU: Dual source blending.** Adds the optional GPU feature "dual-source-blending" that enables combining two fragment shader outputs into a single framebuffer. This technique is useful for applications that require complex blending operations, such as those based on Porter-Duff blend modes. By reducing the need for frequent pipeline state object changes, dual source blending can enhance performance and flexibility.
 
 - **Web Serial: connected attribute and RFCOMM connection events.** This feature adds a boolean `SerialPort.connected` attribute. The attribute returns true if the serial port is logically connected. For wired serial ports, a port is logically connected if the port is physically attached to the system. For wireless serial ports, a port is logically connected if the device hosting the port has any open connections to the host.
 
-  Previously, only wired serial ports dispatched connect and disconnect events. With this feature, Bluetooth RFCOMM serial ports will dispatch these events when the port becomes logically connected or disconnected.
+  Previously, only wired serial ports dispatched connect and disconnect events. With this feature, Bluetooth RFCOMM serial ports dispatch these events when the port becomes logically connected or disconnected.
 
   This feature is intended to allow applications to detect when a Bluetooth RFCOMM serial port is available without opening the port.
 
   For more information, see [Bluetooth RFCOMM updates in Web Serial](https://developer.chrome.com/blog/bluetooth-rfcomm-updates-web-serial).
 
-- **Remove expectedImprovement in DelegatedInkTrailPresenter.** The expectedImprovement attribute tells web developers how much improvement the DelegatedInkTrails API will provide to their current ink latency. However, this attribute is not worth the increase to fingerprinting entropy.
+- **Remove expectedImprovement in DelegatedInkTrailPresenter.** The expectedImprovement attribute tells web developers how much improvement the DelegatedInkTrails API will provide to their current ink latency. However, this attribute isn't worth the increase to fingerprinting entropy.
 
 - **Deprecate non-standard GPUAdapter requestAdapterInfo() method.** The `requestAdapterInfo()` asynchronous method in WebGPU is redundant because developers can already get GPUAdapterInfo synchronously using the GPUAdapter info attribute.
 
@@ -185,7 +185,7 @@ Fixed various bugs and performance issues, feature updates.
 
   For Windows 11 and Windows 10 users, clicking the gear icon now automatically opens the *edge://settings/sidebar* page.
 
-  Also, the ability for Edge Bar to start automatically when starting a Windows 10 device is enabled again, the Close "X" icon was moved below the ellipsis menu at the bottom right corner of Edge Bar, and Copilot in Edge will remain within the browser not in Edge Bar. **Note:** These features are a controlled feature rollout. If you don't see these features, check back as we continue our rollout.
+  Also, the ability for Edge Bar to start automatically when starting a Windows 10 device is enabled again, the Close "X" icon was moved below the ellipsis menu at the bottom right corner of Edge Bar, and Copilot in Edge remains within the browser not in Edge Bar. **Note:** These features are a controlled feature rollout. If you don't see these features, check back as we continue our rollout.
 
   Disabling Edge Bar through the [StandaloneHubsSidebarEnabled](/deployedge/microsoft-edge-policies#standalonehubssidebarenabled) policy continues to work, there's a fix to make the UI and briefcase icon appear on the *edge://settings/sidebar* page coming soon.
 
