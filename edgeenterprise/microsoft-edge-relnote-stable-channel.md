@@ -26,6 +26,18 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 129.0.2792.XX: September XX, 2024
+
+Fixed various bugs and performance issues, and feature updates.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-XX-2024).
+
+### Feature updates
+
+- **Microsoft Edge sidebar updates.** For non-active sidebar users and new Edge users, the sidebar will be turned OFF. Users can always return to **Settings > Sidebar** and turn the sidebar ON again at any time. For active sidebar users, the current sidebar state will stay the same.
+  
+  Administrators can control the availability of the sidebar using the [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) policy.
+
 ## Version 128.0.2739.90: September 19, 2024
 
 Fixed various bugs and performance issues Extended Stable channel.
