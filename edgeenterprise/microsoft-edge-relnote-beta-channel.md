@@ -58,7 +58,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 
   - For these densely populated pages, each lengthy section of settings will be a clickable "table of contents" with descriptive subtexts. This helps users locate settings directly and avoid unnecessary scrolling.
 
-**Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 ### Site compatibility impacting changes
 
