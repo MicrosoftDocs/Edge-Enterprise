@@ -255,6 +255,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 - [DiscoverPageContextEnabled](/deployedge/microsoft-edge-policies#discoverpagecontextenabled) - Enable Discover access to page contents for AAD profiles (obsolete)
 - [EnforceLocalAnchorConstraintsEnabled](/deployedge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) Determines whether the built-in certificate verifier enforces constraints encoded into trust anchors loaded from the platform trust store (deprecated)
 
+<!--=========================== archived =================================-->
 <!-- Version 127.0.2651.74: July 25, 2024 to Version 127.0.2651.8: June 21, 2024 -->
 <!-- Version 126.0.2592.68: June 20, 2024 to Version 126.0.2592.13: May 23, 2024 -->
 <!-- Version 125.0.2535.51: May 17, 2024 to Version 125.0.2535.13: April 29, 2024 -->
