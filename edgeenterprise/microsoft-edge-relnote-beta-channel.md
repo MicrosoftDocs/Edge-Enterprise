@@ -40,7 +40,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 ### Announcement
 
-- **Live Captions.** The [LiveCaptionsAllowed](/deployedge/microsoft-edge-policies#livecaptionsallowed) policy has been available since Microsoft Edge version 103 but this feature isn't generally available. Clients that have the [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-policies#experimentationandconfigurationservicecontrol) policy set to 'FullMode' may receive the feature before broad availability. Broad availability will be announced via Microsoft Edge release notes.
+- **Live Captions.** The [LiveCaptionsAllowed](/deployedge/microsoft-edge-policies#livecaptionsallowed) policy was available since Microsoft Edge version 103 but this feature isn't generally available. Clients that have the [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-policies#experimentationandconfigurationservicecontrol) policy set to 'FullMode' might receive the feature before broad availability. Broad availability will be announced via Microsoft Edge release notes.
 
 ### Feature updates
 
@@ -48,11 +48,11 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 - **Edge on macOS now seamlessly opens links in Teams.** When you set the default browser to Microsoft Edge on macOS and enable the feature, web links from the Teams desktop app are sent via chats, channels, calendar, and other entry points. These links seamlessly open automatically in the profile signed into Teams app and skips the need to reauthenticate in the browser. This feature makes it faster and easier to access content. Administrators can control the availability of this feature using the "Choose Which Browser Opens Web Links" Microsoft 365 policy. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
-- **Elevating top settings and improving settings page navigability.** To make finding browser settings more efficient, Microsoft Edge is introducing three navigation improvements to Edge Settings. We aren’t changing the functionality of any setting, and all the settings stay on the same page as they're today but will be behind clickable sections. These changes are as follows.
+- **Elevating top settings and improving settings page navigability.** To make finding browser settings more efficient, Microsoft Edge is introducing three navigation improvements to Edge Settings. We aren’t changing the functionality of any setting, and all the settings stay on the same page as they are today but will be behind clickable sections. These changes are as follows.
 
   - Introduce quick access to the most used Settings actions on the first place users land when entering Edge Settings (the Profiles page). Clicking the button with the name of the setting navigates users directly to its location.
 
-  - Make densely populated Settings pages, (such as *Privacy, search, and services*, *Appearance*, *Cookies and site permissions*, *System and performance*) easier to navigate by introducing quick access to the most used actions located on that page. Clicking the button with the name of the setting takes users directly to its location.
+  - Make densely populated Settings pages (such as *Privacy, search, and services*, *Appearance*, *Cookies and site permissions*, *System and performance*) easier to navigate by introducing quick access to the most used actions located on that page. Clicking the button with the name of the setting takes users directly to its location.
 
   - For these densely populated pages, each lengthy section of settings will be a clickable "table of contents" with descriptive subtexts. This helps users locate settings directly and avoid unnecessary scrolling.
 
@@ -82,7 +82,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 - **Document picture-in-picture: add option to ignore window bounds cache.** This change adds a new parameter (`preferInitialWindowPlacement`) to the document picture-in-picture API that, when set to true, hints to the user agent that it shouldn't try to reuse the position or size of the previous document picture-in-picture from this site when opening this one.
 
-  Often, a document picture-in-picture window closes and re-opens multiple times for the same site, such as moving a video conference to and from PiP. The user agent is free to re-open the PiP window at its most recent size and location, so that it stays where the user last moved it and provides continuity between the PiP windows. However, if the new window is semantically unrelated to the previous window, such as if it's a new video call, then the developer can use this parameter to provide a hint to the user agent that this window might be better opened in its default position and size instead.
+  Often, a document picture-in-picture window closes and reopens multiple times for the same site, such as moving a video conference to and from PiP. The user agent is free to reopen the PiP window at its most recent size and location, so that it stays where the user last moved it and provides continuity between the PiP windows. However, if the new window is semantically unrelated to the previous window, such as if it's a new video call, then the developer can use this parameter to provide a hint to the user agent that this window might be better opened in its default position and size instead.
 
   Learn [how to open the window in its default position and size](https://developer.chrome.com/docs/web-platform/document-picture-in-picture#open_the_picture-in-picture_window_in_its_default_position_and_size).
 
