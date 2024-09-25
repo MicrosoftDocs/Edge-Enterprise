@@ -34,7 +34,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Feature updates
 
-- **Microsoft Edge sidebar updates.** For non-active sidebar users and new Edge users, the sidebar will be turned OFF. Users can always return to **Settings > Sidebar** and turn the sidebar ON again at any time. For active sidebar users, the current sidebar state will stay the same.
+- **Microsoft Edge sidebar updates.** For inactive sidebar users and new Edge users, the sidebar will be turned OFF. Users can always return to **Settings > Sidebar** and turn the sidebar ON again at any time. For active sidebar users, the current sidebar state will stay the same.
   
   Administrators can control the availability of the sidebar using the [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) policy.
 
