@@ -72,7 +72,7 @@ The following Dev channel updates preceded this Beta channel release. These note
   Previously, only `box-decoration-break:slice` (the initial value) was supported for block fragmentation, whereas for inline fragmentation, `box-decoration-break:clone` was also supported, but only when using the `prefixed -webkit-box-decoration-break` property.
 
 - **Allow more pseudo-elements and pseudo-classes after ::part().** CSS selectors that use the `::part()` pseudo-element are allowed to have other CSS pseudo-elements (except `::part()`) and many types of other CSS pseudo-classes after them. Combinators are still not allowed after `::part()`, and pseudo-classes that depend on tree structure aren't allowed.
- 
+
   Previously only a limited set of pseudo-classes and pseudo-elements after `::part()` was allowed. This change allows all of the pseudo-classes and pseudo-elements that should be allowed. It means selectors such as `::part(part-name):enabled` and `::part(part-name)::marker` are now allowed.
 
 - **Compression dictionary transport with shared Brotli and shared Zstandard.** This feature adds support for using designated previous responses, as an external dictionary for content encoding compressing responses with Brotli or Zstandard.
@@ -110,8 +110,6 @@ The following Dev channel updates preceded this Beta channel release. These note
   Previously, only wired serial ports dispatched connect and disconnect events. With this feature, Bluetooth RFCOMM serial ports dispatch these events when the port becomes logically connected or disconnected.
 
   This feature is intended to allow applications to detect when a Bluetooth RFCOMM serial port is available without opening the port.
-
-  For more information, see [Bluetooth RFCOMM updates in Web Serial](https://developer.chrome.com/blog/bluetooth-rfcomm-updates-web-serial).
 
 - **Remove expectedImprovement in DelegatedInkTrailPresenter.** The expectedImprovement attribute tells web developers how much improvement the DelegatedInkTrails API will provide to their current ink latency. However, this attribute isn't worth the increase to fingerprinting entropy.
 
