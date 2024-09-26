@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/19/2024
+ms.date: 09/26/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,6 +25,24 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 128.0.2739.97: September 26, 2024
+
+Fixed various bugs and performance issues Extended Stable channel.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-26-2024).
+
+## Version 129.0.2792.65: September 26, 2024
+
+Fixed various bugs and performance issues, and feature updates.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-26-2024).
+
+### Feature updates
+
+- **Microsoft Edge sidebar updates.** For inactive sidebar users and new Edge users, the sidebar is turned OFF. Users can always return to **Settings > Sidebar** and turn the sidebar ON again at any time. For active sidebar users, the current sidebar state stays the same.
+  
+  Administrators can control the availability of the sidebar using the [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) policy.
 
 ## Version 128.0.2739.90: September 19, 2024
 
@@ -60,11 +78,11 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 - **Deprecation of the CryptoWallet feature.** To improve end user experience, the CryptoWallet feature and the [CryptoWalletEnabled](/deployedge/microsoft-edge-policies#cryptowalletenabled) policy is deprecated. The [CryptoWalletEnabled](/deployedge/microsoft-edge-policies#cryptowalletenabled) policy will be obsolete in an upcoming release.
 
-### Site compatibilty impacting changes
+### Site compatibility impacting changes
 
-- **Deprecation of non-standard declarative shadow DOM serialization.** The prototype implementation, which shipped in 2020 and then updated in 2023, contained a method called `getInnerHTML()` that could be used to serialize DOM trees containing shadow roots. That part of the prototype was not standardized with the rest of the declarative shadow DOM, and has only recently reached spec consensus (for details, see [Github](https://github.com/whatwg/html/issues/8867). As part of that consensus, the shape of the `getInnerHTML` API changed.
+- **Deprecation of non-standard declarative shadow DOM serialization.** The prototype implementation, which shipped in 2020 and then updated in 2023, contained a method called `getInnerHTML()` that could be used to serialize DOM trees containing shadow roots. That part of the prototype wasn't standardized with the rest of the declarative shadow DOM, and has only recently reached spec consensus (for details, see [GitHub](https://github.com/whatwg/html/issues/8867). As part of that consensus, the shape of the `getInnerHTML` API changed.
 
-- **Deprecate the includeShadowRoots argument on DOMParser.** The `includeShadowRoots` argument was a never-standardized argument to the `DOMParser.parseFromString()` function, which was there to allow imperative parsing of HTML content that contains declarative shadow DOM. This was shipped as part of the initial shipment of declarative shadow DOM. Since the standards discussion rematerialized in 2023, the shape of DSD APIs changed, including this feature for imperative parsing.
+- **Deprecate the includeShadowRoots argument on DOMParser.** The `includeShadowRoots` argument was a never-standardized argument to the `DOMParser.parseFromString()` function, which was there to allow imperative parsing of HTML content that contains declarative shadow DOM. This function was shipped as part of the initial shipment of declarative shadow DOM. Since the standards discussion rematerialized in 2023, the shape of DSD APIs changed, including this feature for imperative parsing.
 
   Now that a standardized version of this API, in the form of `setHTMLUnsafe()` and `parseHTMLUnsafe()` shipped, the non-standard `includeShadowRoots` argument needs to be deprecated and removed. All usage should shift accordingly:
 
@@ -76,9 +94,9 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
   `document.parseHTMLUnsafe(html);`
 
-- **Rename inset-area to position-area**. The CSS working group ([CSSWG](https://www.w3.org/groups/wg/css/)) resolved to rename this property from `inset-area` to `position-area`. For more details, see the CSSWG discussion in [Github](https://github.com/w3c/csswg-drafts/issues/10209#issuecomment-2221005001).
+- **Rename inset-area to position-area**. The CSS working group ([CSSWG](https://www.w3.org/groups/wg/css/)) resolved to rename this property from `inset-area` to `position-area`. For more information, see the CSSWG discussion in [GitHub](https://github.com/w3c/csswg-drafts/issues/10209#issuecomment-2221005001).
 
-  The old and new property names will be supported for a few milestones, to help developers migrate to the new position-area name. We are shipping the new property name, `position-area`, as a synonym for `inset-area`.
+  The old and new property names are supported for a few milestones, to help developers migrate to the new position-area name. We're shipping the new property name, `position-area`, as a synonym for `inset-area`.
 
   The `inset-area` property is currently planned for removal in Microsoft Edge version 131.
 
