@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/19/2024
+ms.date: 09/26/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -26,11 +26,17 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 129.0.2792.XX: September XX, 2024
+## Version 128.0.2739.97: September 19, 2024
+
+Fixed various bugs and performance issues Extended Stable channel.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-26-2024).
+
+## Version 129.0.2792.65: September 26, 2024
 
 Fixed various bugs and performance issues, and feature updates.
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-XX-2024).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-26-2024).
 
 ### Feature updates
 
