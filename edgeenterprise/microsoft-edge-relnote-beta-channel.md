@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/19/2024
+ms.date: 09/26/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -87,15 +87,13 @@ The following Dev channel updates preceded this Beta channel release. These note
 
   Often, a document picture-in-picture window closes and reopens multiple times for the same site, such as moving a video conference to and from PiP. The user agent is free to reopen the PiP window at its most recent size and location, so that it stays where the user last moved it and provides continuity between the PiP windows. However, if the new window is semantically unrelated to the previous window, such as if it's a new video call, then the developer can use this parameter to provide a hint to the user agent that this window might be better opened in its default position and size instead.
 
-  Learn [how to open the window in its default position and size](https://developer.chrome.com/docs/web-platform/document-picture-in-picture#open_the_picture-in-picture_window_in_its_default_position_and_size).
-
 - **Improved error reporting in IndexedDB for large value read failures.** Change to reporting for certain error cases that were previously reported with a DOMException and the message "Failed to read large IndexedDB value."
 
   Now a DOMException is raised with the name "NotFoundError" when the file containing the data being read by an IDBRequest is missing from the disk so that sites can take the appropriate corrective action when an unrecoverable failure occurs. Corrective actions could include deleting the entry from the DB, notifying the user, or re-fetching the data from servers.
 
 - **Keyboard focusable scroll containers.** This feature makes scrollers without focusable children keyboard-focusable by default.
 
-  This is an important improvement to help make scrollers and contents within scrollers more accessible to all users. You can read more about its benefits in [Keyboard focusable scrollers](https://developer.chrome.com/blog/keyboard-focusable-scrollers). Keyboard focusable scrollers are enabled by default starting in version 130.
+  This is an important improvement to help make scrollers and contents within scrollers more accessible to all users. Keyboard focusable scrollers are enabled by default starting in version 130.
 
   If more time is needed to implement this feature, the [KeyboardFocusableScrollersEnabled](/deployedge/microsoft-edge-policies#keyboardfocusablescrollersenabled) policy is available starting with Edge 128.
 
