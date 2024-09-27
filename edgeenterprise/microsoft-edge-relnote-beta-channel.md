@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/26/2024
+ms.date: 09/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -36,8 +36,6 @@ The following Dev channel updates preceded this Beta channel release. These note
 - [Dev Channel update to 130.0.2849.1 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-130-0-2849-1-is-live/m-p/4255515)
 
 ### Fixes
-
-- Fixed an issue that caused rendering issues on some SharePoint sites.
 
 - Fixed an issue that prevented the briefcase icon from appearing on the *edge://settings/sidebar* page when Edge Bar was disabled using the [StandaloneHubsSidebarEnabled](/deployedge/microsoft-edge-policies#standalonehubssidebarenabled) policy.  
 
