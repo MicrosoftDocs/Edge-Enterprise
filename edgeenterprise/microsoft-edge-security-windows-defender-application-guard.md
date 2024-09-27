@@ -3,7 +3,7 @@ title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/08/2024
+ms.date: 09/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -29,7 +29,7 @@ description: "Microsoft Edge support for Microsoft Defender Application Guard"
 >This affects the following browsers: *Chrome* and *Firefox*. If you want to block unprotected browsers until you are ready to retire MDAG usage in your enterprise, we recommend using AppLocker policies or [Microsoft Edge management service](/deployedge/microsoft-edge-management-service).
 
 > [!TIP]
-> Download the [Microsoft Edge for Business Security Whitepaper](https://edgestatic.azureedge.net/shared/cms/pdfs/Microsoft_Edge_Security_Whitepaper_v2.pdf) to learn more about the capabilities that make Edge for Business a secure enterprise browser.
+> Download the [Microsoft Edge for Business Security Whitepaper](https://aka.ms/EdgeSecurityWhitepaper/Docs) to learn more about the capabilities that make Edge for Business a secure enterprise browser.
 >
 >The additional security features in Edge make it very secure without needing Application Guard. The growing list of security features includes:
 >
