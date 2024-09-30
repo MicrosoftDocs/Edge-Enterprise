@@ -23,6 +23,10 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+### Fixes
+
+- Fixed an issue that caused rendering issues on some SharePoint sites.
+
 ## Version 130.0.2849.5: September 26, 2024
 
 Fixed various bugs and performance issues, feature updates, site compatibility impacting changes, and policy updates.
