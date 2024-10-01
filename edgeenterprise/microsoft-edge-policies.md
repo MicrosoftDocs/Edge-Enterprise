@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/24/2024
+ms.date: 09/28/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,11 +30,12 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the obsoleted policies that are in this article update.
+The following table lists the new and obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature (obsolete)|
+|[ImageEditorServiceEnabled](#imageeditorserviceenabled)|Enable the Designer for Image Editor feature|
+|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog (obsolete)|
 
 ## Available policies
 
@@ -235,7 +236,7 @@ These tables list all of the browser-related group policies available in this re
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
 |[ProactiveAuthWorkflowEnabled](#proactiveauthworkflowenabled)|Enable proactive authentication|
-|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog|
+|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog (obsolete)|
 |[SwitchIntranetSitesToWorkProfile](#switchintranetsitestoworkprofile)|Switch intranet sites to a work profile|
 |[SwitchSitesOnIEModeSiteListToWorkProfile](#switchsitesoniemodesitelisttoworkprofile)|Switch sites on the IE mode site list to a work profile|
 |[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|WAM for authentication below Windows 10 RS3 enabled|
@@ -575,6 +576,7 @@ These tables list all of the browser-related group policies available in this re
 |[HideRestoreDialogEnabled](#hiderestoredialogenabled)|Hide restore pages dialog after browser crash|
 |[HttpAllowlist](#httpallowlist)|HTTP Allowlist|
 |[HubsSidebarEnabled](#hubssidebarenabled)|Show Hubs Sidebar|
+|[ImageEditorServiceEnabled](#imageeditorserviceenabled)|Enable the Designer for Image Editor feature|
 |[ImportAutofillFormData](#importautofillformdata)|Allow importing of autofill form data|
 |[ImportBrowserSettings](#importbrowsersettings)|Allow importing of browser settings|
 |[ImportCookies](#importcookies)|Allow importing of Cookies|
@@ -9352,10 +9354,10 @@ If you disable this policy, Microsoft Edge does not send authentications request
 
   ### SignInCtaOnNtpEnabled
 
-  #### Enable sign in click to action dialog
+  #### Enable sign in click to action dialog (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 130.
   #### Supported versions:
 
   - On Windows and macOS since 99, until 130
@@ -9387,7 +9389,7 @@ This policy is obsoleted as the feature has not been enabled in Microsoft Edge, 
   ##### Group Policy (ADMX) info
 
   - GP unique name: SignInCtaOnNtpEnabled
-  - GP name: Enable sign in click to action dialog
+  - GP name: Enable sign in click to action dialog (obsolete)
   - GP path (Mandatory): N/A
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Identity and sign-in
   - GP ADMX file name: MSEdge.admx
@@ -28507,6 +28509,70 @@ If you disable this policy, the Sidebar will never be shown.
   #### Mac information and settings
 
   - Preference Key Name: HubsSidebarEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ImageEditorServiceEnabled
+
+  #### Enable the Designer for Image Editor feature
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 130 or later
+
+  #### Description
+
+  Lets users access and use the Designer for Image Editor feature to edit an image they select.
+
+If you enable or don't configure this policy, users can access and use the Designer for Image Editor feature in Microsoft Edge.
+
+If you disable this policy, users can't access and use the Designer for Image Editor feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ImageEditorServiceEnabled
+  - GP name: Enable the Designer for Image Editor feature
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ImageEditorServiceEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ImageEditorServiceEnabled
   - Example value:
 ``` xml
 <true/>
