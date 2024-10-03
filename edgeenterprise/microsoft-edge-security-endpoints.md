@@ -3,7 +3,7 @@ title: "Allow list for Microsoft Edge endpoints"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 09/30/2024
+ms.date: 10/03/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
