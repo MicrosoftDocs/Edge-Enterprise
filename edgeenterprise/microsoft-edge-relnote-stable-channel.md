@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 129.0.2792.79: October 3, 2024
 
-Fixed various bugs and performance issue.
+Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-3-2024).
 
