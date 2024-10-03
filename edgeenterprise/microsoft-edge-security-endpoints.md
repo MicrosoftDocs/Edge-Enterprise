@@ -126,8 +126,8 @@ The service that supports Copilot, and other apps, in the Edge sidebar.
 - `http://edgeservices.bing.com/`
 - `https://edgeservices.bing.com/`
 
-  > [!NOTE]
-  > Other endpoints that Copilot requires to function can be found in the [Copilot network requirements](/copilot/manage#network-requirements).
+> [!NOTE]
+> Other endpoints that Copilot requires to function can be found in the [Copilot network requirements](/copilot/manage#network-requirements).
 
 ## Feedback and Diagnostics
 
