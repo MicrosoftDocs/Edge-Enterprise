@@ -3,7 +3,7 @@ title: "Allow list for Microsoft Edge endpoints"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 09/16/2024
+ms.date: 10/03/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -126,8 +126,15 @@ The service that supports Copilot, and other apps, in the Edge sidebar.
 - `http://edgeservices.bing.com/`
 - `https://edgeservices.bing.com/`
 
-  > [!NOTE]
-  > Other endpoints that Copilot requires to function can be found in the [Copilot network requirements](/copilot/manage#network-requirements).
+> [!NOTE]
+> Other endpoints that Copilot requires to function can be found in the [Copilot network requirements](/copilot/manage#network-requirements).
+
+## Feedback and Diagnostics
+
+The service that supports feedback and diagnostics for desktop and mobile users.
+
+- `https://api.msa.diagnostics.office.com`
+- `https://api.diagnostics.office.com`
 
 ## Other browser support services
 
