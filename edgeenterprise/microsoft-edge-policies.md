@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/28/2024
+ms.date: 10/04/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,12 +30,12 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new and obsoleted policies that are in this article update.
+The following table lists the new and deprecated policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[ImageEditorServiceEnabled](#imageeditorserviceenabled)|Enable the Designer for Image Editor feature|
-|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog (obsolete)|
+|[EdgeEntraCopilotPageContext](#edgeentracopilotpagecontext)|Control access to page content for Entra ID Profiles accessing Microsoft Copilot with Enterprise Data Protection (EDP) from the Microsoft Edge sidebar|
+|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles (deprecated)|
 
 ## Available policies
 
@@ -482,7 +482,7 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
-|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles|
+|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles (deprecated)|
 |[CopilotPageContext](#copilotpagecontext)|Control Copilot access to page context for Microsoft Entra ID profiles|
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
 |[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature (obsolete)|
@@ -520,6 +520,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge (obsolete)|
 |[EdgeEDropEnabled](#edgeedropenabled)|Enable Drop feature in Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled (obsolete)|
+|[EdgeEntraCopilotPageContext](#edgeentracopilotpagecontext)|Control access to page content for Entra ID Profiles accessing Microsoft Copilot with Enterprise Data Protection (EDP) from the Microsoft Edge sidebar|
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge (obsolete)|
 |[EdgeOpenInSidebarEnabled](#edgeopeninsidebarenabled)|Enable open in sidebar|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
@@ -21968,9 +21969,9 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   ### CopilotCDPPageContext
 
-  #### Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles
+  #### Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -21978,7 +21979,9 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   #### Description
 
-  This policy controls access to page contents for Copilot with Commercial Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
+  Instead of this deprecated policy, we recommend using [EdgeEntraCopilotPageContext](#edgeentracopilotpagecontext).
+
+This policy controls access to page contents for Copilot with Commercial Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
 
 If you enable this policy, Copilot with Commercial Data Protection will have access to page context.
 
@@ -22003,7 +22006,7 @@ If you disable this policy, Copilot with Commercial Data Protection will not be 
   ##### Group Policy (ADMX) info
 
   - GP unique name: CopilotCDPPageContext
-  - GP name: Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles
+  - GP name: Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -22044,11 +22047,11 @@ If you disable this policy, Copilot with Commercial Data Protection will not be 
 
   #### Description
 
-  This policy controls access to page contents for Copilot in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot with Commercial Data Protection. Access for Copilot with Commercial Data Protection is controlled by the policy CopilotCDPPageContext.
+  This policy controls access to page contents for Copilot in the Microsoft Edge sidebar when users are logged into their MSA Copilot account. This policy applies only to Microsoft Entra ID Microsoft Edge profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA Microsoft Edge profiles. This policy doesn't control access for Copilot with enterprise data protection (EDP). Access for Copilot with enterprise data protection (EDP) is controlled by the [EdgeEntraCopilotPageContext](#edgeentracopilotpagecontext) policy.
 
-If you enable this policy, Copilot will have access to page context.
+If you enable this policy, Copilot will have access to page content when logged in with Entra ID.
 
-If you don't configure this policy, a user can enable access to page context for Copilot using the setting toggle in Edge.
+If this policy is not configured, the default behavior for non-EU countries is that access is initially enabled. For EU countries, the default behavior is that access is initially disabled. In both cases, if the policy is not configured, users can enable or disable Copilot's access to page content using the setting toggle in Microsoft Edge.
 
 If you disable this policy, Copilot will not be able to access page context.
 
@@ -24629,6 +24632,78 @@ If you disable this policy, Microsoft Edge will not enhance images.
   #### Mac information and settings
 
   - Preference Key Name: EdgeEnhanceImagesEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeEntraCopilotPageContext
+
+  #### Control access to page content for Entra ID Profiles accessing Microsoft Copilot with Enterprise Data Protection (EDP) from the Microsoft Edge sidebar
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 130 or later
+
+  #### Description
+
+  This policy controls access to page contents for Microsoft Copilot with enterprise data protection (EDP) in the Microsoft Edge sidebar for the web tab only. This policy controls whether Microsoft Copilot can perform page summarization and similar contextual queries.
+
+This policy applies only to Microsoft Entra ID Microsoft Edge profiles. It does not apply to MSA Microsoft Edge profiles. For users with M365 Copilot license, this control applies only to the web tab in the Microsoft Edge sidebar and not the work tab.
+
+If you enable this policy, Copilot will have access to page content when logged in with Entra ID.
+
+If this policy is not configured, the default behavior for non-EU countries is that access is initially enabled. For EU countries, the default behavior is that access is initially disabled. In both cases, if the policy is not configured, users can enable or disable Copilot's access to page content using the setting toggle in Microsoft Edge.
+
+If you disable this policy, Copilot will not be able to access page contents.
+
+Exceptions to the preceding behavior include when a page is protected using data loss prevention (DLP) measures. In that case, the page content will not be shared to Copilot even when this policy is enabled. This behavior ensures the integrity of DLP.
+
+Learn more about Copilot's data usage and consent at [https://go.microsoft.com/fwlink/?linkid=2288056](https://go.microsoft.com/fwlink/?linkid=2288056)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeEntraCopilotPageContext
+  - GP name: Control access to page content for Entra ID Profiles accessing Microsoft Copilot with Enterprise Data Protection (EDP) from the Microsoft Edge sidebar
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeEntraCopilotPageContext
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeEntraCopilotPageContext
   - Example value:
 ``` xml
 <true/>
