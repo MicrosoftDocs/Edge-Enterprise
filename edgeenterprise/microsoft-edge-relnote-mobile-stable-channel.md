@@ -25,7 +25,11 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 129.0.2792.84 (Android and iOS): October 9, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, enhancements.  
+
+### Enhancements
+
+- [Android and iOS] The page layout of the New Tab Page (NTP) defaults to inspirational for Microsoft Entra ID accounts.
 
 ## Version 129.0.2792.65 (Android): September 27, 2024
 
