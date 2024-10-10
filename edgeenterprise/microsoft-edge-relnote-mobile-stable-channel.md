@@ -29,7 +29,7 @@ Fixed various bugs and performance issues, enhancements.
 
 ### Enhancements
 
-- [Android and iOS] The page layout of the New Tab Page (NTP) defaults to inspirational for Microsoft Entra ID accounts.
+- [Android and iOS] The page layout of the New Tab Page (NTP) defaults to Inspirational for Microsoft Entra ID accounts.
 
 ## Version 129.0.2792.65 (Android): September 27, 2024
 
