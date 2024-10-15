@@ -30,6 +30,9 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues, Dev channel updates, announcements, feature updates, site compatibility impacting changes, and policy updates.
 
+> [!NOTE]
+> Portions of this release note are modifications based on work created and shared by Chromium.org and used according to terms described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
 ### Dev Channel updates
 
 The following Dev channel updates preceded this Stable channel release. The following Dev notes provide detailed information about the changes in each release.
