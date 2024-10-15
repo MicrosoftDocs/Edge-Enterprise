@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 130.0.xxxx.xx: October x, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, Dev channel updates, announcements, feature updates, site compatibility impacting changes, and policy updates.
 
 ### Dev Channel updates
 
