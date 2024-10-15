@@ -9,7 +9,7 @@ ms.topic: reference
 ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
