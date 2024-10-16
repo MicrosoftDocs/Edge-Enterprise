@@ -70,6 +70,8 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
   **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
+- **Edge on macOS now seamlessly opens links in Teams.** When Microsoft Edge is configured as the browser to open web links in Teams, then links in Teams chat will be opened through Edge, and Edge launches in the profile that matches with the authenticated profile, users can benefit from a seamless browsing experience that integrates their identity and user data across Microsoft apps. Administrators can control the availability of this feature using the "Choose Which Browser Opens Web Links" Microsoft 365 policy. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
 ### Site compatibility impacting changes
 
 ### Policy updates
