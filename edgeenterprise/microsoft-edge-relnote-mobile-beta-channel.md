@@ -56,7 +56,7 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 - [Android] Improve the feature experience for App proxy.
 - [iOS & Android] Improve the occurrence of re-sign in prompts on NTP.
 - [iOS & Android] General enhancements to NTLMSSO policies to make it more useful.
-- [iOS & Android] Enable ManBro revamp feature by default with silent mode as the managed browser. This change helps customers remediate from non-compliant cases, such as no device registration.
+- [iOS & Android] Enable Managed Browser revamp feature by default with silent mode as the managed browser. This change helps customers remediate from non-compliant cases, such as no device registration.
 
 ## Version 130.0.2849.32 (Android and iOS): October 14, 2024
 
