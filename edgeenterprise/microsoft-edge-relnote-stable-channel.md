@@ -84,7 +84,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
   If more time is needed to adjust to this new feature, the [KeyboardFocusableScrollersEnabled](/deployedge/microsoft-edge-policies#keyboardfocusablescrollersenabled) policy is available from Edge 128.
 
-- **Support non-special scheme URLs.** Non-special scheme URLs are now supported, for example, *git://example.com/path*. Previously, the URL parser didn't support non-special URLs. The parser parses non-special URLs as if they had an opaque path, which is not aligned with the URL standard. Now, the URL parser parses non-special URLs correctly, following the URL standard. For more details, see [http://bit.ly/url-non-special](http://bit.ly/url-non-special). 
+- **Support non-special scheme URLs.** [Non-special scheme URLs](https://url.spec.whatwg.org/#is-special) are now supported, for example, *git://example.com/path*. Previously, the URL parser didn't support non-special URLs. The parser parses non-special URLs as if they had an opaque path, which is not aligned with the URL standard. Now, the URL parser parses non-special URLs correctly, following the URL standard. For more details, see [http://bit.ly/url-non-special](http://bit.ly/url-non-special). 
 
 ### Policy updates
 
