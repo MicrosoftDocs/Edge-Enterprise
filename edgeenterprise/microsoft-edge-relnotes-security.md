@@ -16,9 +16,9 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## October x, 2024
+## October 17, 2024
 
-Microsoft has released the latest **Microsoft Edge Stable Channel (Version 130.0.xxxx.xx)** which incorporates the latest updates of the Chromium project.
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 130.0.2849.46)** which incorporates the latest updates of the Chromium project.
 
 This update contains the following Microsoft Edge-specific updates:
 
