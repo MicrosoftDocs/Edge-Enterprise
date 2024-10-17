@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/30/2024
+ms.date: 10/17/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -27,6 +27,48 @@ Archived versions of these release notes are available at [Archived release note
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 130.0.2849.45 (Android and iOS): October 17, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 130.0.2849.40 (Android and iOS): October 15, 2024
+
+Fixed various bugs and performance issues, general updates, new policies, and enhancements.
+
+### General updates
+
+- [iOS] Upgrade Intune MAM SDK to version 19.7.0
+- [iOS] Upgrade MAM Tunnel SDK to version 1.1.12
+- [iOS & Android] Enable wallpaper on NTP for Commercial user by default. A user can configure `com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom` to exclude the wallpaper.
+- [iOS & Android] Enable weather widget on NTP for Commercial user by default. A user can add weather token to **DisableFeature** policy to disable it the widget.
+
+### Bug fixes
+
+- [iOS] Fix issue about single device mode force sign-in interrupted by external intent.
+- [iOS] Fix **disableImportPasswords** policy not working as expected.
+
+### New policies
+
+- [iOS & Android] Support to disable weather widget on NTP via **DisableFeature** policy
+(`com.microsoft.intune.mam.managedbrowser.disabledFeatures` in MAM) and **EdgeDisabledFeatures** in MDM, now supports disabling weather widget on NTP by using "weather" as value.
+
+### Enhancements
+
+- [iOS] Support removing specified account from sign in account list.
+- [Android] Change default value of `recommendsCustomUi` to support passkey in Edge. Before these changes, the user can only use Google Password Manager and can't select Microsoft Authenticator to save passkey. After these changes, a user can select a 3rd party passkey app, including Microsoft Authenticator.
+- [Android] Improve the feature experience for App proxy.
+- [iOS & Android] Improve the occurrence of re-sign in prompts on NTP.
+- [iOS & Android] General enhancements to NTLMSSO policies to make it more useful.
+- [iOS & Android] Enable Managed Browser revamp feature by default with silent mode as the managed browser. This change helps customers remediate from non-compliant cases, such as no device registration.
+
+## Version 130.0.2849.32 (Android and iOS): October 14, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 130.0.2849.28 (Android and iOS): October 10, 2024
+
+Fixed various bugs and performance issues.
 
 ## Version 130.0.2849.10 (iOS): September 30, 2024
 

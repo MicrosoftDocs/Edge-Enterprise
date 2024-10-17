@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/28/2024
+ms.date: 10/11/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -22,6 +22,15 @@ For information about an additional set of policies used to control how and when
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
+
+## New policies
+
+The following table lists the deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)|
+|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors (deprecated)|
 
 ## Available policies
 
@@ -54,9 +63,9 @@ These tables list all of the group policies available in this release of Microso
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 |[ForcePermissionPolicyUnloadDefaultEnabled](#forcepermissionpolicyunloaddefaultenabled)|Controls whether unload event handlers can be disabled.|
 |[HttpAllowlist](#httpallowlist)|HTTP Allowlist|
-|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior|
+|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)|
 |[NewPDFReaderWebView2List](#newpdfreaderwebview2list)|Enable built-in PDF reader powered by Adobe Acrobat for WebView2|
-|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors|
+|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors (deprecated)|
 
 
 
@@ -668,9 +677,9 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\HttpAllowlist = "[*.]example.org"
 
   ### NewBaseUrlInheritanceBehaviorAllowed
 
-  #### Allows enabling the feature NewBaseUrlInheritanceBehavior
+  #### Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -683,6 +692,10 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\HttpAllowlist = "[*.]example.org"
 If you disable this policy, it prevents users or Microsoft Edge variations from enabling NewBaseUrlInheritanceBehavior, in case compatibility issues are discovered.
 
 If you enable or don't configure this policy, it allows enabling NewBaseUrlInheritanceBehavior.
+
+This policy is being deprecated because the feature NewBaseUrlInheritanceBehaviorAllowed has been removed.
+
+This policy will be obsolete in release 133.
 
   #### Supported features:
 
@@ -699,7 +712,7 @@ If you enable or don't configure this policy, it allows enabling NewBaseUrlInher
   ##### Group Policy (ADMX) info
 
   - GP unique name: NewBaseUrlInheritanceBehaviorAllowed
-  - GP name: Allows enabling the feature NewBaseUrlInheritanceBehavior
+  - GP name: Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdgeWebView2.admx
@@ -785,9 +798,9 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "*
 
   ### RSAKeyUsageForLocalAnchorsEnabled
 
-  #### Check RSA key usage for server certificates issued by local trust anchors
+  #### Check RSA key usage for server certificates issued by local trust anchors (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -795,23 +808,37 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "*
 
   #### Description
 
-  The X.509 key usage extension declares how the key in a certificate can be
+  This policy is deprecated because RSAKeyUsageForLocalAnchorsEnabled feature has been removed.
+
+This policy will be removed in version 133.
+
+The X.509 key usage extension declares how the key in a certificate can be
 used. These instructions ensure certificates aren't used in an unintended
 context, which protects against a class of cross-protocol attacks on HTTPS and
 other protocols. HTTPS clients must verify that server certificates match the
 connection's TLS parameters.
 
-If this policy is enabled,
+Starting in Microsoft Edge 124, this
+check is always enabled.
+
+Microsoft Edge 123 and earlier have the
+following behavior:
+
+If this policy is set to enabled,
 Microsoft Edge will perform this key
 check. This helps prevent attacks where an attacker manipulates the browser into
 interpreting a key in ways that the certificate owner did not intend.
 
-If this policy is set to disabled or not configured,
+If this policy is set to disabled,
 Microsoft Edge will skip this key check in
 HTTPS connections that negotiate TLS 1.2 and use an RSA certificate that
 chains to a local trust anchor. Examples of local trust anchors include
 policy-provided or user-installed root certificates. In all other cases, the
 check is performed independent of this policy's setting.
+
+If this policy is not configured,
+Microsoft Edge will behave as if the
+policy is enabled.
 
 This policy is available for administrators to preview the behavior of a
 future release, which will enable this check by default. At that point, this
@@ -840,7 +867,7 @@ include both in RSA certificates meant for HTTPS.
   ##### Group Policy (ADMX) info
 
   - GP unique name: RSAKeyUsageForLocalAnchorsEnabled
-  - GP name: Check RSA key usage for server certificates issued by local trust anchors
+  - GP name: Check RSA key usage for server certificates issued by local trust anchors (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdgeWebView2.admx
