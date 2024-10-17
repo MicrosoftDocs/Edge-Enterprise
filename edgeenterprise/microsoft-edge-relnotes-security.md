@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 10/03/2024
+ms.date: 10/17/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,6 +15,26 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+## October 17, 2024
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 130.0.2849.46)** which incorporates the latest updates of the Chromium project.
+
+This update contains the following Microsoft Edge-specific updates:
+
+- [CVE-2024-43587](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43587)
+- [CVE-2024-43566](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43566)
+- [CVE-2024-43578](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43578)
+- [CVE-2024-43595](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43595)
+- [CVE-2024-43596](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43596)
+- [CVE-2024-43579](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43579)
+- [CVE-2024-43580](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43580)
+- [CVE-2024-43577](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43577)
+- [CVE-2024-49023](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-49023)
+
+## October 10, 2024
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 129.0.2792.89) and Microsoft Edge Extended Stable Channel (128.0.2739.113)** which incorporate the latest updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## October 3, 2024
 

@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/28/2024
+ms.date: 10/11/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,12 +30,15 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new and obsoleted policies that are in this article update.
+The following table lists the new and deprecated policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[ImageEditorServiceEnabled](#imageeditorserviceenabled)|Enable the Designer for Image Editor feature|
-|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog (obsolete)|
+|[ExtensionsPerformanceDetectorEnabled](#extensionsperformancedetectorenabled)|Extensions Performance Detector enabled|
+|[PrivateNetworkAccessRestrictionsEnabled](#privatenetworkaccessrestrictionsenabled)|Specifies whether to apply restrictions to requests to more private network endpoints|
+|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)|
+|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors (deprecated)|
+|[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature (deprecated)|
 
 ## Available policies
 
@@ -304,6 +307,7 @@ These tables list all of the browser-related group policies available in this re
 |[EfficiencyMode](#efficiencymode)|Configure when efficiency mode should become active|
 |[EfficiencyModeEnabled](#efficiencymodeenabled)|Efficiency mode enabled|
 |[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
+|[ExtensionsPerformanceDetectorEnabled](#extensionsperformancedetectorenabled)|Extensions Performance Detector enabled|
 |[PerformanceDetectorEnabled](#performancedetectorenabled)|Performance Detector Enabled|
 |[PinBrowserEssentialsToolbarButton](#pinbrowseressentialstoolbarbutton)|Pin browser essentials toolbar button|
 |[StartupBoostEnabled](#startupboostenabled)|Enable startup boost|
@@ -342,6 +346,7 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Specifies whether to allow websites to make requests to any network endpoint in an insecure manner.|
 |[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Allow the listed sites to make requests to more-private network endpoints from in an insecure manner|
+|[PrivateNetworkAccessRestrictionsEnabled](#privatenetworkaccessrestrictionsenabled)|Specifies whether to apply restrictions to requests to more private network endpoints|
 ### [*Proxy server*](#proxy-server-policies)
 
 |Policy Name|Caption|
@@ -482,7 +487,7 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
-|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles|
+|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles (deprecated)|
 |[CopilotPageContext](#copilotpagecontext)|Control Copilot access to page context for Microsoft Entra ID profiles|
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
 |[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature (obsolete)|
@@ -520,6 +525,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge (obsolete)|
 |[EdgeEDropEnabled](#edgeedropenabled)|Enable Drop feature in Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled (obsolete)|
+|[EdgeEntraCopilotPageContext](#edgeentracopilotpagecontext)|Control access to page content for Entra ID Profiles accessing Microsoft Copilot with Enterprise Data Protection (EDP) from the Microsoft Edge sidebar|
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge (obsolete)|
 |[EdgeOpenInSidebarEnabled](#edgeopeninsidebarenabled)|Enable open in sidebar|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
@@ -649,7 +655,7 @@ These tables list all of the browser-related group policies available in this re
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
-|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior|
+|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)|
 |[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile|
@@ -672,7 +678,7 @@ These tables list all of the browser-related group policies available in this re
 |[QuicAllowed](#quicallowed)|Allow QUIC protocol|
 |[QuickSearchShowMiniMenu](#quicksearchshowminimenu)|Enables Microsoft Edge mini menu|
 |[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Manage QuickView Office files capability in Microsoft Edge|
-|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors|
+|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors (deprecated)|
 |[ReadAloudEnabled](#readaloudenabled)|Enable Read Aloud feature in Microsoft Edge|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge|
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Redirect incompatible sites from Internet Explorer to Microsoft Edge|
@@ -759,7 +765,7 @@ These tables list all of the browser-related group policies available in this re
 |[UploadFromPhoneEnabled](#uploadfromphoneenabled)|Enable upload files from mobile in Microsoft Edge desktop|
 |[UrlDiagnosticDataEnabled](#urldiagnosticdataenabled)|URL reporting in Edge diagnostic data enabled|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Enable the User-Agent Client Hints feature (obsolete)|
-|[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature|
+|[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature (deprecated)|
 |[UserAgentReduction](#useragentreduction)|Enable or disable the User-Agent Reduction|
 |[UserDataDir](#userdatadir)|Set the user data directory|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limits the number of user data snapshots retained for use in case of emergency rollback|
@@ -11778,6 +11784,70 @@ Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=21739
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ExtensionsPerformanceDetectorEnabled
+
+  #### Extensions Performance Detector enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 131 or later
+
+  #### Description
+
+  This policy controls if users can access the Extensions Performance Detector Recommended Action feature in Browser Essentials. This feature alerts extension users if their extensions are causing performance regressions in the browser and allows them to take action to resolve the issue.
+
+If you enable or don't configure this policy, users will receive Extensions Performance Detector notifications from Browser Essentials. When there is an active alert, users will be able to view the impact of extensions on their browser's performance and make an informed decision to disable impacting extensions. The detector will exclude browser-managed extensions, such as Google Docs offline, component extensions, and organization-managed extensions (ie. extensions that cannot be disabled).
+
+If you disable this policy, users will not receive notifications or be able to view the Extensions Performance Detector Recommended Action.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ExtensionsPerformanceDetectorEnabled
+  - GP name: Extensions Performance Detector enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Performance
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Performance
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: ExtensionsPerformanceDetectorEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ExtensionsPerformanceDetectorEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PerformanceDetectorEnabled
 
   #### Performance Detector Enabled
@@ -13637,6 +13707,77 @@ SOFTWARE\Policies\Microsoft\Edge\InsecurePrivateNetworkRequestsAllowedForUrls\2 
   <string>http://www.example.com:8080</string>
   <string>[*.]example.edu</string>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PrivateNetworkAccessRestrictionsEnabled
+
+  #### Specifies whether to apply restrictions to requests to more private network endpoints
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 130 or later
+
+  #### Description
+
+  Specifies whether to apply restrictions to requests to more private
+network endpoints
+
+When this policy is Enabled, any time when a warning is supposed to be displayed in the DevTools due to Private Network Access checks failing, the request is blocked.
+
+When this policy is Disabled or unset, all Private Network Access warnings are not enforced and the requests are not blocked.
+
+See https://wicg.github.io/private-network-access/ for Private Network Access restrictions.
+
+Note: A network endpoint is more private than another if:
+1) Its IP address is localhost and the other is not.
+2) Its IP address is private and the other is public.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrivateNetworkAccessRestrictionsEnabled
+  - GP name: Specifies whether to apply restrictions to requests to more private network endpoints
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Private Network Request Settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrivateNetworkAccessRestrictionsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: PrivateNetworkAccessRestrictionsEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -21968,9 +22109,9 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   ### CopilotCDPPageContext
 
-  #### Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles
+  #### Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -21978,7 +22119,9 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   #### Description
 
-  This policy controls access to page contents for Copilot with Commercial Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
+  Instead of this deprecated policy, we recommend using [EdgeEntraCopilotPageContext](#edgeentracopilotpagecontext).
+
+This policy controls access to page contents for Copilot with Commercial Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
 
 If you enable this policy, Copilot with Commercial Data Protection will have access to page context.
 
@@ -22003,7 +22146,7 @@ If you disable this policy, Copilot with Commercial Data Protection will not be 
   ##### Group Policy (ADMX) info
 
   - GP unique name: CopilotCDPPageContext
-  - GP name: Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles
+  - GP name: Control Copilot with Commercial Data Protection access to page context for Microsoft Entra ID profiles (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -22044,11 +22187,11 @@ If you disable this policy, Copilot with Commercial Data Protection will not be 
 
   #### Description
 
-  This policy controls access to page contents for Copilot in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot with Commercial Data Protection. Access for Copilot with Commercial Data Protection is controlled by the policy CopilotCDPPageContext.
+  This policy controls access to page contents for Copilot in the Microsoft Edge sidebar when users are logged into their MSA Copilot account. This policy applies only to Microsoft Entra ID Microsoft Edge profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA Microsoft Edge profiles. This policy doesn't control access for Copilot with enterprise data protection (EDP). Access for Copilot with enterprise data protection (EDP) is controlled by the [EdgeEntraCopilotPageContext](#edgeentracopilotpagecontext) policy.
 
-If you enable this policy, Copilot will have access to page context.
+If you enable this policy, Copilot will have access to page content when logged in with Entra ID.
 
-If you don't configure this policy, a user can enable access to page context for Copilot using the setting toggle in Edge.
+If this policy is not configured, the default behavior for non-EU countries is that access is initially enabled. For EU countries, the default behavior is that access is initially disabled. In both cases, if the policy is not configured, users can enable or disable Copilot's access to page content using the setting toggle in Microsoft Edge.
 
 If you disable this policy, Copilot will not be able to access page context.
 
@@ -24629,6 +24772,78 @@ If you disable this policy, Microsoft Edge will not enhance images.
   #### Mac information and settings
 
   - Preference Key Name: EdgeEnhanceImagesEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeEntraCopilotPageContext
+
+  #### Control access to page content for Entra ID Profiles accessing Microsoft Copilot with Enterprise Data Protection (EDP) from the Microsoft Edge sidebar
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 130 or later
+
+  #### Description
+
+  This policy controls access to page contents for Microsoft Copilot with enterprise data protection (EDP) in the Microsoft Edge sidebar for the web tab only. This policy controls whether Microsoft Copilot can perform page summarization and similar contextual queries.
+
+This policy applies only to Microsoft Entra ID Microsoft Edge profiles. It does not apply to MSA Microsoft Edge profiles. For users with M365 Copilot license, this control applies only to the web tab in the Microsoft Edge sidebar and not the work tab.
+
+If you enable this policy, Copilot will have access to page content when logged in with Entra ID.
+
+If this policy is not configured, the default behavior for non-EU countries is that access is initially enabled. For EU countries, the default behavior is that access is initially disabled. In both cases, if the policy is not configured, users can enable or disable Copilot's access to page content using the setting toggle in Microsoft Edge.
+
+If you disable this policy, Copilot will not be able to access page contents.
+
+Exceptions to the preceding behavior include when a page is protected using data loss prevention (DLP) measures. In that case, the page content will not be shared to Copilot even when this policy is enabled. This behavior ensures the integrity of DLP.
+
+Learn more about Copilot's data usage and consent at [https://go.microsoft.com/fwlink/?linkid=2288056](https://go.microsoft.com/fwlink/?linkid=2288056)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeEntraCopilotPageContext
+  - GP name: Control access to page content for Entra ID Profiles accessing Microsoft Copilot with Enterprise Data Protection (EDP) from the Microsoft Edge sidebar
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeEntraCopilotPageContext
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeEntraCopilotPageContext
   - Example value:
 ``` xml
 <true/>
@@ -33459,9 +33674,9 @@ This policy is intended to give enterprises flexibility to disable the network s
 
   ### NewBaseUrlInheritanceBehaviorAllowed
 
-  #### Allows enabling the feature NewBaseUrlInheritanceBehavior
+  #### Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -33474,6 +33689,10 @@ This policy is intended to give enterprises flexibility to disable the network s
 If you disable this policy, it prevents users or Microsoft Edge variations from enabling NewBaseUrlInheritanceBehavior, in case compatibility issues are discovered.
 
 If you enable or don't configure this policy, it allows enabling NewBaseUrlInheritanceBehavior.
+
+This policy is being deprecated because the feature NewBaseUrlInheritanceBehaviorAllowed has been removed.
+
+This policy will be obsolete in release 133.
 
   #### Supported features:
 
@@ -33492,7 +33711,7 @@ If you enable or don't configure this policy, it allows enabling NewBaseUrlInher
   ##### Group Policy (ADMX) info
 
   - GP unique name: NewBaseUrlInheritanceBehaviorAllowed
-  - GP name: Allows enabling the feature NewBaseUrlInheritanceBehavior
+  - GP name: Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -34955,9 +35174,9 @@ If you disable this policy, these files will be downloaded to be viewed.
 
   ### RSAKeyUsageForLocalAnchorsEnabled
 
-  #### Check RSA key usage for server certificates issued by local trust anchors
+  #### Check RSA key usage for server certificates issued by local trust anchors (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -34965,23 +35184,37 @@ If you disable this policy, these files will be downloaded to be viewed.
 
   #### Description
 
-  The X.509 key usage extension declares how the key in a certificate can be
+  This policy is deprecated because RSAKeyUsageForLocalAnchorsEnabled feature has been removed.
+
+This policy will be removed in version 133.
+
+The X.509 key usage extension declares how the key in a certificate can be
 used. These instructions ensure certificates aren't used in an unintended
 context, which protects against a class of cross-protocol attacks on HTTPS and
 other protocols. HTTPS clients must verify that server certificates match the
 connection's TLS parameters.
 
-If this policy is enabled,
+Starting in Microsoft Edge 124, this
+check is always enabled.
+
+Microsoft Edge 123 and earlier have the
+following behavior:
+
+If this policy is set to enabled,
 Microsoft Edge will perform this key
 check. This helps prevent attacks where an attacker manipulates the browser into
 interpreting a key in ways that the certificate owner did not intend.
 
-If this policy is set to disabled or not configured,
+If this policy is set to disabled,
 Microsoft Edge will skip this key check in
 HTTPS connections that negotiate TLS 1.2 and use an RSA certificate that
 chains to a local trust anchor. Examples of local trust anchors include
 policy-provided or user-installed root certificates. In all other cases, the
 check is performed independent of this policy's setting.
+
+If this policy is not configured,
+Microsoft Edge will behave as if the
+policy is enabled.
 
 This policy is available for administrators to preview the behavior of a
 future release, which will enable this check by default. At that point, this
@@ -35012,7 +35245,7 @@ include both in RSA certificates meant for HTTPS.
   ##### Group Policy (ADMX) info
 
   - GP unique name: RSAKeyUsageForLocalAnchorsEnabled
-  - GP name: Check RSA key usage for server certificates issued by local trust anchors
+  - GP name: Check RSA key usage for server certificates issued by local trust anchors (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -40816,9 +41049,9 @@ If you enable or don't configure this policy, the User-Agent Client Hints featur
 
   ### UserAgentClientHintsGREASEUpdateEnabled
 
-  #### Control the User-Agent Client Hints GREASE Update feature
+  #### Control the User-Agent Client Hints GREASE Update feature (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -40832,7 +41065,7 @@ When enabled, the User-Agent Client Hints GREASE Update feature aligns the User-
 
 If this policy is enabled or not configured, the User-Agent GREASE algorithm from the specification will be used. If the policy is disabled, the prior User-Agent GREASE algorithm will be used.
 
-This policy is a temporary measure and will be removed in a future release.
+This policy will be removed in release 133. This policy is deprecated as the updated GREASE algorithm has been on by default since Microsoft Edge version 102.
 
   #### Supported features:
 
@@ -40851,7 +41084,7 @@ This policy is a temporary measure and will be removed in a future release.
   ##### Group Policy (ADMX) info
 
   - GP unique name: UserAgentClientHintsGREASEUpdateEnabled
-  - GP name: Control the User-Agent Client Hints GREASE Update feature
+  - GP name: Control the User-Agent Client Hints GREASE Update feature (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
