@@ -3,7 +3,7 @@ title: "Copilot in Edge webpage summarization behavior"
 ms.author: prithviokade
 author: dan-wesley
 manager: likuba
-ms.date: 09/25/2024
+ms.date: 10/16/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,7 +15,7 @@ description: "This article shows the results of Copilot page summary tests."
 # Copilot in Edge webpage summarization behavior
 
 > [!NOTE]
-> Page summarization features are currently unavailable for Copilot with enterprise data protection in Edge. Until then, disregard the following table.  
+> Page summarization features are being rolled out for Copilot with enterprise data protection in Edge. You may not yet have access to this feature.  
 
 The following chart explains the current behavior of Copilot in Edge webpage summarization on various document types. This information will be updated when support for summarization increases. This chart covers the behavior in Copilot both when enterprise data protection is applied and when it is not. Support for these document types only applies to Copilot in Edge.
 
@@ -30,8 +30,8 @@ The following chart explains the current behavior of Copilot in Edge webpage sum
 | PDFs                              | Summarization is supported |
 | Office Documents                  | Summarization isn't supported |
 | Sites protected by Purview DLP Policies ** | Summarization isn't supported |
-| Sites protected by MAM Policies ++   |  Summarization isn't supported |
-| Sites protected by MDA Policies ^^ | Summarization isn't supported |
+| Sites protected by MAM Policies ^^   |  Summarization isn't supported |
+| Sites protected by MDA Policies ++ | Summarization isn't supported |
 
 ** Sites protected by Purview DLP Policies disallow summarization if any policy&mdash;except for "paste"&mdash;is set to "block" or "override."
 
