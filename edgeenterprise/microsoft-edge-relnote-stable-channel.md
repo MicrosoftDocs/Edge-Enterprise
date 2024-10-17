@@ -80,7 +80,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 - **Keyboard focusable scroll containers.** This feature improves accessibility by making scroll containers focusable using sequential focus navigation. Today, the tab key doesn't focus scrollers unless tabIndex is explicitly set to 0 or more.
 
-  By making scrollers focusable by default, users without a mouse can now focus clipped content using tab and arrow keys. This behavior is enabled only if the scroller does not contain any keyboard-focusable children. This logic is necessary so there are no regressions for existing focusable elements that might exist within a scroller like a <textarea>.
+  By making scrollers focusable by default, users without a mouse can now focus clipped content using tab and arrow keys. This behavior is enabled only if the scroller does not contain any keyboard-focusable children. This logic is necessary so there are no regressions for existing focusable elements that might exist within a scroller like a \<textarea\>.
 
   If more time is needed to adjust to this new feature, the [KeyboardFocusableScrollersEnabled](/deployedge/microsoft-edge-policies#keyboardfocusablescrollersenabled) policy is available from Edge 128.
 
