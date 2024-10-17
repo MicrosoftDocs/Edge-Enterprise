@@ -33,6 +33,8 @@ Fixed various bugs and performance issues, Dev channel updates, announcements, f
 > [!NOTE]
 > Portions of this release note are modifications based on work created and shared by Chromium.org and used according to terms described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-17-2024).
+
 ### Dev Channel updates
 
 The following Dev channel updates preceded this Stable channel release. The following Dev notes provide detailed information about the changes in each release.
@@ -84,7 +86,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
   If more time is needed to adjust to this new feature, the [KeyboardFocusableScrollersEnabled](/deployedge/microsoft-edge-policies#keyboardfocusablescrollersenabled) policy is available from Edge 128.
 
-- **Support non-special scheme URLs.** [Non-special scheme URLs](https://url.spec.whatwg.org/#is-special) are now supported, for example, *git://example.com/path*. Previously, the URL parser didn't support non-special URLs. The parser parses non-special URLs as if they had an opaque path, which is not aligned with the URL standard. Now, the URL parser parses non-special URLs correctly, following the URL standard. For more details, see [http://bit.ly/url-non-special](http://bit.ly/url-non-special). 
+- **Support non-special scheme URLs.** [Non-special scheme URLs](https://url.spec.whatwg.org/#is-special) are now supported, for example, *git://example.com/path*. Previously, the URL parser didn't support non-special URLs. The parser parses non-special URLs as if they had an opaque path, which is not aligned with the URL standard. Now, the URL parser parses non-special URLs correctly, following the URL standard. For more details, see [http://bit.ly/url-non-special](http://bit.ly/url-non-special).
 
 ### Policy updates
 
