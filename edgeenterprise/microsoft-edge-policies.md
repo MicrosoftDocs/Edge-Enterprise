@@ -31,10 +31,10 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 ## New policies
 
 The following table lists the new and deprecated policies that are in this article update.
-ExtensionsPerformanceDetectorEnabled
+
 | Policy Name | Caption |
 |:-----|:-----|
-|[](#extensionsperformancedetectorenabled)|Extensions Performance Detector enabled|
+|[ExtensionsPerformanceDetectorEnabled](#extensionsperformancedetectorenabled)|Extensions Performance Detector enabled|
 |[PrivateNetworkAccessRestrictionsEnabled](#privatenetworkaccessrestrictionsenabled)|Specifies whether to apply restrictions to requests to more private network endpoints|
 |[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)|
 |[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors (deprecated)|
