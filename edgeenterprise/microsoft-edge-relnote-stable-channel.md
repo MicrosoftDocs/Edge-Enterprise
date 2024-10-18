@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 10/17/2024
+ms.date: 10/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -93,6 +93,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 #### New policies
 
 - [EdgeEntraCopilotPageContext](/deployedge/microsoft-edge-policies#edgeentracopilotpagecontext) - Control access to page content for Entra ID Profiles accessing Microsoft Copilot with Enterprise Data Protection (EDP) from the Microsoft Edge sidebar
+- [ExtensionsPerformanceDetectorEnabled](/deployedge/microsoft-edge-policies#extensionsperformancedetectorenabled) - Extensions Performance Detector enabled
 
 #### Deprecated policies
 
