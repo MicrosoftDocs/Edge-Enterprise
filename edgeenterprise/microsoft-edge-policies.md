@@ -11792,7 +11792,7 @@ Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=21739
   
   #### Supported versions:
 
-  - On Windows and macOS since 131 or later
+  - On Windows and macOS since 130 or later
 
   #### Description
 

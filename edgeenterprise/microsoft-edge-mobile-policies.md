@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/10/2024
+ms.date: 10/18/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -1521,6 +1521,9 @@ Edge for iOS and Android allows organizations to disable certain features that a
 - developertools grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only), as of version 112
 - coupons = Disables coupons/shopping feature, as of version 117
 - extensions = Disables extensions (Edge for Android only), as of version 122
+- share = Disables Share under menu, as of version 129
+- sendtodevices = Disables Send to devices under menu, as of version 129
+- weather = Disables weather in NTP (New Tab Page), as of version 130
 
 To disable multiple features, separate values with |. For example, inprivate|password disables both InPrivate and password storage.
 
