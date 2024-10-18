@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/19/2024
+ms.date: 10/17/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,6 +15,108 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 # Archived release notes for Microsoft Edge Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 127.0.2651.105: August 15, 2024 to Version 127.0.2651.74: July 25, 2024 --->
+## Version 127.0.2651.105: August 15, 2024
+
+Fixed various bugs and performance issues, improved reliability.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-15-2024).
+
+### Improved reliability
+ 
+- Fixed a browser crash (STATUS_BREAKPOINT) that occurred when trying to upload documents on some websites.
+
+## Version 126.0.2592.137: August 8, 2024
+
+Fixed various bugs and performance issues for Extended Stable channel.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-8-2024).
+
+## Version 127.0.2651.98: August 8, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-8-2024).
+
+## Version 127.0.2651.86: August 1, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-1-2024).
+
+### Feature update
+
+- **Customize organization branding using the Microsoft Edge management service.** Admins can customize their organization's branding assets onto Edge for Business through the Microsoft Edge management service. This branding can help users signed in with a Microsoft Entra ID more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon.
+
+  This Microsoft Edge management service feature gives admins an enhanced experience to configure, preview, and customize how Edge for Business shows the following organization brand assets:
+
+  - Organization name
+  - Accent color
+  - Organization logo
+  - Edge for Business taskbar icon overlay
+
+  For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business) and [Organization branding](/deployedge/microsoft-edge-organization-branding).
+
+## Version 126.0.2592.132: August 1, 2024
+
+Fixed various bugs and performance issues for Extended Stable channel.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-1-2024).
+
+## Version 127.0.2651.74: July 25, 2024
+
+Fixed various bugs and performance issues, improved reliability, announcements, feature updates, and policy updates.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-25-2024).
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Stable channel release. The following Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 127.0.2610.3 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-127-0-2610-3-is-live/m-p/4156565)
+- [Dev Channel update to 127.0.2638.2 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-127-0-2638-2-is-live/m-p/4168541)
+- [Dev Channel update to 127.0.2651.8 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-127-0-2651-8-is-live/m-p/4173706)
+
+### Improved reliability
+
+- Fixed a browser crash that happened when using the Microsoft Edge Password Generator.  
+
+### Fixes
+
+- **Updated HttpAllowlist policy.** Automatic HTTPS should now respect the [HttpAllowlist](/deployedge/microsoft-edge-policies#httpallowlist) policy, which provides a list of hostnames that HTTP should be permitted on.
+
+- **Resolved issue.** Fixed an issue that prevented the Translate icon in the omnibox from being clickable.
+
+### Announcement
+
+- **SSE3 Requirement.** Microsoft Edge will stop supporting CPUs that lack SSE3 in Microsoft Edge 128. Devices with such CPUs won't receive any more updates. For more information, see [Microsoft Edge Supported Operating Systems](/deployedge/microsoft-edge-supported-operating-systems).
+
+- **Token Binding.** Token Binding uses cryptographic certificates on both ends of the TLS connection in an attempt to close the security gap of bearer tokens, which might be lost or stolen.  We're planning to deprecate Token Binding in Microsoft Edge version 130. The [AllowTokenBindingForUrls](/deployedge/microsoft-edge-policies#allowtokenbindingforurls) policy is deprecated and will be obsolete in Microsoft Edge version 130.  
+
+### Feature updates
+
+- **Removal of mutation events.** Support for mutation events was removed. The [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) API can be used instead. Administrators can use the [MutationEventsEnabled](/deployedge/microsoft-edge-policies#mutationeventsenabled) policy as a temporary workaround. Enterprises should still work to remove their dependencies on these mutation events. For more information, see [Intent to Ship: Deprecate Mutation Events (google.com)](https://groups.google.com/a/chromium.org/g/blink-dev/c/jBEISy1p1XU).
+
+- **Gift Card Redemption History in the Hub.** Users with an MSA or Microsoft Entra ID Linked Account can view and utilize information from gift card redemptions through Pay with Rewards or the Rewards Dashboard. Once a user successfully redeems a gift card with Pay with Rewards, information relating to their gift card (date, card number/pin, redemption status) redemption is added to a Redemption History. This information is located in the Wallet hub. Admins can control availability of this feature using the [EdgeWalletCheckoutEnabled](/deployedge/microsoft-edge-policies#edgewalletcheckoutenabled) policy. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+- **Password Monitor policy update.** When the [PasswordMonitorAllowed](/deployedge/microsoft-edge-policies#passwordmonitorallowed) policy is enabled as mandatory, users won't see the consent screen to turn on the feature. Also, when set to Mandatory enabled, the UI in Settings will be disabled but remain in the 'On' state, and a briefcase icon is made visible next to it with this description displayed on hover - "This setting is managed by your organization."  For more information, see [Password Monitor auto-enabled for users](/deployedge/microsoft-edge-security-password-monitor).
+
+### Policy updates
+
+#### New policies
+
+- [EdgeSidebarAppUrlHostBlockList](/deployedge/microsoft-edge-policies#edgesidebarappurlhostblocklist) - Control which apps cannot be opened in Microsoft Edge sidebar
+- [CSSCustomStateDeprecatedSyntaxEnabled](/deployedge/microsoft-edge-policies#csscustomstatedeprecatedsyntaxenabled) - Controls whether the deprecated :--foo syntax for CSS custom state is enabled
+
+#### Deprecated policies
+
+- [SignInCtaOnNtpEnabled](/deployedge/microsoft-edge-policies#signinctaonntpenabled) - Enable sign in click to action dialog (deprecated)
+
+#### Obsolete policies
+
+- [ImmersiveReaderPictureDictionaryEnabled](/deployedge/microsoft-edge-policies#immersivereaderpicturedictionaryenabled) - Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete)
+- [EdgeFollowEnabled](/deployedge/microsoft-edge-policies#edgefollowenabled) - Enable Follow service in Microsoft Edge (obsolete)
 
 <!-- Version 126.0.2592.113: July 18, 2024 to Version 126.0.2592.61: June 17, 2024 --->
 
