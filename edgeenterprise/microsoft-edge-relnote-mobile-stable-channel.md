@@ -47,9 +47,9 @@ Fixed various bugs and performance issues, general updates, new policies, and en
 ### Enhancements
 
 - [iOS] Support removing specified account from sign in account list.
-- [Android] Change default value of `recommendsCustomUi` to support passkey in Edge. Before these changes, the user can only use Google Password Manager and can't select Microsoft Authenticator to save passkey. After these changes, a user can select a 3rd party passkey app, including Microsoft Authenticator.
-- [Android] Improve the feature experience for App proxy.
-- [iOS & Android] Improve the occurrence of re-sign in prompts on NTP.
+- [Android] Change default value of `recommendsCustomUi` to support passkey in Edge. Before these changes, the user can only use Google Password Manager and can't select Microsoft Authenticator to save passkey. After these changes, a user can select a third party passkey app, including Microsoft Authenticator.
+- [Android] Improves the feature experience for App proxy.
+- [iOS & Android] Improves the occurrence of re-sign in prompts on NTP.
 - [iOS & Android] General enhancements to NTLMSSO policies to make it more useful.
 - [iOS & Android] Enable Managed Browser revamp feature by default with silent mode as the managed browser. This change helps customers remediate from non-compliant cases, such as no device registration.
 
@@ -84,14 +84,14 @@ Fixed various bugs and performance issues, general updates, bug fixes, enhanceme
 
 - [iOS] Fix managed bookmarks dismiss under AAD account (without "XXX's Favorites" folder under favorites)
 - [iOS] Fix downloaded files not properly moved in work profile
-- [iOS] Fix a bug related to MAM Tunnel cannot be disconnected automatically when change to personal account
+- [iOS] Fix a bug related to MAM Tunnel can't be disconnected automatically when change to personal account
 - [iOS] Fix disableFeatures policy - InPrivate mode disablement bug & support policy auto change
-(The problem is when set `com.microsoft.intune.mam.managedbrowser.disabledFeatures='inprivate'`, the InPrivate mode can still be accessed, and the corresponding toolbar button remains functional. Expects the policy to support dynamic switching without needing to restart Edge. When InPrivate mode is disabled by the policy, the application should automatically exit InPrivate mode and close all open InPrivate tabs)
+(The problem is when set `com.microsoft.intune.mam.managedbrowser.disabledFeatures='inprivate'`, the InPrivate mode can still be accessed, and the corresponding toolbar button remains functional. Expects the policy to support dynamic switching without needing to restart Microsoft Edge. When the policy disables InPrivate mode, the application should automatically exit InPrivate mode and close all open InPrivate tabs)
 
 ### Enhancements
 
 - [iOS] Improve the transition user experience for account switcher in iPad
-- [iOS] Improve Web SSO for CMC (copilot.microsoft.com) login in MSA
+- [iOS] Improve Web SSO for CMC (copilot.microsoft.com) sign in in MSA
 - [Android and iOS] Improve the occurrence of re-sign-in prompts by disallow user interaction for proactive-auth
 - [Android and iOS] Improve account verification by consider sync and news feed status
 - [Android and iOS] General enhancements to NTLMSSO policies to make it more useful
