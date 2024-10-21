@@ -177,68 +177,8 @@ Fixed various bugs and performance issues, general updates, enhancements, featur
 
 - [iOS] Enable Web Inspector and add a new token (`webinspector`) of disabled features policy to disable it. Previously Web Inspector was disabled in Stable versions, but it's now enabled for general web site debugging and troubleshooting purposes.
 
-## Version 127.0.2651.111 (Android and iOS): August 20, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 127.0.2651.102 (Android and iOS): August 13, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 127.0.2651.96 (iOS): August 8, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 127.0.2651.90 (Android): August 6, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 127.0.2651.82 (Android): August 1, 2024
-
-Fixed various bugs and performance issues, general updates, and new policies.
-
-### General updates
-
-- [Android] Exclude Microsoft Entra ID Copilot from NTP's voice and camera search
-
-### Bug fixes
-
-- [Android] Fix a bug related to policy InPrivateModeAvailability
-- [Android] Fix SSO bug when a blocked link is opened from Outlook
-
-### New policies
-
-- [Android] Disable UIR prompt pop-up via `com.microsoft.intune.mam.managedbrowser.disabledFeatures` or [EdgeDisabledFeatures](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) policy
-- [Android] Add CIDR (Classless Inter-domain Routing) support in AllowListURLs/BlockListURLs feature
-- [Android] New `com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList` policy to allow IT admin disable edge internal pages
-
-## Version 127.0.2651.81 (iOS): July 31, 2024
-
-Fixed various bugs and performance issues, general updates, new policies, and enhancements.
-
-### Bug fixes
-
-- [iOS] Fix [DefaultBrowserSettingEnabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) policy that didn't work
-- [iOS] Fix the UI layout issue caused by changes in UIWindow safeAreaInsets leading to Webview content offset shift in certain situations
-
-### General updates
-
-- [iOS] Upgrade MS Tunnel SDK version 1.0.18
-- [iOS] Upgrade Intune MAM SDK to version 19.4.1
-
-### New policies
-
-- [iOS] Disable UIR prompt pop-up via `com.microsoft.intune.mam.managedbrowser.disabledFeatures` or [EdgeDisabledFeatures](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) policy
-- [iOS] Add CIDR (Classless Inter-domain Routing) support in AllowListURLs/BlockListURLs feature
-- [iOS] New `com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList` policy to allow IT admin disable edge internal pages
-
-### Enhancements
-
-- [iOS] Shared device mode support is generally available.
-
+<!-- Version 127.0.2651.111 (Android and iOS): August 20, 2024 to Version 127.0.2651.81 (iOS): July 31, 2024 --->
 <!-- Version 126.2592.120 (iOS): July 24, 2024 to Version 126.0.2592.56 (Android and iOS): June 17, 2024 -->
-
-<!-- ranges cut out for mobile stable archive -->
 <!-- Version 125.0.2535.96 (Android and iOS): June 11, 2024 to Version 125.0.2535.51 (Android): May 21, 2024 --->
 <!-- Version 124.0.2478.105 (iOS): May 17, 2024 to Version 124.0.2478.50 (Android and iOS): April 22, 2024 -->
 <!-- Version 123.0.2420.108 (iOS): April 19, 2024 to Version 123.0.2420.56 (iOS): March 25, 2024 -->
