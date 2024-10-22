@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 10/15/2024
+ms.date: 10/21/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -22,6 +22,36 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 130.0.2849.46 (Android and iOS): October 20, 2024
+
+Fixed various bugs and performance issues, general updates, new policies, and enhancements.
+
+### General updates
+
+- [iOS] Upgrade Intune MAM SDK to version 19.7.0
+- [iOS] Upgrade MAM Tunnel SDK to version 1.1.12
+- [iOS & Android] Enable wallpaper on NTP for Commercial user by default. A user can configure `com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom` to exclude the wallpaper.
+- [iOS & Android] Enable weather widget on NTP for Commercial user by default. A user can add weather token to **DisableFeature** policy to disable it the widget.
+
+### Bug fixes
+
+- [iOS] Fix issue about single device mode force sign-in interrupted by external intent.
+- [iOS] Fix **disableImportPasswords** policy not working as expected.
+
+### New policies
+
+- [iOS & Android] Support to disable weather widget on NTP via **DisableFeature** policy
+(`com.microsoft.intune.mam.managedbrowser.disabledFeatures` in MAM) and **EdgeDisabledFeatures** in MDM, now supports disabling weather widget on NTP by using "weather" as value.
+
+### Enhancements
+
+- [iOS] Support removing specified account from sign in account list.
+- [Android] Change default value of `recommendsCustomUi` to support passkey in Edge. Before these changes, the user can only use Google Password Manager and can't select Microsoft Authenticator to save passkey. After these changes, a user can select a third party passkey app, including Microsoft Authenticator.
+- [Android] Improves the feature experience for App proxy.
+- [iOS & Android] Improves the occurrence of re-sign in prompts on NTP.
+- [iOS & Android] General enhancements to NTLMSSO policies to make it more useful.
+- [iOS & Android] Enable Managed Browser revamp feature by default with silent mode as the managed browser. This change helps customers remediate from non-compliant cases, such as no device registration.
 
 ## Version 129.0.2792.92 (Android and iOS): October 15, 2024
 
@@ -54,14 +84,14 @@ Fixed various bugs and performance issues, general updates, bug fixes, enhanceme
 
 - [iOS] Fix managed bookmarks dismiss under AAD account (without "XXX's Favorites" folder under favorites)
 - [iOS] Fix downloaded files not properly moved in work profile
-- [iOS] Fix a bug related to MAM Tunnel cannot be disconnected automatically when change to personal account
+- [iOS] Fix a bug related to MAM Tunnel can't be disconnected automatically when change to personal account
 - [iOS] Fix disableFeatures policy - InPrivate mode disablement bug & support policy auto change
-(The problem is when set `com.microsoft.intune.mam.managedbrowser.disabledFeatures='inprivate'`, the InPrivate mode can still be accessed, and the corresponding toolbar button remains functional. Expects the policy to support dynamic switching without needing to restart Edge. When InPrivate mode is disabled by the policy, the application should automatically exit InPrivate mode and close all open InPrivate tabs)
+(The problem is when set `com.microsoft.intune.mam.managedbrowser.disabledFeatures='inprivate'`, the InPrivate mode can still be accessed, and the corresponding toolbar button remains functional. Expects the policy to support dynamic switching without needing to restart Microsoft Edge. When the policy disables InPrivate mode, the application should automatically exit InPrivate mode and close all open InPrivate tabs)
 
 ### Enhancements
 
 - [iOS] Improve the transition user experience for account switcher in iPad
-- [iOS] Improve Web SSO for CMC (copilot.microsoft.com) login in MSA
+- [iOS] Improve Web SSO for CMC (copilot.microsoft.com) sign in in MSA
 - [Android and iOS] Improve the occurrence of re-sign-in prompts by disallow user interaction for proactive-auth
 - [Android and iOS] Improve account verification by consider sync and news feed status
 - [Android and iOS] General enhancements to NTLMSSO policies to make it more useful
@@ -147,68 +177,8 @@ Fixed various bugs and performance issues, general updates, enhancements, featur
 
 - [iOS] Enable Web Inspector and add a new token (`webinspector`) of disabled features policy to disable it. Previously Web Inspector was disabled in Stable versions, but it's now enabled for general web site debugging and troubleshooting purposes.
 
-## Version 127.0.2651.111 (Android and iOS): August 20, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 127.0.2651.102 (Android and iOS): August 13, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 127.0.2651.96 (iOS): August 8, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 127.0.2651.90 (Android): August 6, 2024
-
-Fixed various bugs and performance issues.
-
-## Version 127.0.2651.82 (Android): August 1, 2024
-
-Fixed various bugs and performance issues, general updates, and new policies.
-
-### General updates
-
-- [Android] Exclude Microsoft Entra ID Copilot from NTP's voice and camera search
-
-### Bug fixes
-
-- [Android] Fix a bug related to policy InPrivateModeAvailability
-- [Android] Fix SSO bug when a blocked link is opened from Outlook
-
-### New policies
-
-- [Android] Disable UIR prompt pop-up via `com.microsoft.intune.mam.managedbrowser.disabledFeatures` or [EdgeDisabledFeatures](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) policy
-- [Android] Add CIDR (Classless Inter-domain Routing) support in AllowListURLs/BlockListURLs feature
-- [Android] New `com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList` policy to allow IT admin disable edge internal pages
-
-## Version 127.0.2651.81 (iOS): July 31, 2024
-
-Fixed various bugs and performance issues, general updates, new policies, and enhancements.
-
-### Bug fixes
-
-- [iOS] Fix [DefaultBrowserSettingEnabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) policy that didn't work
-- [iOS] Fix the UI layout issue caused by changes in UIWindow safeAreaInsets leading to Webview content offset shift in certain situations
-
-### General updates
-
-- [iOS] Upgrade MS Tunnel SDK version 1.0.18
-- [iOS] Upgrade Intune MAM SDK to version 19.4.1
-
-### New policies
-
-- [iOS] Disable UIR prompt pop-up via `com.microsoft.intune.mam.managedbrowser.disabledFeatures` or [EdgeDisabledFeatures](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) policy
-- [iOS] Add CIDR (Classless Inter-domain Routing) support in AllowListURLs/BlockListURLs feature
-- [iOS] New `com.microsoft.intune.mam.managedbrowser.InternalPagesBlockList` policy to allow IT admin disable edge internal pages
-
-### Enhancements
-
-- [iOS] Shared device mode support is generally available.
-
+<!-- Version 127.0.2651.111 (Android and iOS): August 20, 2024 to Version 127.0.2651.81 (iOS): July 31, 2024 --->
 <!-- Version 126.2592.120 (iOS): July 24, 2024 to Version 126.0.2592.56 (Android and iOS): June 17, 2024 -->
-
-<!-- ranges cut out for mobile stable archive -->
 <!-- Version 125.0.2535.96 (Android and iOS): June 11, 2024 to Version 125.0.2535.51 (Android): May 21, 2024 --->
 <!-- Version 124.0.2478.105 (iOS): May 17, 2024 to Version 124.0.2478.50 (Android and iOS): April 22, 2024 -->
 <!-- Version 123.0.2420.108 (iOS): April 19, 2024 to Version 123.0.2420.56 (iOS): March 25, 2024 -->
