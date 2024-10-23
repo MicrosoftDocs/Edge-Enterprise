@@ -3,7 +3,7 @@ title: "Organization branding"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/27/2024
+ms.date: 10/23/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -49,7 +49,7 @@ For more details on defaults and checking what is already configured in Microsof
 
 > [!IMPORTANT]
 > If OneDrive desktop sync is enabled in the user environment, a OneDrive policy to
-[exclude specific kinds of files from being uploaded](/sharepoint/use-group-policy#exclude-specific-kinds-of-files-from-being-uploaded) needs to be enabled to prevent shortcut duplication and enable the organization branding feature.
+[exclude specific kinds of files from being uploaded](/sharepoint/use-group-policy#exclude-specific-kinds-of-files-from-being-uploaded) needs to be enabled to prevent shortcut duplication and enable the organization branding feature. **Note:** You must exclude .Lnk files. The OneDrive sync app won't sync any .Lnk files, regardless of source.
 
 Looking for more advanced customization options? The Edge management service provides admins with an enhanced experience to control, preview, and customize the look of Edge for Business.
 
