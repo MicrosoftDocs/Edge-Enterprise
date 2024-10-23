@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/11/2024
+ms.date: 10/22/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -22,15 +22,6 @@ For information about an additional set of policies used to control how and when
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
-
-## New policies
-
-The following table lists the deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)|
-|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors (deprecated)|
 
 ## Available policies
 

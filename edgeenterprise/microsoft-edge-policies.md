@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/11/2024
+ms.date: 10/22/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,15 +30,12 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new and deprecated policies that are in this article update.
+The following table lists the new and obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[ExtensionsPerformanceDetectorEnabled](#extensionsperformancedetectorenabled)|Extensions Performance Detector enabled|
-|[PrivateNetworkAccessRestrictionsEnabled](#privatenetworkaccessrestrictionsenabled)|Specifies whether to apply restrictions to requests to more private network endpoints|
-|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior (deprecated)|
-|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors (deprecated)|
-|[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature (deprecated)|
+|[EdgeSidebarAppUrlHostAllowList](#edgesidebarappurlhostallowlist)|Allow specific apps to be opened in Microsoft Edge sidebar|
+|[BeforeunloadEventCancelByPreventDefaultEnabled](#beforeunloadeventcancelbypreventdefaultenabled)|Control the behavior for the cancel dialog produced by the beforeunload event (obsolete)|
 
 ## Available policies
 
@@ -453,7 +450,7 @@ These tables list all of the browser-related group policies available in this re
 |[AutoplayAllowlist](#autoplayallowlist)|Allow media autoplay on specific sites|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Continue running background apps after Microsoft Edge closes|
 |[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)|
-|[BeforeunloadEventCancelByPreventDefaultEnabled](#beforeunloadeventcancelbypreventdefaultenabled)|Control the behavior for the cancel dialog produced by the beforeunload event|
+|[BeforeunloadEventCancelByPreventDefaultEnabled](#beforeunloadeventcancelbypreventdefaultenabled)|Control the behavior for the cancel dialog produced by the beforeunload event (obsolete)|
 |[BingAdsSuppression](#bingadssuppression)|Block all ads on Bing search results|
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|Block third party cookies|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|Enable profile creation from the Identity flyout menu or the Settings page|
@@ -529,6 +526,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge (obsolete)|
 |[EdgeOpenInSidebarEnabled](#edgeopeninsidebarenabled)|Enable open in sidebar|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
+|[EdgeSidebarAppUrlHostAllowList](#edgesidebarappurlhostallowlist)|Allow specific apps to be opened in Microsoft Edge sidebar|
 |[EdgeSidebarAppUrlHostBlockList](#edgesidebarappurlhostblocklist)|Control which apps cannot be opened in Microsoft Edge sidebar|
 |[EdgeSidebarCustomizeEnabled](#edgesidebarcustomizeenabled)|Enable sidebar customize|
 |[EdgeWalletCheckoutEnabled](#edgewalletcheckoutenabled)|Enable Wallet Checkout feature|
@@ -11792,7 +11790,7 @@ Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=21739
   
   #### Supported versions:
 
-  - On Windows and macOS since 130 or later
+  - On Windows and macOS since 131 or later
 
   #### Description
 
@@ -19707,13 +19705,13 @@ If you disable this setting the list of available templates will be downloaded o
 
   ### BeforeunloadEventCancelByPreventDefaultEnabled
 
-  #### Control the behavior for the cancel dialog produced by the beforeunload event
+  #### Control the behavior for the cancel dialog produced by the beforeunload event (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 130.
   #### Supported versions:
 
-  - On Windows and macOS since 118 or later
+  - On Windows and macOS since 118, until 130
 
   #### Description
 
@@ -19745,7 +19743,7 @@ Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won
   ##### Group Policy (ADMX) info
 
   - GP unique name: BeforeunloadEventCancelByPreventDefaultEnabled
-  - GP name: Control the behavior for the cancel dialog produced by the beforeunload event
+  - GP name: Control the behavior for the cancel dialog produced by the beforeunload event (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -25049,6 +25047,79 @@ Starting in version 90.0.818.56, the behavior of the messaging letting users kno
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeSidebarAppUrlHostAllowList
+
+  #### Allow specific apps to be opened in Microsoft Edge sidebar
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 131 or later
+
+  #### Description
+
+  Define a list of sites, based on URL patterns, that are not subject to the [EdgeSidebarAppUrlHostBlockList](#edgesidebarappurlhostblocklist).
+
+If you don't configure this policy, a user can open any app in sidebar except the urls listed in [EdgeSidebarAppUrlHostBlockList](#edgesidebarappurlhostblocklist).
+
+If you configure this policy, the apps listed in the allow list could be opened in sidebar even if they are listed in the block list.
+
+By default, all apps are allowed. However, if you prohibited apps by policy, you can use the list of allowed apps to change that policy.
+
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2281313](https://go.microsoft.com/fwlink/?linkid=2281313).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeSidebarAppUrlHostAllowList
+  - GP name: Allow specific apps to be opened in Microsoft Edge sidebar
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EdgeSidebarAppUrlHostAllowList
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EdgeSidebarAppUrlHostAllowList\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\EdgeSidebarAppUrlHostAllowList\2 = "[*.]contoso.edu"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeSidebarAppUrlHostAllowList
+  - Example value:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EdgeSidebarAppUrlHostBlockList
 
   #### Control which apps cannot be opened in Microsoft Edge sidebar
@@ -25069,7 +25140,7 @@ If the [HubsSidebarEnabled](#hubssidebarenabled) policy is disabled, this list i
 
 For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2281313](https://go.microsoft.com/fwlink/?linkid=2281313).
 
-Note: * will block all apps.
+Note: A blocklist value of '\*' means all apps are blocked unless they are explicitly listed in the [EdgeSidebarAppUrlHostAllowList](#edgesidebarappurlhostallowlist) policy.
 
   #### Supported features:
 
@@ -33489,18 +33560,13 @@ If this policy is left not set, occlusion detection will be enabled.
 
   Allows you to set a timeout, in seconds, for Microsoft Edge tabs waiting to navigate until the browser has downloaded the initial Enterprise Mode Site List.
 
-This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry
-and
-[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload) is set to "All eligible navigations" (1).
+This setting works in conjunction with: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode' and [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry and [DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload) is set to "All eligible navigations" (1).
 
 Tabs will not wait longer than this timeout for the Enterprise Mode Site List to download. If the browser has not finished downloading the Enterprise Mode Site List when the timeout expires, Microsoft Edge tabs will continue navigating anyway. The value of the timeout should be no greater than 20 seconds and no fewer than 1 second.
 
-If you set the timeout in this policy to a value greater than the default of 2 seconds, an information bar is shown to the user after 2 seconds. The information bar contains a button that allows the user to quit waiting for the Enterprise Mode Site List download to complete.
+If you set the timeout in this policy to a value greater than 2 seconds, an information bar is shown to the user after 2 seconds. The information bar contains a button that allows the user to quit waiting for the Enterprise Mode Site List download to complete.
 
-If you don't configure this policy, the default timeout of 2 seconds is used. This default is subject to change in the future.
+If you don't configure this policy, the default timeout of 4 seconds is used. This default is subject to change in the future.
 
   #### Supported features:
 

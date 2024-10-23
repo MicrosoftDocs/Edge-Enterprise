@@ -3,13 +3,13 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 10/18/2024
+ms.date: 10/22/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Microsoft Edge release notes for Stable Channel"
+description: "Microsoft Edge release note for Stable Channel"
 ---
 
 # Release notes for Microsoft Edge Stable Channel
@@ -25,6 +25,14 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 130.0.2849.52: October 22, 2024
+
+Fixed various bugs and performance issues, improved reliability.
+
+### Improved reliability
+
+- Fixed a browser crash that occurred on startup in On-premises environments when creating a new Microsoft Edge profile.
 
 ## Version 130.0.2849.46: October 17, 2024
 
