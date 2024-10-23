@@ -21,7 +21,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 131.0.2903.X: October X
 
-Fixed various bugs and performance issues, Dev channel updates, announcements, feature updates, site compatibility impacting changes, and policy updates.
+Fixed various bugs and performance issues, Dev channel updates, feature updates, site compatibility impacting changes, and policy updates.
 
 > [!NOTE]
 > Portions of this release note are modifications based on work created and shared by Chromium.org and used according to terms described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
