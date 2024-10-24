@@ -36,12 +36,6 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - Fixed an issue which prevented some browser extensions using the `chrome.storage.managed` API from functioning correctly.
 
-### Announcement
-
-- Support non-special scheme URLs. In Microsoft Edge Stable Version 130.0.2849.46 support for Non-special scheme URLs was enabled. (Previously, the URL parser didn't support non-special URLs. The parser parses non-special URLs as if they had an opaque path, which is not aligned with the URL standard.) For more information, see [Support Non-Special Scheme URLs](http://bit.ly/url-non-special).
-
-  Users have found that Edge breaks URL parsing for external applications. Repro steps include having a web application that calls into a custom protocol and launches a URL that might be affected by this change in URL parsing. We reverted this change to allow admins and developers to have more time to update. The feature will be enabled in a future Microsoft Edge version.
-
 ## Version 130.0.2849.52: October 22, 2024
 
 Fixed various bugs and performance issues, improved reliability.
