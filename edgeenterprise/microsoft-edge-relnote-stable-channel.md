@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 10/22/2024
+ms.date: 10/24/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,6 +25,22 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 130.0.2849.56: October 24, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-24-2024).
+
+### Fixes
+
+- Fixed an issue which prevented some browser extensions using the `chrome.storage.managed` API from functioning correctly.
+
+### Announcement
+
+- Support non-special scheme URLs. In Microsoft Edge Stable Version 130.0.2849.46 support for Non-special scheme URLs was enabled. (Previously, the URL parser didn't support non-special URLs. The parser parses non-special URLs as if they had an opaque path, which is not aligned with the URL standard.) For more information, see [Support Non-Special Scheme URLs](http://bit.ly/url-non-special).
+
+  Users have found that Edge breaks URL parsing for external applications. Repro steps include having a web application that calls into a custom protocol and launches a URL that might be affected by this change in URL parsing. We reverted this change to allow admins and developers to have more time to update. The feature will be enabled in a future Microsoft Edge version.
 
 ## Version 130.0.2849.52: October 22, 2024
 
