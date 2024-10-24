@@ -33,6 +33,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 - [Dev Channel update to 131.0.2863.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-131-0-2863-0-is-live/m-p/4260359)
 - [Dev Channel update to 131.0.2875.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-131-0-2875-0-is-live/m-p/4267839)
 - [Dev Channel update to 131.0.2889.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-131-0-2889-0-is-live/m-p/4273465)
+- [Dev Channel update to 131.0.2903.5 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-131-0-2903-5-is-live/m-p/4277981)
 
 ### Feature updates
 
