@@ -43,7 +43,7 @@ The following Dev channel updates preceded this Beta channel release. These note
 
 ### Site compatibility impacting changes
 
-- **CSS Anchor Positioning: anchor-scope.** The `anchor-scope` property allows limiting the visibility of anchor names to a given subtree.
+- **CSS Anchor Positioning: `anchor-scope`.** The `anchor-scope` property allows limiting the visibility of anchor names to a given subtree.
 
 - **CSS `font-variant-emoji`.** The `font-variant-emoji` CSS property provides a way to control between colored (emoji-style) and monochromatic (text-style) emoji glyphs. This method can be also done by adding an emoji Variation Selector, specifically U+FE0E for text and U+FE0F for emoji, after each emoji codepoint.
 
@@ -79,20 +79,13 @@ The following Dev channel updates preceded this Beta channel release. These note
 
   In such cases, it can be beneficial for a document to ensure its opener can't script it, even if the opener document is a same-origin one. The `noopener-allow-popups` Cross-Origin-Opener-Policy value lets documents define that behavior.
 
-<!----
-- **Private Aggregation API: increase contribution limit to 100 for Protected Audience callers.** Enables Protected Audience script runners to make up to 100 contributions per Private Aggregation report, compared to the current limit of 20.
-
-  Private Aggregation limits the number of histogram contributions that can be embedded in a single aggregatable report, dropping any additional contributions. Shared Storage callers can work around the limit by invoking another Shared Storage operation. However, Protected Audience callers have no persistent storage, so they lose their excess contributions at the end of their auction. This change is privacy neutral as the API's contributions are still limited by the same privacy budget.
-
-  Due to padding, each Protected Audience report has a larger payload, even if it didn't need the larger contribution limit. It's expected that these larger reports will increase the cost of operating the Aggregation Service.
---->
 - **Select parser relaxation.** This change makes the HTML parser allow more tags in `<select>` besides `<option>`, `<optgroup>`, and `<hr>`.
 
   This change is in support of the customizable `<select>` feature but is being shipped first because it can be done separately and has some compat risk.
 
 - **WebGPU: Clip distances.** Adds the optional GPU feature `clip-distances` that allows setting user-defined clip distances in vertex shader outputs. This technique is useful for the applications that need to clip all vertices in a scene that are beyond a user-defined plane, such as many CAD applications.
 
-- **WebGPU: GPUCanvasContext getConfiguration()**. Once `GPUCanvasContext configure()` is called with a configuration dictionary, the `GPUCanvasContext getConfiguration()` method can be used to check the canvas context configuration. It includes GPU `device`, `format`, `usage`, `viewFormats`, `colorSpace`, `toneMapping`, and `alphaMode` members. As discussed in [issue 4828](https://github.com/gpuweb/gpuweb/issues/4828), web apps can use it to detect whether HDR canvas is supported in WebGPU.
+- **WebGPU: `GPUCanvasContext getConfiguration()`**. Once `GPUCanvasContext configure()` is called with a configuration dictionary, the `GPUCanvasContext getConfiguration()` method can be used to check the canvas context configuration. It includes GPU `device`, `format`, `usage`, `viewFormats`, `colorSpace`, `toneMapping`, and `alphaMode` members. As discussed in [issue 4828](https://github.com/gpuweb/gpuweb/issues/4828), web apps can use it to detect whether HDR canvas is supported in WebGPU.
 
 - **WebHID on dedicated workers.** Enables WebHID inside dedicated worker contexts. This lets the performance of heavy I/O and processing of data from a HID device on a separate thread, helping to reduce the performance impact on the main thread.
 
